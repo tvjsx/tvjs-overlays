@@ -67,21 +67,21 @@ app = new Vue({
 ## Adding new overlay
 
 1. Create a folder in `src/overlays` named just like your overlay: `YourOverlayName`
-2. Your main code should be in `YourOverlayName.vue`, but you can use .js and .json imports
+2. Your main code must be in `YourOverlayName.vue`, but you can use .js and .json imports
 3. Add your data sample `data.json`
-4. Make sure the following conditions are correct:
+4. Make sure that the following conditions are met:
 ```
-    * file name === name === folder name
+    * folder name === .vue file name === overlay name
     * only one .vue file
     * required functions: draw, use_for
     * use_for includes the name
     * use_for.length === 1
-    * name is unique (format: CapitalizedWords, ALL_CAPS, Numbers_123)
+    * name is unique (format: CapitalizedWords, Numbers_123)
     * required meta: author, version
     * data.json < 1MB
 ```
 
-5. `npm run ckeck` to check that everything is OK
+5. `npm run check` to check that everything is OK
 6. `npm run compile` to build the development index
 7. `npm run dev` to test your overlays [WIP]
 8. Submit a PR request to this repo
