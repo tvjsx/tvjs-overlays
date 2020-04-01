@@ -1,0 +1,57 @@
+{
+  "name": "tvjs-overlays",
+  "version": "0.0.4",
+  "description": "Overlay pack for trading-vue-js",
+  "main": "./dist/tvjs-overlays.js",
+  "scripts": {
+    "name-check": "node ./webpack/overlay-parser.js --silent",
+    "check": "node ./webpack/overlay-parser.js",
+    "compile": "node ./webpack/index-compiler.js",
+    "compile-prod": "node ./webpack/index-compiler.js --prod",
+    "eslint": "./node_modules/.bin/eslint --ext .js,.vue src",
+    "dev": "webpack-dev-server --config webpack/dev.config.js --mode development --progress --hot",
+    "build": "webpack  --config webpack/build.config.js --mode production --progress"
+  },
+  "author": "C451",
+  "license": "MIT",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "keywords": [
+    "trading",
+    "trading-vue-js",
+    "tvjs",
+    "overlays",
+    "crypto"
+  ],
+  "homepage": "https://github.com/tvjsx/trading-vue-js#readme",
+  "repository": "github:tvjsx/tvjs-overlays",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "colors": "^1.4.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-eslint": "^6.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "html-webpack-plugin": "^3.2.0",
+    "minimist": "^1.2.5",
+    "request": "^2.88.2",
+    "terser-webpack-plugin": "^2.3.5",
+    "tulind": "^0.8.18",
+    "vue-loader": "^15.9.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "trading-vue-js": "^0.4.5",
+    "vue": "^2.6.11"
+  }
+}

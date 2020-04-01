@@ -1,0 +1,14 @@
+{
+    "overlays": {
+        "TestOverlay1": {
+            "version": "1.0.0",
+            "author": "Bro2020",
+            "is_tool": false
+        },
+        "TestOverlay2": {
+            "version": "1.0.0",
+            "author": "CyberFist",
+            "is_tool": false
+        }
+    }
+}
