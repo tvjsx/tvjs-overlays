@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.0.4 - Wed Apr 01 2020
+ * TVJS Overlays - v0.0.5 - Wed Apr 01 2020
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -139,7 +139,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   methods: {
     meta_info: function meta_info() {
       return {
-        author: 'C451',
+        author: 'Bro2020',
         version: '1.0.0'
       };
     },
@@ -362,7 +362,7 @@ function TestOverlay2vue_type_script_lang_js_arrayLikeToArray(arr, len) { if (le
   methods: {
     meta_info: function meta_info() {
       return {
-        author: 'C451',
+        author: 'CyberFist',
         version: '1.0.0'
       };
     },
@@ -478,7 +478,7 @@ TestOverlay2_component.options.__file = "src/overlays/TestOverlay2/TestOverlay2.
 //
 // Do not commit this file, the final index is
 // compiled by the repo owner, use index_dev.js to
-// experiment.
+// experiment: 'npm run compile'
 
 
 var Pack = {

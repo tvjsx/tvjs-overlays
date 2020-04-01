@@ -4,7 +4,7 @@
   <img width="318" heigth="256" src="assets/README-e6a22b27.png" alt="trading-vue logo">
 </div>
 
-# TVJS Overlay Pack ![npm](https://img.shields.io/npm/v/tvjs-overlays.svg?color=brightgreen&label=version) ![license](https://img.shields.io/badge/license-MIT-blue.svg) ![GRUGLIKE](https://img.shields.io/badge/GRUG-LIKE-yellow.svg) ![build](https://img.shields.io/badge/build-passing-brightgreen.svg) ![size](https://img.shields.io/github/size/C451/trading-vue-js/dist/trading-vue.min.js.svg)
+# TVJS Overlay Pack ![npm](https://img.shields.io/npm/v/tvjs-overlays.svg?color=brightgreen&label=version) ![license](https://img.shields.io/badge/license-MIT-blue.svg) ![GRUGLIKE](https://img.shields.io/badge/GRUG-LIKE-yellow.svg) ![build](https://img.shields.io/badge/build-passing-brightgreen.svg) ![size](https://img.shields.io/github/size/tvjsx/tvjs-overlays/dist/tvjs-overlays.min.js.svg)
 
 **TVJS Overlays** is a collection of overlays made by the [TradingVue.js](https://github.com/tvjsx/trading-vue-js) community.
 
