@@ -33604,7 +33604,7 @@
     "onchart": [
         {
             "name": "EMA, 25",
-            "type": "Overlay1",
+            "type": "EMA",
             "data": [
                 [
                     1543572000000,
@@ -50411,7 +50411,7 @@
         },
         {
             "name": "EMA, 43",
-            "type": "Overlay2",
+            "type": "EMA",
             "data": [
                 [
                     1543572000000,

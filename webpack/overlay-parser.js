@@ -8,6 +8,7 @@ const argv = minimist(process.argv.slice(2))
 /* Overlay checks:
 
 [+] file name === name === folder name
+[ ] file name < some length (symbols)
 [+] only one .vue file
 [+] required functions: draw, use_for
 [+] use_for includes name

@@ -83,5 +83,5 @@ app = new Vue({
 
 5. `npm run check` to check that everything is OK
 6. `npm run compile` to build the development index
-7. `npm run dev` to test your overlays [WIP]
+7. `npm run dev` to test your overlays 
 8. Submit a PR request to this repo
