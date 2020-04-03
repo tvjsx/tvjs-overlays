@@ -122,7 +122,7 @@ body {
 }
 #tvjs-header h1 {
     color: #9b9ca0;
-    margin: 0px 0 0 0px;
+    margin: 0px 0 0 3px;
 }
 #tvjs-header p {
     position: absolute;
