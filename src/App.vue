@@ -39,7 +39,7 @@ export default {
     methods: {
         onResize() {
             this.width = window.innerWidth
-            this.height = window.innerHeight
+            this.height = window.innerHeight - 50
         }
     },
     mounted() {
@@ -53,7 +53,7 @@ export default {
         return {
             chart: {}, // Data will be here,
             width: window.innerWidth,
-            height: window.innerHeight,
+            height: window.innerHeight - 50,
             overlays: Object.values(Overlays),
             overlay_names: ['Default', ...Object.keys(Overlays)],
             night: true,
