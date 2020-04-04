@@ -2,6 +2,8 @@ const vm = require('vm')
 const fs = require('fs')
 const colors = require('colors')
 const minimist = require('minimist')
+const pathmod = require('path')
+
 
 const argv = minimist(process.argv.slice(2))
 
@@ -81,20 +83,22 @@ function read_overlay(path) {
 
     let dotvue = []
 
+    let folder = path.split(pathmod.sep).reverse()[1]
+
     for (var f of fs.readdirSync(path)) {
         if (f === '.DS_Store') continue
         //console.log('   ', f)
         let arr = f.split('.')
-        if (arr.pop() === 'vue') {
+        if (arr[0] === folder && arr[1] === 'vue') {
             dotvue.push({
                 path: path + f,
-                name: arr.pop()
+                name: arr[0]
             })
         }
     }
 
     if (dotvue.length !== 1) {
-        throw "Overlay folder should contain one .vue file"
+        throw "Overlay folder should contain main .vue file"
     }
 
     let info = extract_info(dotvue[0].path)
@@ -102,8 +106,6 @@ function read_overlay(path) {
     info.path = path
 
     if (name !== info.name) throw "File name !== overlay name"
-
-    let folder = path.split('/').reverse()[1]
 
     if (name !== folder) throw "Folder name !== overlay name"
 

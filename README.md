@@ -72,7 +72,6 @@ app = new Vue({
 4. Make sure that the following conditions are met:
 ```
     * folder name === .vue file name === overlay name
-    * only one .vue file
     * required functions: draw, use_for
     * use_for includes the name
     * use_for.length === 1
@@ -83,5 +82,5 @@ app = new Vue({
 
 5. `npm run check` to check that everything is OK
 6. `npm run compile` to build the development index
-7. `npm run dev` to test your overlays 
+7. `npm run dev` to test your overlays
 8. Submit a PR request to this repo
