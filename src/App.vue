@@ -76,7 +76,8 @@ export default {
                 this.$refs.tvjs.resetChart()
                 return
             }
-            let path = `http://localhost:8080/src/overlays/${nv}/data.json`
+            let origin = document.location.origin
+            let path = `${origin}/src/overlays/${nv}/data.json`
             fetch(path).then(response => {
                 return response.json()
             }).then(data => {
