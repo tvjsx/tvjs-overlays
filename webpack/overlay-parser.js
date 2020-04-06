@@ -21,7 +21,7 @@ const argv = minimist(process.argv.slice(2))
 [ ] updated version > the version in overlays.lock
 [ ] interface styles should be scoped
 [ ] no collisions of custom events
-[ ] encurage README.md
+[+] encourage README.md
 [ ] imports from 'trading-vue-js', not from local files
 
 
@@ -147,6 +147,7 @@ function checks(info) {
     if (!data_json_check(info))
         throw "Problem with data.json"
 
+    README_check(info)
 
     names.push(info.name)
 
@@ -180,6 +181,18 @@ function data_json_check(info) {
     }
 
     return true
+
+}
+
+function README_check(info) {
+
+    let path = info.path + '/README.md'
+
+    if (!fs.existsSync(path)) {
+        process.stdout.write(
+            '\n💡 Add README.md on how to use your overlay'.gray
+        )
+    }
 
 }
 
