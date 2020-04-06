@@ -55,7 +55,7 @@ function compile() {
 
     for (var info of overlays) {
         let imp = info.path.replace('/src', '') +
-            pathmod.sep + info.name + '.vue'
+            '/' + info.name + '.vue'
         imports.push(`import ${info.name} from '${imp}'`)
         exports.push(info.name)
     }

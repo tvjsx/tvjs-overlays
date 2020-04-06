@@ -87,7 +87,7 @@ function read_overlay(path) {
 
     let dotvue = []
 
-    let folder = path.split(pathmod.sep).reverse()[0]
+    let folder = path.split('/').reverse()[0]
 
     for (var f of fs.readdirSync(path)) {
         if (f === '.DS_Store') continue
@@ -96,7 +96,7 @@ function read_overlay(path) {
 
         if (arr[0] === folder && arr[1] === 'vue') {
             dotvue.push({
-                path: `${path}${pathmod.sep}${f}`,
+                path: `${path}/${f}`,
                 name: arr[0]
             })
         }
