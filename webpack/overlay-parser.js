@@ -11,7 +11,6 @@ const argv = minimist(process.argv.slice(2))
 
 [+] file name === name === folder name
 [ ] file name < some length (symbols)
-[+] only one .vue file
 [+] required functions: draw, use_for
 [+] use_for includes name
 [+] use_for.length === 1
@@ -20,6 +19,8 @@ const argv = minimist(process.argv.slice(2))
 [+] required meta: author, version
 [+] data.json < 1MB
 [ ] updated version > the version in overlays.lock
+[ ] interface styles should be scoped
+[ ] no collisions of custom events
 
 */
 
