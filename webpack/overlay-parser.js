@@ -21,6 +21,9 @@ const argv = minimist(process.argv.slice(2))
 [ ] updated version > the version in overlays.lock
 [ ] interface styles should be scoped
 [ ] no collisions of custom events
+[ ] encurage README.md
+[ ] imports from 'trading-vue-js', not from local files
+
 
 */
 
@@ -43,7 +46,7 @@ function parse() {
         if (f === '.DS_Store') continue
         if (f[0] === '_') continue
 
-        let path = `${OVERLAYS}${f}/`
+        let path = `${OVERLAYS}${f}`
         if (LIST && !LIST.includes(f)) continue
         if (fs.statSync(path).isDirectory()) {
             if (!SL) process.stdout.write('Parsing '.gray + f)
@@ -84,22 +87,23 @@ function read_overlay(path) {
 
     let dotvue = []
 
-    let folder = path.split(pathmod.sep).reverse()[1]
+    let folder = path.split(pathmod.sep).reverse()[0]
 
     for (var f of fs.readdirSync(path)) {
         if (f === '.DS_Store') continue
         //console.log('   ', f)
         let arr = f.split('.')
+
         if (arr[0] === folder && arr[1] === 'vue') {
             dotvue.push({
-                path: path + f,
+                path: `${path}${pathmod.sep}${f}`,
                 name: arr[0]
             })
         }
     }
 
     if (dotvue.length !== 1) {
-        throw "Overlay folder should contain main .vue file"
+        throw "Folder name should === main .vue file"
     }
 
     let info = extract_info(dotvue[0].path)
@@ -162,7 +166,7 @@ function name_format_check(name) {
 
 function data_json_check(info) {
 
-    let path = info.path + 'data.json'
+    let path = info.path + '/data.json'
 
     if (!fs.existsSync(path)) {
         throw `The folder should contain data.json (sample of data)`
