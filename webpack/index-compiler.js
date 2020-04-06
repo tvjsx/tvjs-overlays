@@ -1,6 +1,8 @@
 const fs = require('fs')
 const parser = require('./overlay-parser.js')
 const minimist = require('minimist')
+const pathmod = require('path')
+
 
 const argv = minimist(process.argv.slice(2))
 
@@ -52,7 +54,8 @@ function compile() {
     let output = argv.prod ? 'index_prod.js' : 'index_dev.js'
 
     for (var info of overlays) {
-        let imp = info.path.replace('/src', '') + info.name + '.vue'
+        let imp = info.path.replace('/src', '') +
+            pathmod.sep + info.name + '.vue'
         imports.push(`import ${info.name} from '${imp}'`)
         exports.push(info.name)
     }
