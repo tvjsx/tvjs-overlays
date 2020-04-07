@@ -1,5 +1,10 @@
 {
     "overlays": {
+        "Ichimoku": {
+            "version": "1.0.0",
+            "author": "Sudeep Batra (www.stoxalpha.com)",
+            "is_tool": false
+        },
         "TestOverlay1": {
             "version": "1.0.0",
             "author": "Bro2020",

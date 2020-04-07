@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.0.5 - Wed Apr 01 2020
+ * TVJS Overlays - v0.1.0 - Tue Apr 07 2020
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -115,117 +115,294 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
+__webpack_require__.d(__webpack_exports__, "Ichimoku", function() { return /* reexport */ Ichimoku; });
 __webpack_require__.d(__webpack_exports__, "TestOverlay1", function() { return /* reexport */ TestOverlay1; });
 __webpack_require__.d(__webpack_exports__, "TestOverlay2", function() { return /* reexport */ TestOverlay2; });
 
 // EXTERNAL MODULE: external "trading-vue-js"
 var external_trading_vue_js_ = __webpack_require__(0);
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/TestOverlay1/TestOverlay1.vue?vue&type=script&lang=js&
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-// Spline renderer. (SMAs, EMAs, TEMAs...
-// you know what I mean)
-// TODO: make a real spline, not a bunch of lines...
-// Adds all necessary stuff for you.
+//Ichimoku Indicator Overlay. Expected Format: [ <timestamp>, <ConversionLine>, <BaseLine>, <Lead1>, <Lead2>, <Lagging> ]
 
-/* harmony default export */ var TestOverlay1vue_type_script_lang_js_ = ({
-  name: 'TestOverlay1',
+/* harmony default export */ var Ichimokuvue_type_script_lang_js_ = ({
+  name: "Ichimoku",
   mixins: [external_trading_vue_js_["Overlay"]],
-  methods: {
-    meta_info: function meta_info() {
-      return {
-        author: 'Bro2020',
-        version: '1.0.0'
-      };
-    },
-    // Here goes your code. You are provided with:
-    // { All stuff is reactive }
-    // $props.layout -> positions of all chart elements +
-    //  some helper functions (see layout_fn.js)
-    // $props.interval -> candlestick time interval
-    // $props.sub -> current subset of candlestick data
-    // $props.data -> your indicator's data subset.
-    //  Comes "as is", should have the following format:
-    //  [[<timestamp>, ... ], ... ]
-    // $props.colors -> colors (see TradingVue.vue)
-    // $props.cursor -> current position of crosshair
-    // $props.settings -> indicator's custom settings
-    //  E.g. colors, line thickness, etc. You define it.
-    // $props.num -> indicator's layer number (of All
-    // layers in the current grid)
-    // $props.id -> indicator's id (e.g. EMA_0)
-    // ~
-    // Finally, let's make the canvas dirty!
-    draw: function draw(ctx) {
-      ctx.lineWidth = this.line_width;
-      ctx.strokeStyle = this.color;
-      ctx.beginPath();
-      var layout = this.$props.layout;
-      var i = this.data_index;
-
-      var _iterator = _createForOfIteratorHelper(this.$props.data),
-          _step;
-
-      try {
-        for (_iterator.s(); !(_step = _iterator.n()).done;) {
-          var p = _step.value;
-          var x = layout.t2screen(p[0]);
-          var y = layout.$2screen(p[i]);
-          ctx.lineTo(x, y);
-        }
-      } catch (err) {
-        _iterator.e(err);
-      } finally {
-        _iterator.f();
-      }
-
-      ctx.stroke();
-    },
-    // For all data with these types overlay will be
-    // added to the renderer list. And '$props.data'
-    // will have the corresponding values. If you want to
-    // redefine the default behviour for a prticular
-    // indicator (let's say EMA),
-    // just create a new overlay with the same type:
-    // e.g. use_for() { return ['EMA'] }.
-    use_for: function use_for() {
-      return ['TestOverlay1'];
-    },
-    // Colors for the legend, should have the
-    // same dimention as a data point (excl. timestamp)
-    data_colors: function data_colors() {
-      return [this.color];
-    }
+  data: function data() {
+    return {
+      ctxTenkan: {},
+      ctxKijun: {},
+      ctxSenkouSpanA: {},
+      ctxSenkouSpanB: {},
+      ctxChinkou: {},
+      ctxFillKumo: {},
+      tenkan: [],
+      kijun: [],
+      senkouSpanA: [],
+      senkouSpanB: [],
+      chinkou: [],
+      offset: 26,
+      tenkanLineWidth: 1,
+      kijunLineWidth: 1,
+      senkouSpanALineWidth: 1,
+      senkouSpanBLineWidth: 1,
+      chinkouLineWidth: 1,
+      colorTenkan: "#52A634",
+      colorKijun: "#52A59D",
+      colorSenkouSpanA: "#438625",
+      colorSenkouSpanB: "#bd003c",
+      colorChinkou: "#BF2A64",
+      colorKumoUp: "#063f0f",
+      colorKumoDown: "#391c19",
+      showTenkan: true,
+      showKijun: true,
+      showSenkouSpanA: true,
+      showSenkouSpanB: true,
+      showChinkou: true,
+      showFillKumo: true
+    };
   },
-  // Define internal setting & constants here
   computed: {
     sett: function sett() {
       return this.$props.settings;
     },
-    line_width: function line_width() {
-      return this.sett.lineWidth || 2;
+    tenkan_color: function tenkan_color() {
+      return this.sett['tenkan-color'] || this.colorTenkan;
     },
-    color: function color() {
-      var n = this.$props.num % 5;
-      return this.sett.color || this.COLORS[n];
+    kijun_color: function kijun_color() {
+      return this.sett['kijun-color'] || this.colorKijun;
     },
-    data_index: function data_index() {
-      return this.sett.dataIndex || 1;
+    senkou_spanA_color: function senkou_spanA_color() {
+      return this.sett['senkou_spanA_color'] || this.colorSenkouSpanA;
+    },
+    senkou_spanB_color: function senkou_spanB_color() {
+      return this.sett['senkou_spanB_color'] || this.colorSenkouSpanB;
+    },
+    chinkou_color: function chinkou_color() {
+      return this.sett['chinkou_color'] || this.colorChinkou;
+    },
+    kumo_up_color: function kumo_up_color() {
+      return this.sett['kumo_up_color'] || this.colorKumoUp;
+    },
+    kumo_down_color: function kumo_down_color() {
+      return this.sett['kumo_down_color'] || this.colorKumoDown;
+    },
+    tenkan_line_width: function tenkan_line_width() {
+      return this.sett['tenkan_line_width'] || this.tenkanLineWidth;
+    },
+    kijun_line_width: function kijun_line_width() {
+      return this.sett['kijun_line_width'] || this.kijunLineWidth;
+    },
+    senkou_spanA_line_width: function senkou_spanA_line_width() {
+      return this.sett['senkou_spanA_line_width'] || this.senkouSpanALineWidth;
+    },
+    senkou_spanB_line_width: function senkou_spanB_line_width() {
+      return this.sett['senkou_spanB_line_width'] || this.senkouSpanBLineWidth;
+    },
+    chinkou_line_width: function chinkou_line_width() {
+      return this.sett['chinkou_line_width'] || this.chinkouLineWidth;
     }
   },
-  data: function data() {
-    return {
-      COLORS: ['#42b28a', '#5691ce', '#612ff9', '#d50b90', '#ff2316']
-    };
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: "Sudeep Batra (www.stoxalpha.com)",
+        version: "1.0.0"
+      };
+    },
+    draw: function draw(ctx) {
+      var layout = this.$props.layout;
+      var propsSub = this.$props.sub;
+      this.ctxTenkan = ctx;
+      this.ctxKijun = ctx;
+      this.ctxSenkouSpanA = ctx;
+      this.ctxSenkouSpanB = ctx;
+      this.ctxChinkou = ctx;
+      this.ctxFillKumo = ctx;
+      var subdata = this.$props.data.slice(0, propsSub.length);
+      var subdataSenkouSpan = this.$props.data.slice(0, propsSub.length + this.offset);
+      var subdataChinkou = this.$props.data.slice(0, propsSub.length - this.offset);
+
+      if (this.showFillKumo) {
+        this.ctxFillKumo.beginPath();
+        var ind = 0;
+
+        var _iterator = _createForOfIteratorHelper(subdataSenkouSpan),
+            _step;
+
+        try {
+          for (_iterator.s(); !(_step = _iterator.n()).done;) {
+            var currItem = _step.value;
+
+            if (ind > 1) {
+              var p1 = this.map_senkou_span_values(subdataSenkouSpan[ind - 1]);
+              var p2 = this.map_senkou_span_values(currItem);
+              this.ctxSenkouSpanB.beginPath();
+              this.ctxSenkouSpanB.moveTo(p1.x, p1.senkouSpanA);
+              this.ctxSenkouSpanB.lineTo(p2.x + 0.1, p2.senkouSpanA);
+              this.ctxSenkouSpanB.lineTo(p2.x + 0.1, p2.senkouSpanB);
+              this.ctxSenkouSpanB.lineTo(p1.x, p1.senkouSpanB);
+
+              if (p1.senkouSpanA >= p1.senkouSpanB) {
+                this.ctxSenkouSpanB.fillStyle = this.kumo_down_color;
+              } else {
+                this.ctxSenkouSpanB.fillStyle = this.kumo_up_color;
+              }
+
+              this.ctxSenkouSpanB.fill();
+            }
+
+            ind++;
+          }
+        } catch (err) {
+          _iterator.e(err);
+        } finally {
+          _iterator.f();
+        }
+
+        this.ctxSenkouSpanB.stroke();
+      }
+
+      if (this.showTenkan) {
+        this.ctxTenkan.beginPath();
+
+        var _iterator2 = _createForOfIteratorHelper(subdata),
+            _step2;
+
+        try {
+          for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+            var pTenkan = _step2.value;
+            this.ctxTenkan.strokeStyle = this.tenkan_color;
+            this.ctxTenkan.lineWidth = this.tenkan_line_width;
+            this.ctxTenkan.lineTo(layout.t2screen(pTenkan[0]), layout.$2screen(pTenkan[1]));
+          }
+        } catch (err) {
+          _iterator2.e(err);
+        } finally {
+          _iterator2.f();
+        }
+
+        this.ctxTenkan.stroke();
+      }
+
+      if (this.showKijun) {
+        this.ctxKijun.beginPath();
+
+        var _iterator3 = _createForOfIteratorHelper(subdata),
+            _step3;
+
+        try {
+          for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+            var pKijun = _step3.value;
+            this.ctxKijun.strokeStyle = this.kijun_color;
+            this.ctxKijun.lineWidth = this.kijun_line_width;
+            this.ctxKijun.lineTo(layout.t2screen(pKijun[0]), layout.$2screen(pKijun[2]));
+          }
+        } catch (err) {
+          _iterator3.e(err);
+        } finally {
+          _iterator3.f();
+        }
+
+        this.ctxKijun.stroke();
+      }
+
+      if (this.showSenkouSpanA) {
+        this.ctxSenkouSpanA.beginPath();
+
+        var _iterator4 = _createForOfIteratorHelper(subdataSenkouSpan),
+            _step4;
+
+        try {
+          for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
+            var pSenkouSpanA = _step4.value;
+            this.ctxSenkouSpanA.strokeStyle = this.senkou_spanA_color;
+            this.ctxSenkouSpanA.lineWidth = this.senkou_spanA_line_width;
+            this.ctxSenkouSpanA.lineTo(layout.t2screen(pSenkouSpanA[0]), layout.$2screen(pSenkouSpanA[3]));
+          }
+        } catch (err) {
+          _iterator4.e(err);
+        } finally {
+          _iterator4.f();
+        }
+
+        this.ctxSenkouSpanA.stroke();
+      }
+
+      if (this.colorSenkouSpanB) {
+        this.ctxSenkouSpanB.beginPath();
+
+        var _iterator5 = _createForOfIteratorHelper(subdataSenkouSpan),
+            _step5;
+
+        try {
+          for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
+            var pSenkouSpanB = _step5.value;
+            this.ctxSenkouSpanB.strokeStyle = this.senkou_spanB_color;
+            this.ctxSenkouSpanB.lineWidth = this.senkou_spanB_line_width;
+            this.ctxSenkouSpanB.lineTo(layout.t2screen(pSenkouSpanB[0]), layout.$2screen(pSenkouSpanB[4]));
+          }
+        } catch (err) {
+          _iterator5.e(err);
+        } finally {
+          _iterator5.f();
+        }
+
+        this.ctxSenkouSpanB.stroke();
+      }
+
+      if (this.showChinkou) {
+        this.ctxChinkou.beginPath();
+
+        var _iterator6 = _createForOfIteratorHelper(subdataChinkou),
+            _step6;
+
+        try {
+          for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
+            var pChikou = _step6.value;
+            this.ctxChinkou.strokeStyle = this.chinkou_color;
+            this.ctxChinkou.lineWidth = this.chinkou_line_width;
+            this.ctxChinkou.lineTo(layout.t2screen(pChikou[0]), layout.$2screen(pChikou[5]));
+          }
+        } catch (err) {
+          _iterator6.e(err);
+        } finally {
+          _iterator6.f();
+        }
+
+        this.ctxChinkou.stroke();
+      }
+    },
+    map_senkou_span_values: function map_senkou_span_values(p) {
+      var layout = this.$props.layout;
+      return p && {
+        x: layout.t2screen(p[0]),
+        senkouSpanA: layout.$2screen(p[3]),
+        senkouSpanB: layout.$2screen(p[4])
+      };
+    },
+    use_for: function use_for() {
+      return ["Ichimoku"];
+    },
+    data_colors: function data_colors() {
+      var colors = [];
+      colors.push(this.tenkan_color);
+      colors.push(this.kijun_color);
+      colors.push(this.senkou_spanA_color);
+      colors.push(this.senkou_spanB_color);
+      colors.push(this.chinkou_color);
+      return colors;
+    }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/TestOverlay1/TestOverlay1.vue?vue&type=script&lang=js&
- /* harmony default export */ var TestOverlay1_TestOverlay1vue_type_script_lang_js_ = (TestOverlay1vue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
+ /* harmony default export */ var Ichimoku_Ichimokuvue_type_script_lang_js_ = (Ichimokuvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -321,7 +498,7 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./src/overlays/TestOverlay1/TestOverlay1.vue
+// CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue
 var render, staticRenderFns
 
 
@@ -330,7 +507,7 @@ var render, staticRenderFns
 /* normalize component */
 
 var component = normalizeComponent(
-  TestOverlay1_TestOverlay1vue_type_script_lang_js_,
+  Ichimoku_Ichimokuvue_type_script_lang_js_,
   render,
   staticRenderFns,
   false,
@@ -342,8 +519,136 @@ var component = normalizeComponent(
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "src/overlays/TestOverlay1/TestOverlay1.vue"
-/* harmony default export */ var TestOverlay1 = (component.exports);
+component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
+/* harmony default export */ var Ichimoku = (component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/TestOverlay1/TestOverlay1.vue?vue&type=script&lang=js&
+function TestOverlay1vue_type_script_lang_js_createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = TestOverlay1vue_type_script_lang_js_unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function TestOverlay1vue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TestOverlay1vue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TestOverlay1vue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function TestOverlay1vue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// Spline renderer. (SMAs, EMAs, TEMAs...
+// you know what I mean)
+// TODO: make a real spline, not a bunch of lines...
+// Adds all necessary stuff for you.
+
+/* harmony default export */ var TestOverlay1vue_type_script_lang_js_ = ({
+  name: 'TestOverlay1',
+  mixins: [external_trading_vue_js_["Overlay"]],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: 'Bro2020',
+        version: '1.0.0'
+      };
+    },
+    // Here goes your code. You are provided with:
+    // { All stuff is reactive }
+    // $props.layout -> positions of all chart elements +
+    //  some helper functions (see layout_fn.js)
+    // $props.interval -> candlestick time interval
+    // $props.sub -> current subset of candlestick data
+    // $props.data -> your indicator's data subset.
+    //  Comes "as is", should have the following format:
+    //  [[<timestamp>, ... ], ... ]
+    // $props.colors -> colors (see TradingVue.vue)
+    // $props.cursor -> current position of crosshair
+    // $props.settings -> indicator's custom settings
+    //  E.g. colors, line thickness, etc. You define it.
+    // $props.num -> indicator's layer number (of All
+    // layers in the current grid)
+    // $props.id -> indicator's id (e.g. EMA_0)
+    // ~
+    // Finally, let's make the canvas dirty!
+    draw: function draw(ctx) {
+      ctx.lineWidth = this.line_width;
+      ctx.strokeStyle = this.color;
+      ctx.beginPath();
+      var layout = this.$props.layout;
+      var i = this.data_index;
+
+      var _iterator = TestOverlay1vue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var p = _step.value;
+          var x = layout.t2screen(p[0]);
+          var y = layout.$2screen(p[i]);
+          ctx.lineTo(x, y);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      ctx.stroke();
+    },
+    // For all data with these types overlay will be
+    // added to the renderer list. And '$props.data'
+    // will have the corresponding values. If you want to
+    // redefine the default behviour for a prticular
+    // indicator (let's say EMA),
+    // just create a new overlay with the same type:
+    // e.g. use_for() { return ['EMA'] }.
+    use_for: function use_for() {
+      return ['TestOverlay1'];
+    },
+    // Colors for the legend, should have the
+    // same dimention as a data point (excl. timestamp)
+    data_colors: function data_colors() {
+      return [this.color];
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    line_width: function line_width() {
+      return this.sett.lineWidth || 2;
+    },
+    color: function color() {
+      var n = this.$props.num % 5;
+      return this.sett.color || this.COLORS[n];
+    },
+    data_index: function data_index() {
+      return this.sett.dataIndex || 1;
+    }
+  },
+  data: function data() {
+    return {
+      COLORS: ['#42b28a', '#5691ce', '#612ff9', '#d50b90', '#ff2316']
+    };
+  }
+});
+// CONCATENATED MODULE: ./src/overlays/TestOverlay1/TestOverlay1.vue?vue&type=script&lang=js&
+ /* harmony default export */ var TestOverlay1_TestOverlay1vue_type_script_lang_js_ = (TestOverlay1vue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/overlays/TestOverlay1/TestOverlay1.vue
+var TestOverlay1_render, TestOverlay1_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var TestOverlay1_component = normalizeComponent(
+  TestOverlay1_TestOverlay1vue_type_script_lang_js_,
+  TestOverlay1_render,
+  TestOverlay1_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var TestOverlay1_api; }
+TestOverlay1_component.options.__file = "src/overlays/TestOverlay1/TestOverlay1.vue"
+/* harmony default export */ var TestOverlay1 = (TestOverlay1_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/TestOverlay2/TestOverlay2.vue?vue&type=script&lang=js&
 function TestOverlay2vue_type_script_lang_js_createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = TestOverlay2vue_type_script_lang_js_unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
@@ -481,7 +786,9 @@ TestOverlay2_component.options.__file = "src/overlays/TestOverlay2/TestOverlay2.
 // experiment: 'npm run compile'
 
 
+
 var Pack = {
+  Ichimoku: Ichimoku,
   TestOverlay1: TestOverlay1,
   TestOverlay2: TestOverlay2
 };
