@@ -1,12 +1,12 @@
 <script>
 //Ichimoku Indicator Overlay. Expected Format: [ <timestamp>, <ConversionLine>, <BaseLine>, <Lead1>, <Lead2>, <Lagging> ]
-import { Overlay, Tool } from 'trading-vue-js'
+import { Overlay } from 'trading-vue-js'
 
 export default {
     name: "Ichimoku",
     mixins: [Overlay],
     data() {
-        return {            
+        return {
             ctxTenkan: {},
             ctxKijun: {},
             ctxSenkouSpanA: {},
@@ -78,7 +78,7 @@ export default {
         },
         chinkou_line_width() {
             return this.sett['chinkou_line_width'] || this.chinkouLineWidth;
-        },                                
+        },
     },
     methods: {
         meta_info() {
@@ -201,12 +201,12 @@ export default {
             return ["Ichimoku"];
         },
         data_colors() {
-            let colors = [];           
+            let colors = [];
             colors.push(this.tenkan_color)
             colors.push(this.kijun_color)
             colors.push(this.senkou_spanA_color)
             colors.push(this.senkou_spanB_color)
-            colors.push(this.chinkou_color)            
+            colors.push(this.chinkou_color)
 
             return colors;
         }
