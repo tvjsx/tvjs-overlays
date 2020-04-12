@@ -3,6 +3,7 @@ const fs = require('fs')
 const colors = require('colors')
 const minimist = require('minimist')
 const pathmod = require('path')
+const recursive = require('recursive-readdir-sync')
 
 
 const argv = minimist(process.argv.slice(2))
@@ -88,6 +89,8 @@ function read_overlay(path) {
     let dotvue = []
 
     let folder = path.split('/').reverse()[0]
+
+    check_scoped_styles(path)
 
     for (var f of fs.readdirSync(path)) {
         if (f === '.DS_Store') continue
@@ -193,7 +196,28 @@ function README_check(info) {
             '\n💡 Add README.md on how to use your overlay'.gray
         )
     }
+}
 
+function check_scoped_styles(path) {
+    files = recursive(path)
+    for (var file of files) {
+        if (file.split('.').pop() === 'vue') {
+            let content = fs.readFileSync(file, 'utf8')
+            let tag = style_tag(content)
+            if(tag && tag[1] !== 'scoped') {
+                let f = pathmod.basename(file)
+                throw `${f}: Styles should be scoped: <style scoped>`
+            }
+        }
+    }
+}
+
+function style_tag(str) {
+    const reg = new RegExp(
+        '<style\\s*([a-zA-Z]+)?\\s*>[^\0]*?<\/style>',
+        'gm')
+    let res = reg.exec(str)
+    return res
 }
 
 function extract_info(file) {

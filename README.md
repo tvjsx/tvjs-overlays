@@ -83,4 +83,5 @@ app = new Vue({
 5. `npm run check` to check that everything is OK
 6. `npm run compile` to build the development index
 7. `npm run dev` to test your overlays
-8. Submit a PR request to this repo
+8. Add a short README.md ([example](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/TestOverlay1))
+9. Submit a PR request to this repo
