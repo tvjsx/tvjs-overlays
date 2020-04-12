@@ -4,7 +4,7 @@
 // TODO: make a real spline, not a bunch of lines...
 
 // Adds all necessary stuff for you.
-import { Overlay, Tool } from 'trading-vue-js'
+import { Overlay } from 'trading-vue-js'
 
 export default {
     name: 'TestOverlay1',
