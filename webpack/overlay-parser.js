@@ -20,7 +20,7 @@ const argv = minimist(process.argv.slice(2))
 [+] required meta: author, version
 [+] data.json < 1MB
 [ ] updated version > the version in overlays.lock
-[ ] interface styles should be scoped
+[+] interface styles should be scoped
 [ ] no collisions of custom events
 [+] encourage README.md
 [ ] imports from 'trading-vue-js', not from local files
