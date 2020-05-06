@@ -10,6 +10,7 @@ if (!argv._.length) {
     --filter=<t1,t2> :: Slice by timestamp t1 & t2
     --out=<path>     :: Output file (./~<filename> by default)
     --overlay=<Name> :: Remove all overlays except <Name>
+    --prec=<N>       :: Decrease numbers precision to N digits
     `)
     process.exit()
 }
@@ -86,6 +87,37 @@ if (argv.overlay) {
         if (ov.name !== argv.overlay) {
             data.offchart.splice(i, 1)
         }
+    }
+
+}
+
+function round(num, decimals = 8) {
+    return parseFloat(num.toFixed(decimals))
+}
+
+function round_arr(src) {
+    for (var dp of src) {
+        for (var i = 0; i < dp.length; i++) {
+            dp[i] = round(dp[i], argv.prec)
+        }
+    }
+}
+
+if ('prec' in argv) {
+    var src = data.ohlcv ? data.ohlcv : data.chart.data
+
+    for (var dp of src) {
+        for (var i = 0; i < dp.length; i++) {
+            dp[i] = round(dp[i], argv.prec)
+        }
+    }
+
+    for (var ov of data.onchart || []) {
+        round_arr(ov.data)
+    }
+
+    for (var ov of data.offchart || []) {
+        round_arr(ov.data) 
     }
 
 }
