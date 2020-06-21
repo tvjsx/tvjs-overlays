@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.1.0 - Tue Apr 07 2020
+ * TVJS Overlays - v0.1.1 - Sun Jun 21 2020
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -116,6 +116,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "Ichimoku", function() { return /* reexport */ Ichimoku; });
+__webpack_require__.d(__webpack_exports__, "LongShortTrades", function() { return /* reexport */ LongShortTrades; });
 __webpack_require__.d(__webpack_exports__, "TestOverlay1", function() { return /* reexport */ TestOverlay1; });
 __webpack_require__.d(__webpack_exports__, "TestOverlay2", function() { return /* reexport */ TestOverlay2; });
 
@@ -125,7 +126,7 @@ var external_trading_vue_js_ = __webpack_require__(0);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -468,7 +469,12 @@ function normalizeComponent (
     options._ssrRegister = hook
   } else if (injectStyles) {
     hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
       : injectStyles
   }
 
@@ -521,10 +527,299 @@ var component = normalizeComponent(
 if (false) { var api; }
 component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
 /* harmony default export */ var Ichimoku = (component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
+function LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+//Long Short Overlay. Expected Format: [ <timestamp>, <Short:0 Long:1 ShortCover: 2 LongCover:3>, <Price Change>, <Percent Price Change>, <Open Price>, <High Price>, <Low Price>, <Close Price> ]
+
+/* harmony default export */ var LongShortTradesvue_type_script_lang_js_ = ({
+  name: 'LongShortTrades',
+  mixins: [external_trading_vue_js_["Overlay"]],
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    default_font: function default_font() {
+      return '12px ' + this.$props.font.split('px').pop();
+    },
+    currency_symbol: function currency_symbol() {
+      return this.sett.currency || '₹';
+    },
+    long_color: function long_color() {
+      return this.sett.longColor || '#63df89';
+    },
+    short_color: function short_color() {
+      return this.sett.shortColor || '#ffd581';
+    },
+    long_cover_color: function long_cover_color() {
+      return this.sett.longCoverColor || '#fc7e2f';
+    },
+    short_cover_color: function short_cover_color() {
+      return this.sett.shortCoverColor || '#ff6bd6';
+    },
+    label_color: function label_color() {
+      return '#4BECF9';
+    },
+    marker_size: function marker_size() {
+      return this.sett.markerSize || 5;
+    },
+    show_label: function show_label() {
+      return this.sett.showLabel !== false;
+    },
+    new_font: function new_font() {
+      return this.sett.font || this.default_font;
+    }
+  },
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: 'Sudeep Batra',
+        version: '1.0.1'
+      };
+    },
+    draw: function draw(ctx) {
+      var layout = this.$props.layout;
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = 'black';
+
+      var _iterator = LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var p = _step.value;
+          var tradeTime = p[0];
+          var longShortEntryExit = p[1];
+          var priceChange = p[2];
+          var percentPriceChange = p[3];
+          var openPrice = p[4];
+          var highPrice = p[5];
+          var lowPrice = p[6];
+          var closePrice = p[7];
+          var x = layout.t2screen(tradeTime);
+          var lowPriceY = layout.$2screen(lowPrice);
+          var highPriceY = layout.$2screen(highPrice);
+
+          switch (longShortEntryExit) {
+            case 0:
+              this.filledArrowDownFilledBottom(ctx, x, highPriceY - 25, 5, 5, 3, 20, this.short_color);
+              this.draw_label(ctx, x + 30, highPriceY - 35, this.currency_symbol + closePrice);
+              break;
+
+            case 1:
+              this.filledArrowUpFilledBottom(ctx, x, lowPriceY + 20, 5, 5, 3, 20, this.long_color);
+              this.draw_label(ctx, x + 30, lowPriceY + 40, this.currency_symbol + closePrice);
+              break;
+
+            case 2:
+              this.upTriangle(ctx, x, lowPriceY + 25, 5, 7, this.short_cover_color);
+
+              if (this.show_label && priceChange) {
+                this.draw_label(ctx, x, lowPriceY + 50, priceChange + " (" + percentPriceChange + ")");
+              }
+
+              break;
+
+            case 3:
+              this.downTriangle(ctx, x, highPriceY - 25, 5, 7, this.long_cover_color);
+
+              if (this.show_label && priceChange) {
+                this.draw_label(ctx, x, highPriceY - 45, priceChange + " (" + percentPriceChange + ")");
+              }
+
+              break;
+
+            default:
+              ctx.fillStyle = 'black';
+          } // this.simpleArrowUp(ctx, x, z - 25, '#84e5b1')
+          // this.simpleArrowDown(ctx, x, z - 25, '#84e5b1')
+          // this.filledArrowUp(ctx, x, z - 25, 5, 5, 20, '#84e5b1')
+          // this.filledDownArrow(ctx, x, z - 25, 5, 5, 20, '#84e5b1')
+          // this.filledArrowUpFilledBottom(ctx, x, z - 25, 5, 5, 3, 20, '#84e5b1')
+          // this.filledArrowDownFilledBottom(ctx, x, z - 25, 5, 5, 3, 20, '#84e5b1')
+          // this.upTriangle(ctx, x, z-60, 5, 7, '#84e5b1')
+          // this.downTriangle(ctx, x, z - 25, 5, 7, '#84e5b1')
+
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    },
+    draw_label: function draw_label(ctx, x, y, labelText) {
+      ctx.fillStyle = this.label_color;
+      ctx.font = this.new_font;
+      ctx.textAlign = 'center';
+      ctx.fillText(labelText, x, y);
+    },
+    use_for: function use_for() {
+      return ['LongShortTrades'];
+    },
+    legend: function legend(values) {
+      switch (values[1]) {
+        case 0:
+          var pos = 'Short';
+          break;
+
+        case 1:
+          pos = 'Long';
+          break;
+
+        case 2:
+          pos = 'Short Cover';
+          break;
+
+        case 3:
+          pos = 'Long Cover';
+          break;
+
+        default:
+          pos = 'Unknown';
+      }
+
+      return [{
+        value: pos
+      }, {
+        value: values[2].toFixed(4),
+        color: this.$props.colors.colorText
+      }].concat(values[3] ? [{
+        value: values[3]
+      }] : []);
+    },
+    simpleArrowUp: function simpleArrowUp(ctx, x, y, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - 5, y + 5);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + 5, y + 5);
+      ctx.moveTo(x, y);
+      ctx.lineTo(x, y + 15);
+      ctx.stroke();
+      ctx.closePath();
+    },
+    simpleArrowDown: function simpleArrowDown(ctx, x, y, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - 5, y - 5);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + 5, y - 5);
+      ctx.moveTo(x, y);
+      ctx.lineTo(x, y - 15);
+      ctx.stroke();
+      ctx.closePath();
+    },
+    filledArrowUp: function filledArrowUp(ctx, x, y, width, height, depth, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - width, y + height);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + width, y + height);
+      ctx.moveTo(x, y);
+      ctx.lineTo(x, y + depth);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    },
+    filledDownArrow: function filledDownArrow(ctx, x, y, width, height, depth, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - width, y - height);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + width, y - height);
+      ctx.moveTo(x, y);
+      ctx.lineTo(x, y - depth);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    },
+    filledArrowUpFilledBottom: function filledArrowUpFilledBottom(ctx, x, y, width, height, bottom, depth, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - width, y + height);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + width, y + height);
+      ctx.moveTo(x, y);
+      ctx.rect(x - bottom / 2, y + height, bottom, depth);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    },
+    filledArrowDownFilledBottom: function filledArrowDownFilledBottom(ctx, x, y, width, height, bottom, depth, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - width, y - height);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + width, y - height);
+      ctx.moveTo(x, y);
+      ctx.rect(x - bottom / 2, y - height - depth, bottom, depth);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    },
+    upTriangle: function upTriangle(ctx, x, y, width, height, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - width, y + height);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + width, y + height);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    },
+    downTriangle: function downTriangle(ctx, x, y, width, height, color) {
+      ctx.beginPath();
+      ctx.fillStyle = color;
+      ctx.strokeStyle = color;
+      ctx.moveTo(x - width, y - height);
+      ctx.lineTo(x, y);
+      ctx.lineTo(x + width, y - height);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    }
+  }
+});
+// CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
+ /* harmony default export */ var LongShortTrades_LongShortTradesvue_type_script_lang_js_ = (LongShortTradesvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue
+var LongShortTrades_render, LongShortTrades_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var LongShortTrades_component = normalizeComponent(
+  LongShortTrades_LongShortTradesvue_type_script_lang_js_,
+  LongShortTrades_render,
+  LongShortTrades_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var LongShortTrades_api; }
+LongShortTrades_component.options.__file = "src/overlays/LongShortTrades/LongShortTrades.vue"
+/* harmony default export */ var LongShortTrades = (LongShortTrades_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/TestOverlay1/TestOverlay1.vue?vue&type=script&lang=js&
 function TestOverlay1vue_type_script_lang_js_createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = TestOverlay1vue_type_script_lang_js_unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function TestOverlay1vue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TestOverlay1vue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TestOverlay1vue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+function TestOverlay1vue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TestOverlay1vue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TestOverlay1vue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
 function TestOverlay1vue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -652,7 +947,7 @@ TestOverlay1_component.options.__file = "src/overlays/TestOverlay1/TestOverlay1.
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/TestOverlay2/TestOverlay2.vue?vue&type=script&lang=js&
 function TestOverlay2vue_type_script_lang_js_createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = TestOverlay2vue_type_script_lang_js_unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function TestOverlay2vue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TestOverlay2vue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TestOverlay2vue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+function TestOverlay2vue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TestOverlay2vue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TestOverlay2vue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
 function TestOverlay2vue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
@@ -787,8 +1082,10 @@ TestOverlay2_component.options.__file = "src/overlays/TestOverlay2/TestOverlay2.
 
 
 
+
 var Pack = {
   Ichimoku: Ichimoku,
+  LongShortTrades: LongShortTrades,
   TestOverlay1: TestOverlay1,
   TestOverlay2: TestOverlay2
 };
