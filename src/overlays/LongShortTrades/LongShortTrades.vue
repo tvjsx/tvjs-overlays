@@ -1,9 +1,6 @@
 <script>
 //Long Short Overlay. Expected Format: [ <timestamp>, <Short:0 Long:1 ShortCover: 2 LongCover:3>, <Price Change>, <Percent Price Change>, <Open Price>, <High Price>, <Low Price>, <Close Price> ]
-import {
-    Overlay,
-    Tool
-} from 'trading-vue-js'
+import { Overlay, Tool } from 'trading-vue-js'
 
 export default {
     name: 'LongShortTrades',
@@ -16,19 +13,19 @@ export default {
             return '12px ' + this.$props.font.split('px').pop()
         },
         currency_symbol() {
-            return '₹'
-        },        
+            return this.sett.currency || '₹'
+        },
         long_color() {
             return this.sett.longColor || '#63df89'
         },
         short_color() {
             return this.sett.shortColor || '#ffd581'
         },
-        long_cover_color() {            
+        long_cover_color() {
             return this.sett.longCoverColor || '#fc7e2f'
         },
         short_cover_color() {
-            return this.sett.shortCoverColor || '#ff6bd6'         
+            return this.sett.shortCoverColor || '#ff6bd6'
         },
         label_color() {
             return '#4BECF9'
@@ -81,13 +78,13 @@ export default {
                         this.upTriangle(ctx, x, lowPriceY + 25, 5, 7, this.short_cover_color)
                         if (this.show_label && priceChange) {
                             this.draw_label(ctx, x, lowPriceY + 50, priceChange + " (" + percentPriceChange + ")")
-                        }                        
+                        }
                         break
                     case 3:
                         this.downTriangle(ctx, x, highPriceY - 25, 5, 7, this.long_cover_color)
                         if (this.show_label && priceChange) {
                             this.draw_label(ctx, x, highPriceY - 45, priceChange + " (" + percentPriceChange + ")")
-                        }                        
+                        }
                         break
                     default:
                         ctx.fillStyle = 'black'
@@ -96,7 +93,7 @@ export default {
                 // this.simpleArrowUp(ctx, x, z - 25, '#84e5b1')
                 // this.simpleArrowDown(ctx, x, z - 25, '#84e5b1')
                 // this.filledArrowUp(ctx, x, z - 25, 5, 5, 20, '#84e5b1')
-                // this.filledDownArrow(ctx, x, z - 25, 5, 5, 20, '#84e5b1')                
+                // this.filledDownArrow(ctx, x, z - 25, 5, 5, 20, '#84e5b1')
                 // this.filledArrowUpFilledBottom(ctx, x, z - 25, 5, 5, 3, 20, '#84e5b1')
                 // this.filledArrowDownFilledBottom(ctx, x, z - 25, 5, 5, 3, 20, '#84e5b1')
                 // this.upTriangle(ctx, x, z-60, 5, 7, '#84e5b1')
