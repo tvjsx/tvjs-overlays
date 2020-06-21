@@ -8,11 +8,13 @@
 // experiment: 'npm run compile'
 
 import Ichimoku from './overlays/Ichimoku/Ichimoku.vue'
+import LongShortTrades from './overlays/LongShortTrades/LongShortTrades.vue'
 import TestOverlay1 from './overlays/TestOverlay1/TestOverlay1.vue'
 import TestOverlay2 from './overlays/TestOverlay2/TestOverlay2.vue'
 
 const Pack = {
     Ichimoku,
+    LongShortTrades,
     TestOverlay1,
     TestOverlay2
 }
@@ -25,6 +27,7 @@ export default Pack
 
 export {
     Ichimoku,
+    LongShortTrades,
     TestOverlay1,
     TestOverlay2
 }

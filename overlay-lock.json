@@ -5,6 +5,11 @@
             "author": "Sudeep Batra (www.stoxalpha.com)",
             "is_tool": false
         },
+        "LongShortTrades": {
+            "version": "1.0.1",
+            "author": "Sudeep Batra",
+            "is_tool": false
+        },
         "TestOverlay1": {
             "version": "1.0.0",
             "author": "Bro2020",
