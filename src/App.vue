@@ -45,6 +45,7 @@ export default {
     mounted() {
         window.addEventListener('resize', this.onResize)
         this.$set(this, 'chart', Data)
+        window.data = Data
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.onResize)
