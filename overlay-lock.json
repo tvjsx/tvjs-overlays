@@ -1,8 +1,78 @@
 {
     "overlays": {
+        "ALMA": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "ATR": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "ATRp": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "BB": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "BBW": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "CCI": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "CMO": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "COG": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "DMI": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "EMA": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "HMA": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "Histogram": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
         "Ichimoku": {
             "version": "1.0.0",
             "author": "Sudeep Batra (www.stoxalpha.com)",
+            "is_tool": false
+        },
+        "KC": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "KCW": {
+            "version": "1.0.0",
+            "author": "StdSquad",
             "is_tool": false
         },
         "LongShortTrades": {
@@ -10,14 +80,74 @@
             "author": "Sudeep Batra",
             "is_tool": false
         },
-        "TestOverlay1": {
+        "MACD": {
             "version": "1.0.0",
-            "author": "Bro2020",
+            "author": "StdSquad",
             "is_tool": false
         },
-        "TestOverlay2": {
+        "MFI": {
             "version": "1.0.0",
-            "author": "CyberFist",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "MOM": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "PlotCross": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "ROC": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "RSI": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "Ribbon": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "SAR": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "SMA": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "SWMA": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "Stoch": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "TSI": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "VWMA": {
+            "version": "1.0.0",
+            "author": "StdSquad",
+            "is_tool": false
+        },
+        "WilliamsR": {
+            "version": "1.0.0",
+            "author": "StdSquad",
             "is_tool": false
         }
     }
