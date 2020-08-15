@@ -16,6 +16,7 @@
             <trading-vue :data="chart" :width="this.width" :height="this.height"
                 title-txt="TVJS Overlays"
                 ref="tvjs"
+                :chart-config="{DEFAULT_LEN:70}"
                 :overlays="overlays"
                 :color-back="colors.colorBack"
                 :color-grid="colors.colorGrid"
@@ -27,6 +28,7 @@
 
 <script>
 import TradingVue from 'trading-vue-js'
+import { DataCube } from 'trading-vue-js'
 import StdInput from './components/StdInput.vue'
 import Data from '../data/data.json'
 import Overlays from './index_dev'
@@ -45,7 +47,6 @@ export default {
     mounted() {
         window.addEventListener('resize', this.onResize)
         this.$set(this, 'chart', Data)
-        window.data = Data
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.onResize)
@@ -73,7 +74,7 @@ export default {
     watch: {
         current(nv) {
             if (nv === 'Default') {
-                this.$set(this, 'chart', Data)
+                this.$set(this, 'chart', new DataCube(Data))
                 this.$refs.tvjs.resetChart()
                 return
             }
@@ -82,8 +83,10 @@ export default {
             fetch(path).then(response => {
                 return response.json()
             }).then(data => {
-                this.$set(this, 'chart', data)
+                this.$set(this, 'chart', new DataCube(data))
                 this.$refs.tvjs.resetChart()
+                window.data = data
+                window.dc = this.chart
             }).catch(e => {
                 console.log(e)
             })

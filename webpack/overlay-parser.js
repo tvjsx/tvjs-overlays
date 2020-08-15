@@ -12,7 +12,7 @@ const argv = minimist(process.argv.slice(2))
 
 [+] file name === name === folder name
 [ ] file name < some length (symbols)
-[+] required functions: draw, use_for
+[+] required functions: draw (or calc renderer), use_for
 [+] use_for includes name
 [+] use_for.length === 1
 [+] name is unique (CapitalizedWords, ALL_CAPS, Numbers_123)
@@ -74,7 +74,7 @@ function name_checker() {
 
     try {
         if (!name_format_check(NAME)) return
-        if (names.includes(NAME)) {
+        if (names.includes(NAME.toLowerCase())) {
             throw `Name ${NAME.yellow} already exists`
         }
         console.log(`The name is cool`, '[OK]'.green)
@@ -123,14 +123,16 @@ function read_overlay(path) {
 
 function checks(info) {
 
-    if (names.includes(info.name))
+    if (names.includes(info.name.toLowerCase()))
         throw "Overlay's name is not unique"
 
     if (typeof info.methods.use_for !== 'function')
         throw "use_for() method is required"
 
-    if (typeof info.methods.draw !== 'function')
-        throw "draw() method is required"
+    if (typeof info.methods.draw !== 'function' &&
+        !calc_render_check(info))
+        throw "draw() method is required" +
+              "(or custom calc().conf renderer)"
 
     if (!info.methods.use_for().includes(info.name))
         throw "use_for() doesn't include overlay's name"
@@ -152,12 +154,12 @@ function checks(info) {
 
     README_check(info)
 
-    names.push(info.name)
+    names.push(info.name.toLowerCase())
 
 }
 
 function name_format_check(name) {
-     if (!/^[a-zA-Z_0-9]*$/.test(name)) {
+     if (!/^[a-zA-Z_0-9]*/.test(name)) {
          console.log("⚠️  Only a-Z, 0-9 and _ are alowed")
          return false
      }
@@ -166,6 +168,11 @@ function name_format_check(name) {
          return false
      }
      return true
+}
+
+function calc_render_check(info) {
+    let calc = info.methods.calc()
+    return calc.conf && calc.conf.renderer
 }
 
 function data_json_check(info) {
