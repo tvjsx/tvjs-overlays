@@ -12,36 +12,36 @@
 
 | Name | Author | Type | Description | Version |
 |---|---|---|---|---|
-| ALMA | StdSquad | OV+Script | Arnaud Legoux Moving Average | 1.0.0 |
-| ATR | StdSquad | OV+Script | Average True Range | 1.0.0 |
-| ATRp | StdSquad | OV+Script | Average True Range, % | 1.0.0 |
-| BB | StdSquad | OV+Script | Bollinger Bands | 1.0.0 |
-| BBW | StdSquad | OV+Script | Bollinger Bands Width | 1.0.0 |
-| CCI | StdSquad | OV+Script | Commodity Channel Index | 1.0.0 |
-| CMO | StdSquad | OV+Script | Chande Momentum Oscillator | 1.0.0 |
-| COG | StdSquad | OV+Script | Center of Gravity | 1.0.0 |
-| DMI | StdSquad | OV+Script | Directional Movement Index | 1.0.0 |
-| EMA | StdSquad | OV+Script | Exponential Moving Average | 1.0.0 |
-| HMA | StdSquad | OV+Script | Hull Moving Average | 1.0.0 |
-| Histogram | StdSquad | OV | Histogram plot | 1.0.0 |
-| Ichimoku | Sudeep Batra | OV |  | 1.0.0 |
-| KC | StdSquad | OV+Script | Keltner Channels | 1.0.0 |
-| KCW | StdSquad | OV+Script | Keltner Channels Width | 1.0.0 |
-| LongShortTrades | Sudeep Batra | OV |  | 1.0.1 |
-| MACD | StdSquad | OV+Script | Moving Average Convergence/Divergence | 1.0.0 |
-| MFI | StdSquad | OV+Script | Money Flow Index | 1.0.0 |
-| MOM | StdSquad | OV+Script | Momentum | 1.0.0 |
-| PlotCross | StdSquad | OV | Plot line with crosses | 1.0.0 |
-| ROC | StdSquad | OV+Script | Rate of Change | 1.0.0 |
-| RSI | StdSquad | OV+Script | Relative Strength Index | 1.0.0 |
-| Ribbon | StdSquad | OV+Script | Moving Average Ribbon | 1.0.0 |
-| SAR | StdSquad | OV+Script | Parabolic SAR | 1.0.0 |
-| SMA | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
-| SWMA | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
-| Stoch | StdSquad | OV+Script | Stochastic | 1.0.0 |
-| TSI | StdSquad | OV+Script | True Strength Index | 1.0.0 |
-| VWMA | StdSquad | OV+Script | Volume Weighted Moving Average | 1.0.0 |
-| WilliamsR | StdSquad | OV+Script | Williams %R | 1.0.0 |
+| [ALMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ALMA) | StdSquad | OV+Script | Arnaud Legoux Moving Average | 1.0.0 |
+| [ATR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ATR) | StdSquad | OV+Script | Average True Range | 1.0.0 |
+| [ATRp](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ATRp) | StdSquad | OV+Script | Average True Range, % | 1.0.0 |
+| [BB](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/BB) | StdSquad | OV+Script | Bollinger Bands | 1.0.0 |
+| [BBW](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/BBW) | StdSquad | OV+Script | Bollinger Bands Width | 1.0.0 |
+| [CCI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/CCI) | StdSquad | OV+Script | Commodity Channel Index | 1.0.0 |
+| [CMO](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/CMO) | StdSquad | OV+Script | Chande Momentum Oscillator | 1.0.0 |
+| [COG](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/COG) | StdSquad | OV+Script | Center of Gravity | 1.0.0 |
+| [DMI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/DMI) | StdSquad | OV+Script | Directional Movement Index | 1.0.0 |
+| [EMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/EMA) | StdSquad | OV+Script | Exponential Moving Average | 1.0.0 |
+| [HMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/HMA) | StdSquad | OV+Script | Hull Moving Average | 1.0.0 |
+| [Histogram](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Histogram) | StdSquad | OV | Histogram plot | 1.0.0 |
+| [Ichimoku](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Ichimoku) | Sudeep Batra | OV |  | 1.0.0 |
+| [KC](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/KC) | StdSquad | OV+Script | Keltner Channels | 1.0.0 |
+| [KCW](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/KCW) | StdSquad | OV+Script | Keltner Channels Width | 1.0.0 |
+| [LongShortTrades](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/LongShortTrades) | Sudeep Batra | OV |  | 1.0.1 |
+| [MACD](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MACD) | StdSquad | OV+Script | Moving Average Convergence/Divergence | 1.0.1 |
+| [MFI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MFI) | StdSquad | OV+Script | Money Flow Index | 1.0.0 |
+| [MOM](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MOM) | StdSquad | OV+Script | Momentum | 1.0.0 |
+| [PlotCross](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/PlotCross) | StdSquad | OV | Plot line with crosses | 1.0.0 |
+| [ROC](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ROC) | StdSquad | OV+Script | Rate of Change | 1.0.0 |
+| [RSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/RSI) | StdSquad | OV+Script | Relative Strength Index | 1.0.0 |
+| [Ribbon](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Ribbon) | StdSquad | OV+Script | Moving Average Ribbon | 1.0.0 |
+| [SAR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SAR) | StdSquad | OV+Script | Parabolic SAR | 1.0.0 |
+| [SMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SMA) | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
+| [SWMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SWMA) | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
+| [Stoch](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Stoch) | StdSquad | OV+Script | Stochastic | 1.0.0 |
+| [TSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/TSI) | StdSquad | OV+Script | True Strength Index | 1.0.0 |
+| [VWMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/VWMA) | StdSquad | OV+Script | Volume Weighted Moving Average | 1.0.0 |
+| [WilliamsR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/WilliamsR) | StdSquad | OV+Script | Williams %R | 1.0.0 |
 
 ## Install
 

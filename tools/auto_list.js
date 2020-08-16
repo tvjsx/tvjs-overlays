@@ -14,10 +14,12 @@ const HEAD = `
 | Name | Author | Type | Description | Version |
 |---|---|---|---|---|\n`
 
+const L = `https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/`
+
 let body = ``
 
 for (var ov of list) {
-    let n = ov.name
+    let n = `[${ov.name}](${L + ov.name})`
     let a = ov.methods.meta_info().author
     if (ov.methods.tool) {
         var t = 'Tool'
