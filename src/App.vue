@@ -12,7 +12,7 @@
                 <label>NM</label>
             </span>
         </div>
-        <div id="tvjs-tvjs">
+        <div id="tvjs-tvjs" :style="{top: top+'px'}">
             <trading-vue :data="chart" :width="this.width" :height="this.height"
                 title-txt="TVJS Overlays"
                 ref="tvjs"
@@ -41,12 +41,32 @@ export default {
     methods: {
         onResize() {
             this.width = window.innerWidth
-            this.height = window.innerHeight - 50
+            this.height = window.innerHeight - this.top
+        },
+        win_query() {
+            let qs = (function(a) {
+                if (a == "") return {};
+                var b = {};
+                for (var i = 0; i < a.length; ++i) {
+                    var p=a[i].split('=', 2);
+                    if (p.length == 1)
+                        b[p[0]] = "";
+                    else
+                        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+                return b;
+            })(window.location.search.substr(1).split('&'));
+            return qs
         }
     },
     mounted() {
         window.addEventListener('resize', this.onResize)
         this.$set(this, 'chart', Data)
+        let q = this.win_query()
+        if (q.nm === 'false') this.night = false
+        if (q.ov) this.current = q.ov
+        if (q.header === 'false') this.top = 0
+        this.onResize()
     },
     beforeDestroy() {
         window.removeEventListener('resize', this.onResize)
@@ -55,11 +75,12 @@ export default {
         return {
             chart: {}, // Data will be here,
             width: window.innerWidth,
-            height: window.innerHeight - 50,
+            height: window.innerHeight,
             overlays: Object.values(Overlays),
             overlay_names: ['Default', ...Object.keys(Overlays)],
             night: true,
-            current: 'Default'//Object.keys(Overlays)[0]
+            current: 'Default',
+            top: 50
         }
     },
     computed: {
@@ -123,7 +144,6 @@ body {
 
 #tvjs-tvjs {
     position: absolute;
-    top: 50px;
 }
 #tvjs-header h1 {
     color: #9b9ca0;

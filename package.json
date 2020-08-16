@@ -1,6 +1,6 @@
 {
   "name": "tvjs-overlays",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Overlay pack for trading-vue-js",
   "main": "./dist/tvjs-overlays.js",
   "scripts": {
@@ -39,6 +39,8 @@
     "eslint-plugin-vue": "^6.2.2",
     "html-webpack-plugin": "^4.3.0",
     "minimist": "^1.2.5",
+    "node-fetch": "^2.6.0",
+    "puppeteer": "^5.2.1",
     "recursive-readdir": "^2.2.2",
     "recursive-readdir-sync": "^1.0.6",
     "request": "^2.88.2",

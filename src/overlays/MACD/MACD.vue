@@ -11,7 +11,7 @@ export default {
     methods: {
         meta_info() {
             return {
-                author: 'StdSquad', version: '1.0.0',
+                author: 'StdSquad', version: '1.0.1',
                 desc: 'Moving Average Convergence/Divergence'
             }
         },
@@ -105,7 +105,6 @@ export default {
                     smooth: { def: 9, text: 'Signal EMA' },
                     histColors: { def: [], text: 'Colors' }
                 },
-                conf: { renderer: 'Spline' },
                 update: `
                     let [macd, signal, hist] =
                         macd(close, fast, slow, smooth)

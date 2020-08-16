@@ -241,9 +241,9 @@ function style_tag(str) {
     return res
 }
 
-function extract_info(file) {
+function extract_info(file, content) {
 
-    let content = fs.readFileSync(file, 'utf8')
+    if (!content) content = fs.readFileSync(file, 'utf8')
 
     content = content.replace(/<\/?script>/g, '')
     content = content.replace(/export\s+default/g, 'Export_Default = ')
@@ -255,6 +255,7 @@ function extract_info(file) {
         // structure. It doesn't support full ES6, so
         // the code must be cleaned before the exec.
         let struct = vm.runInNewContext(content)
+        struct.raw_src = content
         return struct
     } catch(e) {
         console.log(e)
@@ -307,3 +308,4 @@ if (require.main === module) {
 
 module.exports.parse = parse
 module.exports.read_overlay = read_overlay
+module.exports.extract_info = extract_info

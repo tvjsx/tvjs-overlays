@@ -62,7 +62,7 @@
         },
         "Ichimoku": {
             "version": "1.0.0",
-            "author": "Sudeep Batra (www.stoxalpha.com)",
+            "author": "Sudeep Batra",
             "is_tool": false
         },
         "KC": {
@@ -81,7 +81,7 @@
             "is_tool": false
         },
         "MACD": {
-            "version": "1.0.0",
+            "version": "1.0.1",
             "author": "StdSquad",
             "is_tool": false
         },

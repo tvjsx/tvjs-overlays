@@ -911,7 +911,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     meta_info: function meta_info() {
       return {
         author: 'StdSquad',
-        version: '1.0.0'
+        version: '1.0.0',
+        desc: 'Histogram plot'
       };
     },
     draw: function draw(ctx) {
@@ -1112,7 +1113,7 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
   methods: {
     meta_info: function meta_info() {
       return {
-        author: "Sudeep Batra (www.stoxalpha.com)",
+        author: "Sudeep Batra",
         version: "1.0.0"
       };
     },
@@ -1762,7 +1763,7 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
     meta_info: function meta_info() {
       return {
         author: 'StdSquad',
-        version: '1.0.0',
+        version: '1.0.1',
         desc: 'Moving Average Convergence/Divergence'
       };
     },
@@ -1902,9 +1903,6 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
             def: [],
             text: 'Colors'
           }
-        },
-        conf: {
-          renderer: 'Spline'
         },
         update: "\n                    let [macd, signal, hist] =\n                        macd(close, fast, slow, smooth)\n\n                    if (hist[0] >= 0) {\n                         var color = histColors[0]\n                         if (hist[0] < hist[1]) color = histColors[1]\n                    } else {\n                        color = histColors[2]\n                        if (hist[0] > hist[1]) color = histColors[3]\n                    }\n\n                    return [hist[0], macd[0], signal[0], color]\n                "
       };
@@ -2092,7 +2090,8 @@ function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     meta_info: function meta_info() {
       return {
         author: 'StdSquad',
-        version: '1.0.0'
+        version: '1.0.0',
+        desc: 'Plot line with crosses'
       };
     },
     draw: function draw(ctx) {
@@ -2574,7 +2573,8 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
     meta_info: function meta_info() {
       return {
         author: 'StdSquad',
-        version: '1.0.0'
+        version: '1.0.0',
+        desc: 'Stochastic'
       };
     },
     draw: function draw(ctx) {
