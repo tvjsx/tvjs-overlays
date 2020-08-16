@@ -7,7 +7,10 @@ export default {
     mixins: [Overlay],
     methods: {
         meta_info() {
-            return { author: 'StdSquad', version: '1.0.0' }
+            return {
+                author: 'StdSquad', version: '1.0.0',
+                desc: 'Stochastic'
+            }
         },
         draw(ctx) {
 

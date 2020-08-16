@@ -83,7 +83,7 @@ export default {
     methods: {
         meta_info() {
             return {
-                author: "Sudeep Batra (www.stoxalpha.com)",
+                author: "Sudeep Batra",
                 version: "1.0.0"
             };
         },

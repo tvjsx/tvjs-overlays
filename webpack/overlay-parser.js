@@ -126,6 +126,10 @@ function checks(info) {
     if (names.includes(info.name.toLowerCase()))
         throw "Overlay's name is not unique"
 
+
+    if (typeof info.methods.meta_info !== 'function')
+        throw "meta_info() method is required"
+
     if (typeof info.methods.use_for !== 'function')
         throw "use_for() method is required"
 
@@ -153,6 +157,7 @@ function checks(info) {
         throw "Problem with data.json"
 
     README_check(info)
+    DESC_check(info)
 
     names.push(info.name.toLowerCase())
 
@@ -199,8 +204,17 @@ function README_check(info) {
     let path = info.path + '/README.md'
 
     if (!fs.existsSync(path)) {
-        process.stdout.write(
+        if (!SL) process.stdout.write(
             '\n💡 Add README.md on how to use your overlay'.gray
+        )
+    }
+}
+
+function DESC_check(info) {
+
+    if (!info.methods.meta_info().desc) {
+        if (!SL) process.stdout.write(
+            `\n💡 Add a description: { author: '...', desc: '...' }`.gray
         )
     }
 }
@@ -292,3 +306,4 @@ if (require.main === module) {
 }
 
 module.exports.parse = parse
+module.exports.read_overlay = read_overlay
