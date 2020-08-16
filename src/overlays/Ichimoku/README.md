@@ -144,4 +144,5 @@ export default {
 ## Read more about Ichimoku
 
 [Investopedia: Ichimoku](https://www.investopedia.com/search?q=Ichimoku)
+[Investopedia: ](https://www.investopedia.com/search?q=)
 

@@ -57,4 +57,5 @@ export default {
 ## Read more about ALMA
 
 [Investopedia: ALMA](https://www.investopedia.com/search?q=ALMA)
+[Investopedia: Arnaud%20Legoux%20Moving%20Average](https://www.investopedia.com/search?q=Arnaud%20Legoux%20Moving%20Average)
 

@@ -13,7 +13,7 @@ const fs = require('fs')
 
 const BASE = `https://api.github.com/repos/tvjsx/trading-vue-js/contents/`
 const OVLIST = `src/components/overlays`
-const TEMP = (name, info, sett, data) =>
+const TEMP = (name, info, sett, data, desc) =>
 `
 # ${name}
 
@@ -63,6 +63,7 @@ ${data}
 ## Read more about ${name}
 
 [Investopedia: ${name}](https://www.investopedia.com/search?q=${name})
+[Investopedia: ${desc}](https://www.investopedia.com/search?q=${desc})
 
 `
 
@@ -122,7 +123,9 @@ async function parse() {
             ov.name,
             format_info(ov),
             format_sett(ov),
-            JSON.stringify(data || [], null, 4)
+            JSON.stringify(data || [], null, 4),
+            (ov.methods.meta_info().desc || '')
+                .replace(/\s/g, '%20')
         )
 
         fs.writeFileSync(ov.path + '/README.md', txt)

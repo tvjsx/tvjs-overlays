@@ -56,4 +56,5 @@ export default {
 ## Read more about BBW
 
 [Investopedia: BBW](https://www.investopedia.com/search?q=BBW)
+[Investopedia: Bollinger%20Bands%20Width](https://www.investopedia.com/search?q=Bollinger%20Bands%20Width)
 

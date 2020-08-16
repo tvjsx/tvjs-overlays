@@ -55,4 +55,5 @@ export default {
 ## Read more about ATR
 
 [Investopedia: ATR](https://www.investopedia.com/search?q=ATR)
+[Investopedia: Average%20True%20Range](https://www.investopedia.com/search?q=Average%20True%20Range)
 

@@ -60,4 +60,5 @@ export default {
 ## Read more about CCI
 
 [Investopedia: CCI](https://www.investopedia.com/search?q=CCI)
+[Investopedia: Commodity%20Channel%20Index](https://www.investopedia.com/search?q=Commodity%20Channel%20Index)
 

@@ -94,4 +94,5 @@ export default {
 ## Read more about Histogram
 
 [Investopedia: Histogram](https://www.investopedia.com/search?q=Histogram)
+[Investopedia: Histogram%20plot](https://www.investopedia.com/search?q=Histogram%20plot)
 

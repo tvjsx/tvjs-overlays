@@ -56,4 +56,5 @@ export default {
 ## Read more about SAR
 
 [Investopedia: SAR](https://www.investopedia.com/search?q=SAR)
+[Investopedia: Parabolic%20SAR](https://www.investopedia.com/search?q=Parabolic%20SAR)
 

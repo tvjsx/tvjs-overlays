@@ -57,4 +57,5 @@ export default {
 ## Read more about Ribbon
 
 [Investopedia: Ribbon](https://www.investopedia.com/search?q=Ribbon)
+[Investopedia: Moving%20Average%20Ribbon](https://www.investopedia.com/search?q=Moving%20Average%20Ribbon)
 

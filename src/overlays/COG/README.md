@@ -55,4 +55,5 @@ export default {
 ## Read more about COG
 
 [Investopedia: COG](https://www.investopedia.com/search?q=COG)
+[Investopedia: Center%20of%20Gravity](https://www.investopedia.com/search?q=Center%20of%20Gravity)
 

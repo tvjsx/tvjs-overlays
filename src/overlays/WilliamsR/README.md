@@ -60,4 +60,5 @@ export default {
 ## Read more about WilliamsR
 
 [Investopedia: WilliamsR](https://www.investopedia.com/search?q=WilliamsR)
+[Investopedia: Williams%20%R](https://www.investopedia.com/search?q=Williams%20%R)
 

@@ -57,4 +57,5 @@ export default {
 ## Read more about TSI
 
 [Investopedia: TSI](https://www.investopedia.com/search?q=TSI)
+[Investopedia: True%20Strength%20Index](https://www.investopedia.com/search?q=True%20Strength%20Index)
 

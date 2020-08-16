@@ -63,4 +63,5 @@ export default {
 ## Read more about Stoch
 
 [Investopedia: Stoch](https://www.investopedia.com/search?q=Stoch)
+[Investopedia: Stochastic](https://www.investopedia.com/search?q=Stochastic)
 
