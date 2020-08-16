@@ -54,6 +54,6 @@ export default {
 
 ## Read more about HMA
 
-[Investopedia: HMA](https://www.investopedia.com/search?q=HMA)
+[Investopedia: HMA](https://www.investopedia.com/search?q=HMA)<br>
 [Investopedia: Hull%20Moving%20Average](https://www.investopedia.com/search?q=Hull%20Moving%20Average)
 

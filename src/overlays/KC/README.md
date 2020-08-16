@@ -57,6 +57,6 @@ export default {
 
 ## Read more about KC
 
-[Investopedia: KC](https://www.investopedia.com/search?q=KC)
+[Investopedia: KC](https://www.investopedia.com/search?q=KC)<br>
 [Investopedia: Keltner%20Channels](https://www.investopedia.com/search?q=Keltner%20Channels)
 

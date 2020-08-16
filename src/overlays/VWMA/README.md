@@ -59,6 +59,6 @@ export default {
 
 ## Read more about VWMA
 
-[Investopedia: VWMA](https://www.investopedia.com/search?q=VWMA)
+[Investopedia: VWMA](https://www.investopedia.com/search?q=VWMA)<br>
 [Investopedia: Volume%20Weighted%20Moving%20Average](https://www.investopedia.com/search?q=Volume%20Weighted%20Moving%20Average)
 

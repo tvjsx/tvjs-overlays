@@ -54,6 +54,6 @@ export default {
 
 ## Read more about MOM
 
-[Investopedia: MOM](https://www.investopedia.com/search?q=MOM)
+[Investopedia: MOM](https://www.investopedia.com/search?q=MOM)<br>
 [Investopedia: Momentum](https://www.investopedia.com/search?q=Momentum)
 

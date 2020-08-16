@@ -61,6 +61,6 @@ export default {
 
 ## Read more about MACD
 
-[Investopedia: MACD](https://www.investopedia.com/search?q=MACD)
+[Investopedia: MACD](https://www.investopedia.com/search?q=MACD)<br>
 [Investopedia: Moving%20Average%20Convergence/Divergence](https://www.investopedia.com/search?q=Moving%20Average%20Convergence/Divergence)
 

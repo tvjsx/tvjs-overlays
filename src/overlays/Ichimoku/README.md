@@ -143,6 +143,6 @@ export default {
 
 ## Read more about Ichimoku
 
-[Investopedia: Ichimoku](https://www.investopedia.com/search?q=Ichimoku)
+[Investopedia: Ichimoku](https://www.investopedia.com/search?q=Ichimoku)<br>
 [Investopedia: ](https://www.investopedia.com/search?q=)
 

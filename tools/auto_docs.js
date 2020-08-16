@@ -62,7 +62,7 @@ ${data}
 
 ## Read more about ${name}
 
-[Investopedia: ${name}](https://www.investopedia.com/search?q=${name})
+[Investopedia: ${name}](https://www.investopedia.com/search?q=${name})<br>
 [Investopedia: ${desc}](https://www.investopedia.com/search?q=${desc})
 
 `

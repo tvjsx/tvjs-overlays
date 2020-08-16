@@ -93,6 +93,6 @@ export default {
 
 ## Read more about PlotCross
 
-[Investopedia: PlotCross](https://www.investopedia.com/search?q=PlotCross)
+[Investopedia: PlotCross](https://www.investopedia.com/search?q=PlotCross)<br>
 [Investopedia: Plot%20line%20with%20crosses](https://www.investopedia.com/search?q=Plot%20line%20with%20crosses)
 

@@ -53,6 +53,6 @@ export default {
 
 ## Read more about SWMA
 
-[Investopedia: SWMA](https://www.investopedia.com/search?q=SWMA)
+[Investopedia: SWMA](https://www.investopedia.com/search?q=SWMA)<br>
 [Investopedia: Symmetrically%20Weighted%20Moving%20Average](https://www.investopedia.com/search?q=Symmetrically%20Weighted%20Moving%20Average)
 

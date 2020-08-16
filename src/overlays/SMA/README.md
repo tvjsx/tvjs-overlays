@@ -54,6 +54,6 @@ export default {
 
 ## Read more about SMA
 
-[Investopedia: SMA](https://www.investopedia.com/search?q=SMA)
+[Investopedia: SMA](https://www.investopedia.com/search?q=SMA)<br>
 [Investopedia: Symmetrically%20Weighted%20Moving%20Average](https://www.investopedia.com/search?q=Symmetrically%20Weighted%20Moving%20Average)
 

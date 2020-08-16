@@ -159,6 +159,6 @@ export default {
 
 ## Read more about LongShortTrades
 
-[Investopedia: LongShortTrades](https://www.investopedia.com/search?q=LongShortTrades)
+[Investopedia: LongShortTrades](https://www.investopedia.com/search?q=LongShortTrades)<br>
 [Investopedia: ](https://www.investopedia.com/search?q=)
 

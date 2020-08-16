@@ -54,6 +54,6 @@ export default {
 
 ## Read more about EMA
 
-[Investopedia: EMA](https://www.investopedia.com/search?q=EMA)
+[Investopedia: EMA](https://www.investopedia.com/search?q=EMA)<br>
 [Investopedia: Exponential%20Moving%20Average](https://www.investopedia.com/search?q=Exponential%20Moving%20Average)
 

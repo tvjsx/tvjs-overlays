@@ -59,6 +59,6 @@ export default {
 
 ## Read more about RSI
 
-[Investopedia: RSI](https://www.investopedia.com/search?q=RSI)
+[Investopedia: RSI](https://www.investopedia.com/search?q=RSI)<br>
 [Investopedia: Relative%20Strength%20Index](https://www.investopedia.com/search?q=Relative%20Strength%20Index)
 
