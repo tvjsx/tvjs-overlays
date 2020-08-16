@@ -60,5 +60,5 @@ export default {
 ## Read more about MFI
 
 [Investopedia: MFI](https://www.investopedia.com/search?q=MFI)<br>
-[Investopedia: Money%20Flow%20Index](https://www.investopedia.com/search?q=Money%20Flow%20Index)
+[Investopedia: Money Flow Index](https://www.investopedia.com/search?q=Money%20Flow%20Index)
 

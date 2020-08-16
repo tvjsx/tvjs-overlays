@@ -56,5 +56,5 @@ export default {
 ## Read more about DMI
 
 [Investopedia: DMI](https://www.investopedia.com/search?q=DMI)<br>
-[Investopedia: Directional%20Movement%20Index](https://www.investopedia.com/search?q=Directional%20Movement%20Index)
+[Investopedia: Directional Movement Index](https://www.investopedia.com/search?q=Directional%20Movement%20Index)
 

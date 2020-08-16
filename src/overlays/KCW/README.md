@@ -57,5 +57,5 @@ export default {
 ## Read more about KCW
 
 [Investopedia: KCW](https://www.investopedia.com/search?q=KCW)<br>
-[Investopedia: Keltner%20Channels%20Width](https://www.investopedia.com/search?q=Keltner%20Channels%20Width)
+[Investopedia: Keltner Channels Width](https://www.investopedia.com/search?q=Keltner%20Channels%20Width)
 

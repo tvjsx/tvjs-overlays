@@ -55,5 +55,5 @@ export default {
 ## Read more about ATRp
 
 [Investopedia: ATRp](https://www.investopedia.com/search?q=ATRp)<br>
-[Investopedia: Average%20True%20Range,%20%](https://www.investopedia.com/search?q=Average%20True%20Range,%20%)
+[Investopedia: Average True Range, %](https://www.investopedia.com/search?q=Average%20True%20Range,%20%)
 

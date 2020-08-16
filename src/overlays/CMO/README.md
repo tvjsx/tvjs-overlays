@@ -55,5 +55,5 @@ export default {
 ## Read more about CMO
 
 [Investopedia: CMO](https://www.investopedia.com/search?q=CMO)<br>
-[Investopedia: Chande%20Momentum%20Oscillator](https://www.investopedia.com/search?q=Chande%20Momentum%20Oscillator)
+[Investopedia: Chande Momentum Oscillator](https://www.investopedia.com/search?q=Chande%20Momentum%20Oscillator)
 

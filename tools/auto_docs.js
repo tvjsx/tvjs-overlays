@@ -63,7 +63,7 @@ ${data}
 ## Read more about ${name}
 
 [Investopedia: ${name}](https://www.investopedia.com/search?q=${name})<br>
-[Investopedia: ${desc}](https://www.investopedia.com/search?q=${desc})
+[Investopedia: ${desc}](https://www.investopedia.com/search?q=${desc.replace(/\s/g, '%20')})
 
 `
 
@@ -125,7 +125,6 @@ async function parse() {
             format_sett(ov),
             JSON.stringify(data || [], null, 4),
             (ov.methods.meta_info().desc || '')
-                .replace(/\s/g, '%20')
         )
 
         fs.writeFileSync(ov.path + '/README.md', txt)

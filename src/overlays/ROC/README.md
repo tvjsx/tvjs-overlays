@@ -55,5 +55,5 @@ export default {
 ## Read more about ROC
 
 [Investopedia: ROC](https://www.investopedia.com/search?q=ROC)<br>
-[Investopedia: Rate%20of%20Change](https://www.investopedia.com/search?q=Rate%20of%20Change)
+[Investopedia: Rate of Change](https://www.investopedia.com/search?q=Rate%20of%20Change)
 

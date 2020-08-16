@@ -57,5 +57,5 @@ export default {
 ## Read more about BB
 
 [Investopedia: BB](https://www.investopedia.com/search?q=BB)<br>
-[Investopedia: Bollinger%20Bands](https://www.investopedia.com/search?q=Bollinger%20Bands)
+[Investopedia: Bollinger Bands](https://www.investopedia.com/search?q=Bollinger%20Bands)
 
