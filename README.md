@@ -87,7 +87,7 @@ export default {
 
 ```html
 <div id="app">
-    <trading-vue :data="data" :overlays="overlays"/>
+<trading-vue :data="data" :overlays="overlays"/>
 </div>
 <script>
 app = new Vue({
