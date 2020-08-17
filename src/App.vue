@@ -20,8 +20,7 @@
                 :overlays="overlays"
                 :color-back="colors.colorBack"
                 :color-grid="colors.colorGrid"
-                :color-text="colors.colorText">
-            </trading-vue>
+                :color-text="colors.colorText"/>
         </div>
     </div>
 </template>

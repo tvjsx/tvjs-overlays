@@ -61,7 +61,7 @@ npm i tvjs-overlays
 
 ```html
 <template>
-<trading-vue :overlays="overlays"></trading-vue>
+<trading-vue :data="data" :overlays="overlays"/>
 </template>
 <script>
 
@@ -73,7 +73,8 @@ export default {
     components: { TradingVue },
     data() {
         return {
-            overlays: Object.values(Overlays)
+            overlays: Object.values(Overlays),
+            data: new DataCube(...)
         }
     }
 }
@@ -86,14 +87,14 @@ export default {
 
 ```html
 <div id="app">
-    <trading-vue :overlays="overlays">
-    </trading-vue>
+    <trading-vue :data="data" :overlays="overlays"/>
 </div>
 <script>
 app = new Vue({
     el: '#app',
     data: {
         overlays: Object.values(TvjsOverlays),
+        data: new TradingVueJs.DataCube(...)
     }
 })
 </script>
