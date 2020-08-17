@@ -36,7 +36,7 @@
 | [RSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/RSI) | StdSquad | OV+Script | Relative Strength Index | 1.0.0 |
 | [Ribbon](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Ribbon) | StdSquad | OV+Script | Moving Average Ribbon | 1.0.0 |
 | [SAR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SAR) | StdSquad | OV+Script | Parabolic SAR | 1.0.0 |
-| [SMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SMA) | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
+| [SMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SMA) | StdSquad | OV+Script | Simple Moving Average | 1.0.0 |
 | [SWMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SWMA) | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
 | [Stoch](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Stoch) | StdSquad | OV+Script | Stochastic | 1.0.0 |
 | [TSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/TSI) | StdSquad | OV+Script | True Strength Index | 1.0.0 |

@@ -97,6 +97,8 @@ async function parse() {
 
     for (var ov of list) {
 
+        if (argv['ov'] && ov.name !== argv['ov']) continue 
+
         console.log(`Making docs for `.gray + ov.name)
 
         // Screen

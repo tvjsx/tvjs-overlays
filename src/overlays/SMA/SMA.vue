@@ -9,7 +9,7 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Symmetrically Weighted Moving Average'
+                desc: 'Simple Moving Average'
             }
         },
         use_for() { return ['SMA'] },

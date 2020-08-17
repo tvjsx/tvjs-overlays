@@ -9,7 +9,7 @@
 
 | Author | Type | Description | Version |
 | ------ | ---- | ----------- | ------- |
-| StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
+| StdSquad | OV+Script | Simple Moving Average | 1.0.0 |
 
 
 ## Settings
@@ -55,5 +55,5 @@ export default {
 ## Read more about SMA
 
 [Investopedia: SMA](https://www.investopedia.com/search?q=SMA)<br>
-[Investopedia: Symmetrically Weighted Moving Average](https://www.investopedia.com/search?q=Symmetrically%20Weighted%20Moving%20Average)
+[Investopedia: Simple Moving Average](https://www.investopedia.com/search?q=Simple%20Moving%20Average)
 
