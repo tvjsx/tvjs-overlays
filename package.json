@@ -9,7 +9,7 @@
     "compile": "node ./webpack/index-compiler.js",
     "compile-prod": "node ./webpack/index-compiler.js --prod",
     "eslint": "./node_modules/.bin/eslint --ext .js,.vue src",
-    "dev": "webpack-dev-server --config webpack/dev.config.js --mode development --progress --hot",
+    "dev": "webpack serve --config webpack/dev.config.js --mode development --progress --hot",
     "build": "webpack  --config webpack/build.config.js --mode production --progress"
   },
   "author": "C451",
@@ -28,15 +28,15 @@
   "homepage": "https://github.com/tvjsx/trading-vue-js#readme",
   "repository": "github:tvjsx/tvjs-overlays",
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-transform-runtime": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/core": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.1.0",
     "colors": "^1.4.0",
     "css-loader": "^3.6.0",
-    "eslint": "^7.10.0",
+    "eslint": "^7.11.0",
     "eslint-config-eslint": "^6.0.0",
-    "eslint-plugin-vue": "^7.0.0",
+    "eslint-plugin-vue": "^7.0.1",
     "html-webpack-plugin": "^4.5.0",
     "minimist": "^1.2.5",
     "node-fetch": "^2.6.1",
@@ -44,18 +44,18 @@
     "recursive-readdir": "^2.2.2",
     "recursive-readdir-sync": "^1.0.6",
     "request": "^2.88.2",
-    "terser-webpack-plugin": "^4.2.2",
+    "terser-webpack-plugin": "^5.0.0",
     "tulind": "^0.8.18",
     "vue-loader": "^15.9.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.1.2",
+    "webpack-cli": "^4.0.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/runtime": "^7.11.2",
-    "trading-vue-js": "^0.7.0",
+    "@babel/runtime": "^7.12.1",
+    "trading-vue-js": "^0.8.0",
     "vue": "^2.6.12"
   }
 }
