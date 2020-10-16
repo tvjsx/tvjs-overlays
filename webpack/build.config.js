@@ -56,13 +56,12 @@ let common = {
         minimize: true,
         minimizer: [new TerserPlugin({
             include: /\.min\.js$/,
-            sourceMap: true,
             extractComments: {
                 banner: BANNER
             }
         })]
     },
-    devtool: '#source-map',
+    devtool: 'source-map',
     plugins: [
         new VueLoaderPlugin(),
         new webpack.BannerPlugin({

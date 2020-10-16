@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.2.1 - Sun Aug 16 2020
+ * TVJS Overlays - v0.2.1 - Fri Oct 16 2020
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -13,147 +13,59 @@
 		exports["TvjsOverlays"] = factory(require("trading-vue-js"));
 	else
 		root["TvjsOverlays"] = factory(root["trading-vue-js"]);
-})(window, function(__WEBPACK_EXTERNAL_MODULE__0__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+})(self, function(__WEBPACK_EXTERNAL_MODULE__954__) {
+return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
 
-module.exports = __WEBPACK_EXTERNAL_MODULE__0__;
+/***/ 196:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "ALMA", function() { return /* reexport */ ALMA; });
-__webpack_require__.d(__webpack_exports__, "ATR", function() { return /* reexport */ ATR; });
-__webpack_require__.d(__webpack_exports__, "ATRp", function() { return /* reexport */ ATRp; });
-__webpack_require__.d(__webpack_exports__, "BB", function() { return /* reexport */ BB; });
-__webpack_require__.d(__webpack_exports__, "BBW", function() { return /* reexport */ BBW; });
-__webpack_require__.d(__webpack_exports__, "CCI", function() { return /* reexport */ CCI; });
-__webpack_require__.d(__webpack_exports__, "CMO", function() { return /* reexport */ CMO; });
-__webpack_require__.d(__webpack_exports__, "COG", function() { return /* reexport */ COG; });
-__webpack_require__.d(__webpack_exports__, "DMI", function() { return /* reexport */ DMI; });
-__webpack_require__.d(__webpack_exports__, "EMA", function() { return /* reexport */ EMA; });
-__webpack_require__.d(__webpack_exports__, "HMA", function() { return /* reexport */ HMA; });
-__webpack_require__.d(__webpack_exports__, "Histogram", function() { return /* reexport */ Histogram; });
-__webpack_require__.d(__webpack_exports__, "Ichimoku", function() { return /* reexport */ Ichimoku; });
-__webpack_require__.d(__webpack_exports__, "KC", function() { return /* reexport */ KC; });
-__webpack_require__.d(__webpack_exports__, "KCW", function() { return /* reexport */ KCW; });
-__webpack_require__.d(__webpack_exports__, "LongShortTrades", function() { return /* reexport */ LongShortTrades; });
-__webpack_require__.d(__webpack_exports__, "MACD", function() { return /* reexport */ MACD; });
-__webpack_require__.d(__webpack_exports__, "MFI", function() { return /* reexport */ MFI; });
-__webpack_require__.d(__webpack_exports__, "MOM", function() { return /* reexport */ MOM; });
-__webpack_require__.d(__webpack_exports__, "PlotCross", function() { return /* reexport */ PlotCross; });
-__webpack_require__.d(__webpack_exports__, "ROC", function() { return /* reexport */ ROC; });
-__webpack_require__.d(__webpack_exports__, "RSI", function() { return /* reexport */ RSI; });
-__webpack_require__.d(__webpack_exports__, "Ribbon", function() { return /* reexport */ Ribbon; });
-__webpack_require__.d(__webpack_exports__, "SAR", function() { return /* reexport */ SAR; });
-__webpack_require__.d(__webpack_exports__, "SMA", function() { return /* reexport */ SMA; });
-__webpack_require__.d(__webpack_exports__, "SWMA", function() { return /* reexport */ SWMA; });
-__webpack_require__.d(__webpack_exports__, "Stoch", function() { return /* reexport */ Stoch; });
-__webpack_require__.d(__webpack_exports__, "TSI", function() { return /* reexport */ TSI; });
-__webpack_require__.d(__webpack_exports__, "VWMA", function() { return /* reexport */ VWMA; });
-__webpack_require__.d(__webpack_exports__, "WilliamsR", function() { return /* reexport */ WilliamsR; });
+__webpack_require__.d(__webpack_exports__, {
+  "ALMA": () => /* reexport */ ALMA,
+  "ATR": () => /* reexport */ ATR,
+  "ATRp": () => /* reexport */ ATRp,
+  "BB": () => /* reexport */ BB,
+  "BBW": () => /* reexport */ BBW,
+  "CCI": () => /* reexport */ CCI,
+  "CMO": () => /* reexport */ CMO,
+  "COG": () => /* reexport */ COG,
+  "DMI": () => /* reexport */ DMI,
+  "EMA": () => /* reexport */ EMA,
+  "HMA": () => /* reexport */ HMA,
+  "Histogram": () => /* reexport */ Histogram,
+  "Ichimoku": () => /* reexport */ Ichimoku,
+  "KC": () => /* reexport */ KC,
+  "KCW": () => /* reexport */ KCW,
+  "LongShortTrades": () => /* reexport */ LongShortTrades,
+  "MACD": () => /* reexport */ MACD,
+  "MFI": () => /* reexport */ MFI,
+  "MOM": () => /* reexport */ MOM,
+  "PlotCross": () => /* reexport */ PlotCross,
+  "ROC": () => /* reexport */ ROC,
+  "RSI": () => /* reexport */ RSI,
+  "Ribbon": () => /* reexport */ Ribbon,
+  "SAR": () => /* reexport */ SAR,
+  "SMA": () => /* reexport */ SMA,
+  "SWMA": () => /* reexport */ SWMA,
+  "Stoch": () => /* reexport */ Stoch,
+  "TSI": () => /* reexport */ TSI,
+  "VWMA": () => /* reexport */ VWMA,
+  "WilliamsR": () => /* reexport */ WilliamsR,
+  "default": () => /* binding */ index_prod
+});
 
 // EXTERNAL MODULE: external "trading-vue-js"
-var external_trading_vue_js_ = __webpack_require__(0);
+var external_trading_vue_js_ = __webpack_require__(954);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
-
-/* harmony default export */ var ALMAvue_type_script_lang_js_ = ({
+/* harmony default export */ const ALMAvue_type_script_lang_js_ = ({
   name: 'ALMA',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -190,7 +102,7 @@ var external_trading_vue_js_ = __webpack_require__(0);
   }
 });
 // CONCATENATED MODULE: ./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
- /* harmony default export */ var ALMA_ALMAvue_type_script_lang_js_ = (ALMAvue_type_script_lang_js_); 
+ /* harmony default export */ const ALMA_ALMAvue_type_script_lang_js_ = (ALMAvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
@@ -313,12 +225,12 @@ var component = normalizeComponent(
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "src/overlays/ALMA/ALMA.vue"
-/* harmony default export */ var ALMA = (component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
+/* harmony default export */ const ALMA = (component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var ATRvue_type_script_lang_js_ = ({
+/* harmony default export */ const ATRvue_type_script_lang_js_ = ({
   name: 'ATR',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -347,7 +259,7 @@ component.options.__file = "src/overlays/ALMA/ALMA.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
- /* harmony default export */ var ATR_ATRvue_type_script_lang_js_ = (ATRvue_type_script_lang_js_); 
+ /* harmony default export */ const ATR_ATRvue_type_script_lang_js_ = (ATRvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/ATR/ATR.vue
 var ATR_render, ATR_staticRenderFns
 
@@ -370,12 +282,12 @@ var ATR_component = normalizeComponent(
 /* hot reload */
 if (false) { var ATR_api; }
 ATR_component.options.__file = "src/overlays/ATR/ATR.vue"
-/* harmony default export */ var ATR = (ATR_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
+/* harmony default export */ const ATR = (ATR_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var ATRpvue_type_script_lang_js_ = ({
+/* harmony default export */ const ATRpvue_type_script_lang_js_ = ({
   name: 'ATRp',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -404,7 +316,7 @@ ATR_component.options.__file = "src/overlays/ATR/ATR.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
- /* harmony default export */ var ATRp_ATRpvue_type_script_lang_js_ = (ATRpvue_type_script_lang_js_); 
+ /* harmony default export */ const ATRp_ATRpvue_type_script_lang_js_ = (ATRpvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/ATRp/ATRp.vue
 var ATRp_render, ATRp_staticRenderFns
 
@@ -427,12 +339,12 @@ var ATRp_component = normalizeComponent(
 /* hot reload */
 if (false) { var ATRp_api; }
 ATRp_component.options.__file = "src/overlays/ATRp/ATRp.vue"
-/* harmony default export */ var ATRp = (ATRp_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/BB/BB.vue?vue&type=script&lang=js&
+/* harmony default export */ const ATRp = (ATRp_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BB/BB.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var BBvue_type_script_lang_js_ = ({
+/* harmony default export */ const BBvue_type_script_lang_js_ = ({
   name: 'BB',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -465,7 +377,7 @@ ATRp_component.options.__file = "src/overlays/ATRp/ATRp.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/BB/BB.vue?vue&type=script&lang=js&
- /* harmony default export */ var BB_BBvue_type_script_lang_js_ = (BBvue_type_script_lang_js_); 
+ /* harmony default export */ const BB_BBvue_type_script_lang_js_ = (BBvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/BB/BB.vue
 var BB_render, BB_staticRenderFns
 
@@ -488,12 +400,12 @@ var BB_component = normalizeComponent(
 /* hot reload */
 if (false) { var BB_api; }
 BB_component.options.__file = "src/overlays/BB/BB.vue"
-/* harmony default export */ var BB = (BB_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
+/* harmony default export */ const BB = (BB_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var BBWvue_type_script_lang_js_ = ({
+/* harmony default export */ const BBWvue_type_script_lang_js_ = ({
   name: 'BBW',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -526,7 +438,7 @@ BB_component.options.__file = "src/overlays/BB/BB.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
- /* harmony default export */ var BBW_BBWvue_type_script_lang_js_ = (BBWvue_type_script_lang_js_); 
+ /* harmony default export */ const BBW_BBWvue_type_script_lang_js_ = (BBWvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/BBW/BBW.vue
 var BBW_render, BBW_staticRenderFns
 
@@ -549,12 +461,12 @@ var BBW_component = normalizeComponent(
 /* hot reload */
 if (false) { var BBW_api; }
 BBW_component.options.__file = "src/overlays/BBW/BBW.vue"
-/* harmony default export */ var BBW = (BBW_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
+/* harmony default export */ const BBW = (BBW_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var CCIvue_type_script_lang_js_ = ({
+/* harmony default export */ const CCIvue_type_script_lang_js_ = ({
   name: 'CCI',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -583,7 +495,7 @@ BBW_component.options.__file = "src/overlays/BBW/BBW.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
- /* harmony default export */ var CCI_CCIvue_type_script_lang_js_ = (CCIvue_type_script_lang_js_); 
+ /* harmony default export */ const CCI_CCIvue_type_script_lang_js_ = (CCIvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/CCI/CCI.vue
 var CCI_render, CCI_staticRenderFns
 
@@ -606,12 +518,12 @@ var CCI_component = normalizeComponent(
 /* hot reload */
 if (false) { var CCI_api; }
 CCI_component.options.__file = "src/overlays/CCI/CCI.vue"
-/* harmony default export */ var CCI = (CCI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
+/* harmony default export */ const CCI = (CCI_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var CMOvue_type_script_lang_js_ = ({
+/* harmony default export */ const CMOvue_type_script_lang_js_ = ({
   name: 'CMO',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -640,7 +552,7 @@ CCI_component.options.__file = "src/overlays/CCI/CCI.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
- /* harmony default export */ var CMO_CMOvue_type_script_lang_js_ = (CMOvue_type_script_lang_js_); 
+ /* harmony default export */ const CMO_CMOvue_type_script_lang_js_ = (CMOvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/CMO/CMO.vue
 var CMO_render, CMO_staticRenderFns
 
@@ -663,12 +575,12 @@ var CMO_component = normalizeComponent(
 /* hot reload */
 if (false) { var CMO_api; }
 CMO_component.options.__file = "src/overlays/CMO/CMO.vue"
-/* harmony default export */ var CMO = (CMO_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/COG/COG.vue?vue&type=script&lang=js&
+/* harmony default export */ const CMO = (CMO_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/COG/COG.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var COGvue_type_script_lang_js_ = ({
+/* harmony default export */ const COGvue_type_script_lang_js_ = ({
   name: 'COG',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -697,7 +609,7 @@ CMO_component.options.__file = "src/overlays/CMO/CMO.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/COG/COG.vue?vue&type=script&lang=js&
- /* harmony default export */ var COG_COGvue_type_script_lang_js_ = (COGvue_type_script_lang_js_); 
+ /* harmony default export */ const COG_COGvue_type_script_lang_js_ = (COGvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/COG/COG.vue
 var COG_render, COG_staticRenderFns
 
@@ -720,12 +632,12 @@ var COG_component = normalizeComponent(
 /* hot reload */
 if (false) { var COG_api; }
 COG_component.options.__file = "src/overlays/COG/COG.vue"
-/* harmony default export */ var COG = (COG_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
+/* harmony default export */ const COG = (COG_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var DMIvue_type_script_lang_js_ = ({
+/* harmony default export */ const DMIvue_type_script_lang_js_ = ({
   name: 'DMI',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -758,7 +670,7 @@ COG_component.options.__file = "src/overlays/COG/COG.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
- /* harmony default export */ var DMI_DMIvue_type_script_lang_js_ = (DMIvue_type_script_lang_js_); 
+ /* harmony default export */ const DMI_DMIvue_type_script_lang_js_ = (DMIvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/DMI/DMI.vue
 var DMI_render, DMI_staticRenderFns
 
@@ -781,12 +693,12 @@ var DMI_component = normalizeComponent(
 /* hot reload */
 if (false) { var DMI_api; }
 DMI_component.options.__file = "src/overlays/DMI/DMI.vue"
-/* harmony default export */ var DMI = (DMI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
+/* harmony default export */ const DMI = (DMI_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var EMAvue_type_script_lang_js_ = ({
+/* harmony default export */ const EMAvue_type_script_lang_js_ = ({
   name: 'EMA',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -815,7 +727,7 @@ DMI_component.options.__file = "src/overlays/DMI/DMI.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
- /* harmony default export */ var EMA_EMAvue_type_script_lang_js_ = (EMAvue_type_script_lang_js_); 
+ /* harmony default export */ const EMA_EMAvue_type_script_lang_js_ = (EMAvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/EMA/EMA.vue
 var EMA_render, EMA_staticRenderFns
 
@@ -838,12 +750,12 @@ var EMA_component = normalizeComponent(
 /* hot reload */
 if (false) { var EMA_api; }
 EMA_component.options.__file = "src/overlays/EMA/EMA.vue"
-/* harmony default export */ var EMA = (EMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
+/* harmony default export */ const EMA = (EMA_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var HMAvue_type_script_lang_js_ = ({
+/* harmony default export */ const HMAvue_type_script_lang_js_ = ({
   name: 'HMA',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -872,7 +784,7 @@ EMA_component.options.__file = "src/overlays/EMA/EMA.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
- /* harmony default export */ var HMA_HMAvue_type_script_lang_js_ = (HMAvue_type_script_lang_js_); 
+ /* harmony default export */ const HMA_HMAvue_type_script_lang_js_ = (HMAvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/HMA/HMA.vue
 var HMA_render, HMA_staticRenderFns
 
@@ -895,8 +807,8 @@ var HMA_component = normalizeComponent(
 /* hot reload */
 if (false) { var HMA_api; }
 HMA_component.options.__file = "src/overlays/HMA/HMA.vue"
-/* harmony default export */ var HMA = (HMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
+/* harmony default export */ const HMA = (HMA_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
 function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
@@ -904,9 +816,9 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
-/* harmony default export */ var Histogramvue_type_script_lang_js_ = ({
+/* harmony default export */ const Histogramvue_type_script_lang_js_ = ({
   name: 'Histogram',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -999,7 +911,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   }
 });
 // CONCATENATED MODULE: ./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
- /* harmony default export */ var Histogram_Histogramvue_type_script_lang_js_ = (Histogramvue_type_script_lang_js_); 
+ /* harmony default export */ const Histogram_Histogramvue_type_script_lang_js_ = (Histogramvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/Histogram/Histogram.vue
 var Histogram_render, Histogram_staticRenderFns
 
@@ -1022,8 +934,8 @@ var Histogram_component = normalizeComponent(
 /* hot reload */
 if (false) { var Histogram_api; }
 Histogram_component.options.__file = "src/overlays/Histogram/Histogram.vue"
-/* harmony default export */ var Histogram = (Histogram_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
+/* harmony default export */ const Histogram = (Histogram_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
 function Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Ichimokuvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Ichimokuvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
@@ -1032,9 +944,9 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
 
 //Ichimoku Indicator Overlay. Expected Format: [ <timestamp>, <ConversionLine>, <BaseLine>, <Lead1>, <Lead2>, <Lagging> ]
 
-/* harmony default export */ var Ichimokuvue_type_script_lang_js_ = ({
+/* harmony default export */ const Ichimokuvue_type_script_lang_js_ = ({
   name: "Ichimoku",
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   data: function data() {
     return {
       ctxTenkan: {},
@@ -1303,7 +1215,7 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
   }
 });
 // CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
- /* harmony default export */ var Ichimoku_Ichimokuvue_type_script_lang_js_ = (Ichimokuvue_type_script_lang_js_); 
+ /* harmony default export */ const Ichimoku_Ichimokuvue_type_script_lang_js_ = (Ichimokuvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue
 var Ichimoku_render, Ichimoku_staticRenderFns
 
@@ -1326,12 +1238,12 @@ var Ichimoku_component = normalizeComponent(
 /* hot reload */
 if (false) { var Ichimoku_api; }
 Ichimoku_component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
-/* harmony default export */ var Ichimoku = (Ichimoku_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/KC/KC.vue?vue&type=script&lang=js&
+/* harmony default export */ const Ichimoku = (Ichimoku_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KC/KC.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var KCvue_type_script_lang_js_ = ({
+/* harmony default export */ const KCvue_type_script_lang_js_ = ({
   name: 'KC',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -1368,7 +1280,7 @@ Ichimoku_component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/KC/KC.vue?vue&type=script&lang=js&
- /* harmony default export */ var KC_KCvue_type_script_lang_js_ = (KCvue_type_script_lang_js_); 
+ /* harmony default export */ const KC_KCvue_type_script_lang_js_ = (KCvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/KC/KC.vue
 var KC_render, KC_staticRenderFns
 
@@ -1391,12 +1303,12 @@ var KC_component = normalizeComponent(
 /* hot reload */
 if (false) { var KC_api; }
 KC_component.options.__file = "src/overlays/KC/KC.vue"
-/* harmony default export */ var KC = (KC_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
+/* harmony default export */ const KC = (KC_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var KCWvue_type_script_lang_js_ = ({
+/* harmony default export */ const KCWvue_type_script_lang_js_ = ({
   name: 'KCW',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -1433,7 +1345,7 @@ KC_component.options.__file = "src/overlays/KC/KC.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
- /* harmony default export */ var KCW_KCWvue_type_script_lang_js_ = (KCWvue_type_script_lang_js_); 
+ /* harmony default export */ const KCW_KCWvue_type_script_lang_js_ = (KCWvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/KCW/KCW.vue
 var KCW_render, KCW_staticRenderFns
 
@@ -1456,8 +1368,8 @@ var KCW_component = normalizeComponent(
 /* hot reload */
 if (false) { var KCW_api; }
 KCW_component.options.__file = "src/overlays/KCW/KCW.vue"
-/* harmony default export */ var KCW = (KCW_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
+/* harmony default export */ const KCW = (KCW_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
 function LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
@@ -1466,9 +1378,9 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
 
 //Long Short Overlay. Expected Format: [ <timestamp>, <Short:0 Long:1 ShortCover: 2 LongCover:3>, <Price Change>, <Percent Price Change>, <Open Price>, <High Price>, <Low Price>, <Close Price> ]
 
-/* harmony default export */ var LongShortTradesvue_type_script_lang_js_ = ({
+/* harmony default export */ const LongShortTradesvue_type_script_lang_js_ = ({
   name: 'LongShortTrades',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   computed: {
     sett: function sett() {
       return this.$props.settings;
@@ -1722,7 +1634,7 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
   }
 });
 // CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
- /* harmony default export */ var LongShortTrades_LongShortTradesvue_type_script_lang_js_ = (LongShortTradesvue_type_script_lang_js_); 
+ /* harmony default export */ const LongShortTrades_LongShortTradesvue_type_script_lang_js_ = (LongShortTradesvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue
 var LongShortTrades_render, LongShortTrades_staticRenderFns
 
@@ -1745,8 +1657,8 @@ var LongShortTrades_component = normalizeComponent(
 /* hot reload */
 if (false) { var LongShortTrades_api; }
 LongShortTrades_component.options.__file = "src/overlays/LongShortTrades/LongShortTrades.vue"
-/* harmony default export */ var LongShortTrades = (LongShortTrades_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
+/* harmony default export */ const LongShortTrades = (LongShortTrades_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
 function MACDvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = MACDvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function MACDvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return MACDvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return MACDvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
@@ -1756,9 +1668,9 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
 // TODO: pass colors from settings to the script
 // TODO: hist lines => recangles (like in volbar.js)
 
-/* harmony default export */ var MACDvue_type_script_lang_js_ = ({
+/* harmony default export */ const MACDvue_type_script_lang_js_ = ({
   name: 'MACD',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -1937,7 +1849,7 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
   }
 });
 // CONCATENATED MODULE: ./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
- /* harmony default export */ var MACD_MACDvue_type_script_lang_js_ = (MACDvue_type_script_lang_js_); 
+ /* harmony default export */ const MACD_MACDvue_type_script_lang_js_ = (MACDvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/MACD/MACD.vue
 var MACD_render, MACD_staticRenderFns
 
@@ -1960,12 +1872,12 @@ var MACD_component = normalizeComponent(
 /* hot reload */
 if (false) { var MACD_api; }
 MACD_component.options.__file = "src/overlays/MACD/MACD.vue"
-/* harmony default export */ var MACD = (MACD_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
+/* harmony default export */ const MACD = (MACD_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var MFIvue_type_script_lang_js_ = ({
+/* harmony default export */ const MFIvue_type_script_lang_js_ = ({
   name: 'MFI',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -1994,7 +1906,7 @@ MACD_component.options.__file = "src/overlays/MACD/MACD.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
- /* harmony default export */ var MFI_MFIvue_type_script_lang_js_ = (MFIvue_type_script_lang_js_); 
+ /* harmony default export */ const MFI_MFIvue_type_script_lang_js_ = (MFIvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/MFI/MFI.vue
 var MFI_render, MFI_staticRenderFns
 
@@ -2017,12 +1929,12 @@ var MFI_component = normalizeComponent(
 /* hot reload */
 if (false) { var MFI_api; }
 MFI_component.options.__file = "src/overlays/MFI/MFI.vue"
-/* harmony default export */ var MFI = (MFI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
+/* harmony default export */ const MFI = (MFI_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var MOMvue_type_script_lang_js_ = ({
+/* harmony default export */ const MOMvue_type_script_lang_js_ = ({
   name: 'MOM',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2051,7 +1963,7 @@ MFI_component.options.__file = "src/overlays/MFI/MFI.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
- /* harmony default export */ var MOM_MOMvue_type_script_lang_js_ = (MOMvue_type_script_lang_js_); 
+ /* harmony default export */ const MOM_MOMvue_type_script_lang_js_ = (MOMvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/MOM/MOM.vue
 var MOM_render, MOM_staticRenderFns
 
@@ -2074,8 +1986,8 @@ var MOM_component = normalizeComponent(
 /* hot reload */
 if (false) { var MOM_api; }
 MOM_component.options.__file = "src/overlays/MOM/MOM.vue"
-/* harmony default export */ var MOM = (MOM_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
+/* harmony default export */ const MOM = (MOM_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
 function PlotCrossvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return PlotCrossvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return PlotCrossvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
@@ -2083,9 +1995,9 @@ function PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) 
 function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
-/* harmony default export */ var PlotCrossvue_type_script_lang_js_ = ({
+/* harmony default export */ const PlotCrossvue_type_script_lang_js_ = ({
   name: 'PlotCross',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2181,7 +2093,7 @@ function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
   }
 });
 // CONCATENATED MODULE: ./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
- /* harmony default export */ var PlotCross_PlotCrossvue_type_script_lang_js_ = (PlotCrossvue_type_script_lang_js_); 
+ /* harmony default export */ const PlotCross_PlotCrossvue_type_script_lang_js_ = (PlotCrossvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/PlotCross/PlotCross.vue
 var PlotCross_render, PlotCross_staticRenderFns
 
@@ -2204,12 +2116,12 @@ var PlotCross_component = normalizeComponent(
 /* hot reload */
 if (false) { var PlotCross_api; }
 PlotCross_component.options.__file = "src/overlays/PlotCross/PlotCross.vue"
-/* harmony default export */ var PlotCross = (PlotCross_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
+/* harmony default export */ const PlotCross = (PlotCross_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var ROCvue_type_script_lang_js_ = ({
+/* harmony default export */ const ROCvue_type_script_lang_js_ = ({
   name: 'ROC',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2238,7 +2150,7 @@ PlotCross_component.options.__file = "src/overlays/PlotCross/PlotCross.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
- /* harmony default export */ var ROC_ROCvue_type_script_lang_js_ = (ROCvue_type_script_lang_js_); 
+ /* harmony default export */ const ROC_ROCvue_type_script_lang_js_ = (ROCvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/ROC/ROC.vue
 var ROC_render, ROC_staticRenderFns
 
@@ -2261,12 +2173,12 @@ var ROC_component = normalizeComponent(
 /* hot reload */
 if (false) { var ROC_api; }
 ROC_component.options.__file = "src/overlays/ROC/ROC.vue"
-/* harmony default export */ var ROC = (ROC_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
+/* harmony default export */ const ROC = (ROC_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var RSIvue_type_script_lang_js_ = ({
+/* harmony default export */ const RSIvue_type_script_lang_js_ = ({
   name: 'RSI',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2295,7 +2207,7 @@ ROC_component.options.__file = "src/overlays/ROC/ROC.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
- /* harmony default export */ var RSI_RSIvue_type_script_lang_js_ = (RSIvue_type_script_lang_js_); 
+ /* harmony default export */ const RSI_RSIvue_type_script_lang_js_ = (RSIvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/RSI/RSI.vue
 var RSI_render, RSI_staticRenderFns
 
@@ -2318,12 +2230,12 @@ var RSI_component = normalizeComponent(
 /* hot reload */
 if (false) { var RSI_api; }
 RSI_component.options.__file = "src/overlays/RSI/RSI.vue"
-/* harmony default export */ var RSI = (RSI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
+/* harmony default export */ const RSI = (RSI_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var Ribbonvue_type_script_lang_js_ = ({
+/* harmony default export */ const Ribbonvue_type_script_lang_js_ = ({
   name: 'Ribbon',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2360,7 +2272,7 @@ RSI_component.options.__file = "src/overlays/RSI/RSI.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
- /* harmony default export */ var Ribbon_Ribbonvue_type_script_lang_js_ = (Ribbonvue_type_script_lang_js_); 
+ /* harmony default export */ const Ribbon_Ribbonvue_type_script_lang_js_ = (Ribbonvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/Ribbon/Ribbon.vue
 var Ribbon_render, Ribbon_staticRenderFns
 
@@ -2383,12 +2295,12 @@ var Ribbon_component = normalizeComponent(
 /* hot reload */
 if (false) { var Ribbon_api; }
 Ribbon_component.options.__file = "src/overlays/Ribbon/Ribbon.vue"
-/* harmony default export */ var Ribbon = (Ribbon_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
+/* harmony default export */ const Ribbon = (Ribbon_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var SARvue_type_script_lang_js_ = ({
+/* harmony default export */ const SARvue_type_script_lang_js_ = ({
   name: 'SAR',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2425,7 +2337,7 @@ Ribbon_component.options.__file = "src/overlays/Ribbon/Ribbon.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
- /* harmony default export */ var SAR_SARvue_type_script_lang_js_ = (SARvue_type_script_lang_js_); 
+ /* harmony default export */ const SAR_SARvue_type_script_lang_js_ = (SARvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/SAR/SAR.vue
 var SAR_render, SAR_staticRenderFns
 
@@ -2448,18 +2360,18 @@ var SAR_component = normalizeComponent(
 /* hot reload */
 if (false) { var SAR_api; }
 SAR_component.options.__file = "src/overlays/SAR/SAR.vue"
-/* harmony default export */ var SAR = (SAR_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
+/* harmony default export */ const SAR = (SAR_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var SMAvue_type_script_lang_js_ = ({
+/* harmony default export */ const SMAvue_type_script_lang_js_ = ({
   name: 'SMA',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Symmetrically Weighted Moving Average'
+        desc: 'Simple Moving Average'
       };
     },
     use_for: function use_for() {
@@ -2482,7 +2394,7 @@ SAR_component.options.__file = "src/overlays/SAR/SAR.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
- /* harmony default export */ var SMA_SMAvue_type_script_lang_js_ = (SMAvue_type_script_lang_js_); 
+ /* harmony default export */ const SMA_SMAvue_type_script_lang_js_ = (SMAvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/SMA/SMA.vue
 var SMA_render, SMA_staticRenderFns
 
@@ -2505,12 +2417,12 @@ var SMA_component = normalizeComponent(
 /* hot reload */
 if (false) { var SMA_api; }
 SMA_component.options.__file = "src/overlays/SMA/SMA.vue"
-/* harmony default export */ var SMA = (SMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
+/* harmony default export */ const SMA = (SMA_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var SWMAvue_type_script_lang_js_ = ({
+/* harmony default export */ const SWMAvue_type_script_lang_js_ = ({
   name: 'SWMA',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2534,7 +2446,7 @@ SMA_component.options.__file = "src/overlays/SMA/SMA.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
- /* harmony default export */ var SWMA_SWMAvue_type_script_lang_js_ = (SWMAvue_type_script_lang_js_); 
+ /* harmony default export */ const SWMA_SWMAvue_type_script_lang_js_ = (SWMAvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/SWMA/SWMA.vue
 var SWMA_render, SWMA_staticRenderFns
 
@@ -2557,8 +2469,8 @@ var SWMA_component = normalizeComponent(
 /* hot reload */
 if (false) { var SWMA_api; }
 SWMA_component.options.__file = "src/overlays/SWMA/SWMA.vue"
-/* harmony default export */ var SWMA = (SWMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
+/* harmony default export */ const SWMA = (SWMA_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
 function Stochvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Stochvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function Stochvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Stochvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Stochvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
@@ -2566,9 +2478,9 @@ function Stochvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if
 function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
-/* harmony default export */ var Stochvue_type_script_lang_js_ = ({
+/* harmony default export */ const Stochvue_type_script_lang_js_ = ({
   name: 'Stoch',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2694,7 +2606,7 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
   }
 });
 // CONCATENATED MODULE: ./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
- /* harmony default export */ var Stoch_Stochvue_type_script_lang_js_ = (Stochvue_type_script_lang_js_); 
+ /* harmony default export */ const Stoch_Stochvue_type_script_lang_js_ = (Stochvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/Stoch/Stoch.vue
 var Stoch_render, Stoch_staticRenderFns
 
@@ -2717,12 +2629,12 @@ var Stoch_component = normalizeComponent(
 /* hot reload */
 if (false) { var Stoch_api; }
 Stoch_component.options.__file = "src/overlays/Stoch/Stoch.vue"
-/* harmony default export */ var Stoch = (Stoch_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
+/* harmony default export */ const Stoch = (Stoch_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var TSIvue_type_script_lang_js_ = ({
+/* harmony default export */ const TSIvue_type_script_lang_js_ = ({
   name: 'TSI',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2759,7 +2671,7 @@ Stoch_component.options.__file = "src/overlays/Stoch/Stoch.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
- /* harmony default export */ var TSI_TSIvue_type_script_lang_js_ = (TSIvue_type_script_lang_js_); 
+ /* harmony default export */ const TSI_TSIvue_type_script_lang_js_ = (TSIvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/TSI/TSI.vue
 var TSI_render, TSI_staticRenderFns
 
@@ -2782,12 +2694,12 @@ var TSI_component = normalizeComponent(
 /* hot reload */
 if (false) { var TSI_api; }
 TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
-/* harmony default export */ var TSI = (TSI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
+/* harmony default export */ const TSI = (TSI_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var VWMAvue_type_script_lang_js_ = ({
+/* harmony default export */ const VWMAvue_type_script_lang_js_ = ({
   name: 'VWMA',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2816,7 +2728,7 @@ TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
- /* harmony default export */ var VWMA_VWMAvue_type_script_lang_js_ = (VWMAvue_type_script_lang_js_); 
+ /* harmony default export */ const VWMA_VWMAvue_type_script_lang_js_ = (VWMAvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/VWMA/VWMA.vue
 var VWMA_render, VWMA_staticRenderFns
 
@@ -2839,12 +2751,12 @@ var VWMA_component = normalizeComponent(
 /* hot reload */
 if (false) { var VWMA_api; }
 VWMA_component.options.__file = "src/overlays/VWMA/VWMA.vue"
-/* harmony default export */ var VWMA = (VWMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
+/* harmony default export */ const VWMA = (VWMA_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
 
-/* harmony default export */ var WilliamsRvue_type_script_lang_js_ = ({
+/* harmony default export */ const WilliamsRvue_type_script_lang_js_ = ({
   name: 'WilliamsR',
-  mixins: [external_trading_vue_js_["Overlay"]],
+  mixins: [external_trading_vue_js_.Overlay],
   methods: {
     meta_info: function meta_info() {
       return {
@@ -2873,7 +2785,7 @@ VWMA_component.options.__file = "src/overlays/VWMA/VWMA.vue"
   }
 });
 // CONCATENATED MODULE: ./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
- /* harmony default export */ var WilliamsR_WilliamsRvue_type_script_lang_js_ = (WilliamsRvue_type_script_lang_js_); 
+ /* harmony default export */ const WilliamsR_WilliamsRvue_type_script_lang_js_ = (WilliamsRvue_type_script_lang_js_); 
 // CONCATENATED MODULE: ./src/overlays/WilliamsR/WilliamsR.vue
 var WilliamsR_render, WilliamsR_staticRenderFns
 
@@ -2896,7 +2808,7 @@ var WilliamsR_component = normalizeComponent(
 /* hot reload */
 if (false) { var WilliamsR_api; }
 WilliamsR_component.options.__file = "src/overlays/WilliamsR/WilliamsR.vue"
-/* harmony default export */ var WilliamsR = (WilliamsR_component.exports);
+/* harmony default export */ const WilliamsR = (WilliamsR_component.exports);
 // CONCATENATED MODULE: ./src/index_prod.js
 // -------- Production overlay index ---------
 //      ! THIS FILE WAS AUTO-GENERATED !
@@ -2971,10 +2883,78 @@ if (typeof window !== 'undefined' && window.Vue) {
   window.TvjsOverlays = Pack;
 }
 
-/* harmony default export */ var index_prod = __webpack_exports__["default"] = (Pack);
+/* harmony default export */ const index_prod = (Pack);
 
+
+/***/ }),
+
+/***/ 954:
+/***/ ((module) => {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
 
 /***/ })
-/******/ ]);
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		if(__webpack_module_cache__[moduleId]) {
+/******/ 			return __webpack_module_cache__[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	// module exports must be returned from runtime so entry inlining is disabled
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(196);
+/******/ })()
+;
 });
 //# sourceMappingURL=tvjs-overlays.js.map
