@@ -1,6 +1,6 @@
 {
   "name": "tvjs-overlays",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Overlay pack for trading-vue-js",
   "main": "./dist/tvjs-overlays.js",
   "scripts": {
@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.1",
-    "trading-vue-js": "^0.8.0",
+    "trading-vue-js": "^0.9.0",
     "vue": "^2.6.12"
   }
 }
