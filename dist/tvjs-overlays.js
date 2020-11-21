@@ -1,10 +1,13 @@
 /*!
- * TVJS Overlays - v0.2.2 - Sat Nov 21 2020
+ * TVJS Overlays - v0.2.3 - Sat Nov 21 2020
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
  */
 (function webpackUniversalModuleDefinition(root, factory) {
+    if (!root['trading-vue-js']) {
+        root['trading-vue-js'] = root['TradingVueJs']
+    }
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("trading-vue-js"));
 	else if(typeof define === 'function' && define.amd)

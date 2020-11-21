@@ -1,5 +1,6 @@
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const TvjsRef = require('./tvjs-ref-plugin.js')
 
 const webpack = require('webpack')
 const path = require('path')
@@ -66,7 +67,8 @@ let common = {
         new VueLoaderPlugin(),
         new webpack.BannerPlugin({
             banner: BANNER
-        })
+        }),
+        new TvjsRef()
     ]
 }
 
