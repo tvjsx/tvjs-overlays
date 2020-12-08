@@ -9,7 +9,17 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Bollinger Bands'
+                desc: 'Bollinger Bands',
+                preset: {
+                    name: 'BB $length $stddev',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#2cc6c9ab',
+                        showMid: true,
+                        backColor: '#2cc6c90a'
+                    }
+                }
             }
         },
         use_for() { return ['BB'] },

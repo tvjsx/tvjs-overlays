@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Moving Average Ribbon'
+                desc: 'Moving Average Ribbon',
+                preset: {
+                    name: 'EMA x $number',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        colors: ["#3aaaf4ee"]
+                    }
+                }
             }
         },
         use_for() { return ['Ribbon'] },

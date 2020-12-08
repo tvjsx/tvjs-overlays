@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Exponential Moving Average'
+                desc: 'Exponential Moving Average',
+                preset: {
+                    name: 'EMA $length',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#f7890c'
+                    }
+                }
             }
         },
         use_for() { return ['EMA'] },

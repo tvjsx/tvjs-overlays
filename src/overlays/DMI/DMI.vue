@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Directional Movement Index'
+                desc: 'Directional Movement Index',
+                preset: {
+                    name: 'DMI $length $smooth',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        colors: ["#ef1360", "#3782f2", "#f48709"]
+                    }
+                }
             }
         },
         use_for() { return ['DMI'] },

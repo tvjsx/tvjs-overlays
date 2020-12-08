@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Chande Momentum Oscillator'
+                desc: 'Chande Momentum Oscillator',
+                preset: {
+                    name: 'CMO $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#559de0'
+                    }
+                }
             }
         },
         use_for() { return ['CMO'] },

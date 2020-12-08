@@ -9,7 +9,17 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Relative Strength Index'
+                desc: 'Relative Strength Index',
+                preset: {
+                    name: 'RSI $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#ec206e',
+                        bandColor: '#aaa',
+                        backColor: '#9b9ba316',
+                    }
+                }
             }
         },
         use_for() { return ['RSI'] },

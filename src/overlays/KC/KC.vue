@@ -9,7 +9,17 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Keltner Channels'
+                desc: 'Keltner Channels',
+                preset: {
+                    name: 'KC $length $mult',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#4c8dffab',
+                        showMid: true,
+                        backColor: '#4c8dff0a'
+                    }
+                }
             }
         },
         use_for() { return ['KC'] },

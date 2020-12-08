@@ -12,7 +12,22 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.1',
-                desc: 'Moving Average Convergence/Divergence'
+                desc: 'Moving Average Convergence/Divergence',
+                preset: {
+                    name: 'MACD $fast $slow $smooth',
+                    side: 'offchart',
+                    settings: {
+                        histWidth: 4,
+                        macdWidth: 1,
+                        signalWidth: 1,
+                        defColor: "#42b28a",
+                        macdColor: "#3782f2",
+                        signalColor: "#f48709",
+                        histColors: [
+                            "#35a776", "#79e0b3", "#e54150", "#ea969e"
+                        ]
+                    }
+                }
             }
         },
 
@@ -27,32 +42,15 @@ export default {
             ctx.strokeStyle = this.color
             ctx.beginPath()
 
-            // Color changed
-            let changed = false
             for (var p of this.$props.data) {
-
                 let x = layout.t2screen(p[0]) - off
                 let y = layout.$2screen(p[1]) - 0.5
-                let changed = false
-
-                if (p[4]) {
-                    if (ctx.strokeStyle !== p[4]) {
-                        ctx.stroke()
-                        changed = true
-                    }
-                    ctx.strokeStyle = p[4]
-                } else {
-                    if (ctx.strokeStyle !== this.color) {
-                        ctx.stroke()
-                        changed = true
-                    }
-                    ctx.strokeStyle = this.color
-                }
-                if (changed) ctx.beginPath()
+                ctx.strokeStyle = this.sett.histColors[p[4]]
+                ctx.beginPath()
                 ctx.moveTo(x, base)
                 ctx.lineTo(x, y)
+                ctx.stroke()
             }
-            ctx.stroke()
 
             // MACD LINE
 
@@ -102,19 +100,18 @@ export default {
                 props: {
                     fast: { def: 12, text: 'Fast Length' },
                     slow: { def: 26, text: 'Slow Length' },
-                    smooth: { def: 9, text: 'Signal EMA' },
-                    histColors: { def: [], text: 'Colors' }
+                    smooth: { def: 9, text: 'Signal EMA' }
                 },
                 update: `
                     let [macd, signal, hist] =
                         macd(close, fast, slow, smooth)
 
                     if (hist[0] >= 0) {
-                         var color = histColors[0]
-                         if (hist[0] < hist[1]) color = histColors[1]
+                         var color = 0
+                         if (hist[0] < hist[1]) color = 1
                     } else {
-                        color = histColors[2]
-                        if (hist[0] > hist[1]) color = histColors[3]
+                        color = 2
+                        if (hist[0] > hist[1]) color = 3
                     }
 
                     return [hist[0], macd[0], signal[0], color]

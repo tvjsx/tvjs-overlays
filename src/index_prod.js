@@ -10,6 +10,7 @@
 import ALMA from './overlays/ALMA/ALMA.vue'
 import ATR from './overlays/ATR/ATR.vue'
 import ATRp from './overlays/ATRp/ATRp.vue'
+import Area51 from './overlays/Area51/Area51.vue'
 import BB from './overlays/BB/BB.vue'
 import BBW from './overlays/BBW/BBW.vue'
 import CCI from './overlays/CCI/CCI.vue'
@@ -37,11 +38,13 @@ import Stoch from './overlays/Stoch/Stoch.vue'
 import TSI from './overlays/TSI/TSI.vue'
 import VWMA from './overlays/VWMA/VWMA.vue'
 import WilliamsR from './overlays/WilliamsR/WilliamsR.vue'
+import XOhlcBars from './overlays/XOhlcBars/XOhlcBars.vue'
 
 const Pack = {
     ALMA,
     ATR,
     ATRp,
+    Area51,
     BB,
     BBW,
     CCI,
@@ -68,7 +71,8 @@ const Pack = {
     Stoch,
     TSI,
     VWMA,
-    WilliamsR
+    WilliamsR,
+    XOhlcBars
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -81,6 +85,7 @@ export {
     ALMA,
     ATR,
     ATRp,
+    Area51,
     BB,
     BBW,
     CCI,
@@ -107,5 +112,6 @@ export {
     Stoch,
     TSI,
     VWMA,
-    WilliamsR
+    WilliamsR,
+    XOhlcBars
 }

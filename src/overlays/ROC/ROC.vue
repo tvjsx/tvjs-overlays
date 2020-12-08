@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Rate of Change'
+                desc: 'Rate of Change',
+                preset: {
+                    name: 'ROC $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#279fc4'
+                    }
+                }
             }
         },
         use_for() { return ['ROC'] },

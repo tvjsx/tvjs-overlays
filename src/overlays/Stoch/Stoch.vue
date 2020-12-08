@@ -9,7 +9,18 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Stochastic'
+                desc: 'Stochastic',
+                preset: {
+                    name: 'Stoch $param_k $param_d $smooth',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        kColor: '#3782f2',
+                        dColor: '#f48709',
+                        bandColor: '#ddd',
+                        backColor: '#381e9c16'
+                    }
+                }
             }
         },
         draw(ctx) {

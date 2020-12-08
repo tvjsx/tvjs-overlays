@@ -9,7 +9,19 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Commodity Channel Index'
+                desc: 'Commodity Channel Index',
+                preset: {
+                    name: 'CCI $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#e28a3dee',
+                        backColor: '#e28a3d11',
+                        bandColor: '#aaaaaa',
+                        upper: 100,
+                        lower: -100
+                    }
+                }
             }
         },
         use_for() { return ['CCI'] },

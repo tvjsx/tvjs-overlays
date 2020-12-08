@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Parabolic SAR'
+                desc: 'Parabolic SAR',
+                preset: {
+                    name: 'SAR $start $inc $max',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 2,
+                        color: '#35a9c6'
+                    }
+                }
             }
         },
         use_for() { return ['SAR'] },

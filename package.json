@@ -1,6 +1,6 @@
 {
   "name": "tvjs-overlays",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Overlay pack for trading-vue-js",
   "main": "./dist/tvjs-overlays.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "compile": "node ./webpack/index-compiler.js",
     "compile-prod": "node ./webpack/index-compiler.js --prod",
     "eslint": "./node_modules/.bin/eslint --ext .js,.vue src",
-    "dev": "webpack serve --config webpack/dev.config.js --mode development --progress --hot",
+    "dev": "webpack serve --config webpack/dev.config.js --mode development --progress --hot --port=$PORT",
     "build": "webpack  --config webpack/build.config.js --mode production --progress"
   },
   "author": "C451",
@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.12.1",
-    "trading-vue-js": "^0.9.0",
+    "trading-vue-js": "^0.10.0",
     "vue": "^2.6.12"
   }
 }

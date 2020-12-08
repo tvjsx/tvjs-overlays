@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.2.3 - Sat Nov 21 2020
+ * TVJS Overlays - v0.3.0 - Tue Dec 08 2020
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -18,12 +18,137 @@
 		root["TvjsOverlays"] = factory(root["trading-vue-js"]);
 })(self, function(__WEBPACK_EXTERNAL_MODULE__954__) {
 return /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 196:
+/***/ 228:
+/***/ ((module) => {
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+module.exports = _arrayLikeToArray;
+
+/***/ }),
+
+/***/ 646:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayLikeToArray = __webpack_require__(228);
+
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return arrayLikeToArray(arr);
+}
+
+module.exports = _arrayWithoutHoles;
+
+/***/ }),
+
+/***/ 575:
+/***/ ((module) => {
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+
+/***/ }),
+
+/***/ 913:
+/***/ ((module) => {
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+module.exports = _createClass;
+
+/***/ }),
+
+/***/ 860:
+/***/ ((module) => {
+
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
+}
+
+module.exports = _iterableToArray;
+
+/***/ }),
+
+/***/ 206:
+/***/ ((module) => {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+module.exports = _nonIterableSpread;
+
+/***/ }),
+
+/***/ 319:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayWithoutHoles = __webpack_require__(646);
+
+var iterableToArray = __webpack_require__(860);
+
+var unsupportedIterableToArray = __webpack_require__(379);
+
+var nonIterableSpread = __webpack_require__(206);
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
+
+/***/ }),
+
+/***/ 379:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var arrayLikeToArray = __webpack_require__(228);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
+}
+
+module.exports = _unsupportedIterableToArray;
+
+/***/ }),
+
+/***/ 464:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
@@ -32,6 +157,7 @@ __webpack_require__.d(__webpack_exports__, {
   "ALMA": () => /* reexport */ ALMA,
   "ATR": () => /* reexport */ ATR,
   "ATRp": () => /* reexport */ ATRp,
+  "Area51": () => /* reexport */ Area51,
   "BB": () => /* reexport */ BB,
   "BBW": () => /* reexport */ BBW,
   "CCI": () => /* reexport */ CCI,
@@ -59,6 +185,7 @@ __webpack_require__.d(__webpack_exports__, {
   "TSI": () => /* reexport */ TSI,
   "VWMA": () => /* reexport */ VWMA,
   "WilliamsR": () => /* reexport */ WilliamsR,
+  "XOhlcBars": () => /* reexport */ XOhlcBars,
   "default": () => /* binding */ index_prod
 });
 
@@ -74,7 +201,15 @@ var external_trading_vue_js_ = __webpack_require__(954);
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Arnaud Legoux Moving Average'
+        desc: 'Arnaud Legoux Moving Average',
+        preset: {
+          name: 'ALMA $length $offset $sigma',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#559de0'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -239,7 +374,15 @@ component.options.__file = "src/overlays/ALMA/ALMA.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Average True Range'
+        desc: 'Average True Range',
+        preset: {
+          name: 'ATR $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#e52468'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -296,7 +439,15 @@ ATR_component.options.__file = "src/overlays/ATR/ATR.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Average True Range, %'
+        desc: 'Average True Range, %',
+        preset: {
+          name: 'ATR% $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#f44336'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -343,6 +494,136 @@ var ATRp_component = normalizeComponent(
 if (false) { var ATRp_api; }
 ATRp_component.options.__file = "src/overlays/ATRp/ATRp.vue"
 /* harmony default export */ const ATRp = (ATRp_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+/* harmony default export */ const Area51vue_type_script_lang_js_ = ({
+  name: 'Area51',
+  mixins: [external_trading_vue_js_.Overlay],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: '👽',
+        version: '1.0.0',
+        desc: 'Gradient area chart'
+      };
+    },
+    draw: function draw(ctx) {
+      var layout = this.$props.layout;
+      var data = this.$props.data;
+      var grd = ctx.createLinearGradient(0, 0, 0, layout.height);
+      grd.addColorStop(0, this.back1);
+      grd.addColorStop(1, this.back2); // Line
+
+      ctx.lineWidth = this.line_width;
+      ctx.strokeStyle = this.color;
+      ctx.beginPath();
+
+      var _iterator = _createForOfIteratorHelper(data),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var p = _step.value;
+          var x = layout.t2screen(p[0]);
+          var y = layout.$2screen(p[1]);
+          ctx.lineTo(x, y);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      ctx.stroke(); // Area
+
+      ctx.fillStyle = grd;
+      ctx.beginPath();
+      var p0 = (data[0] || [])[0];
+      var pN = (data[data.length - 1] || [])[0];
+      ctx.lineTo(layout.t2screen(p0), layout.height);
+
+      var _iterator2 = _createForOfIteratorHelper(data),
+          _step2;
+
+      try {
+        for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+          var p = _step2.value;
+
+          var _x = layout.t2screen(p[0]);
+
+          var _y = layout.$2screen(p[1]);
+
+          ctx.lineTo(_x, _y);
+        }
+      } catch (err) {
+        _iterator2.e(err);
+      } finally {
+        _iterator2.f();
+      }
+
+      ctx.lineTo(layout.t2screen(pN), layout.height);
+      ctx.fill();
+    },
+    use_for: function use_for() {
+      return ['Area51'];
+    },
+    data_colors: function data_colors() {
+      return [this.color];
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    line_width: function line_width() {
+      return this.sett.lineWidth || 1.25;
+    },
+    color: function color() {
+      return this.sett.color || '#2fd68f';
+    },
+    back1: function back1() {
+      return this.sett.back1 || this.color + '15';
+    },
+    back2: function back2() {
+      return this.sett.back2 || this.color + '01';
+    }
+  },
+  data: function data() {
+    return {};
+  }
+});
+// CONCATENATED MODULE: ./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
+ /* harmony default export */ const Area51_Area51vue_type_script_lang_js_ = (Area51vue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/overlays/Area51/Area51.vue
+var Area51_render, Area51_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var Area51_component = normalizeComponent(
+  Area51_Area51vue_type_script_lang_js_,
+  Area51_render,
+  Area51_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var Area51_api; }
+Area51_component.options.__file = "src/overlays/Area51/Area51.vue"
+/* harmony default export */ const Area51 = (Area51_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BB/BB.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const BBvue_type_script_lang_js_ = ({
@@ -353,7 +634,17 @@ ATRp_component.options.__file = "src/overlays/ATRp/ATRp.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Bollinger Bands'
+        desc: 'Bollinger Bands',
+        preset: {
+          name: 'BB $length $stddev',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#2cc6c9ab',
+            showMid: true,
+            backColor: '#2cc6c90a'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -414,7 +705,15 @@ BB_component.options.__file = "src/overlays/BB/BB.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Bollinger Bands Width'
+        desc: 'Bollinger Bands Width',
+        preset: {
+          name: 'BBW $length $stddev',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#2cc6c9ab'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -475,7 +774,19 @@ BBW_component.options.__file = "src/overlays/BBW/BBW.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Commodity Channel Index'
+        desc: 'Commodity Channel Index',
+        preset: {
+          name: 'CCI $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#e28a3dee',
+            backColor: '#e28a3d11',
+            bandColor: '#aaaaaa',
+            upper: 100,
+            lower: -100
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -532,7 +843,15 @@ CCI_component.options.__file = "src/overlays/CCI/CCI.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Chande Momentum Oscillator'
+        desc: 'Chande Momentum Oscillator',
+        preset: {
+          name: 'CMO $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#559de0'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -589,7 +908,15 @@ CMO_component.options.__file = "src/overlays/CMO/CMO.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Center of Gravity'
+        desc: 'Center of Gravity',
+        preset: {
+          name: 'COG $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#559de0'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -646,7 +973,15 @@ COG_component.options.__file = "src/overlays/COG/COG.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Directional Movement Index'
+        desc: 'Directional Movement Index',
+        preset: {
+          name: 'DMI $length $smooth',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            colors: ["#ef1360", "#3782f2", "#f48709"]
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -707,7 +1042,15 @@ DMI_component.options.__file = "src/overlays/DMI/DMI.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Exponential Moving Average'
+        desc: 'Exponential Moving Average',
+        preset: {
+          name: 'EMA $length',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#f7890c'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -764,7 +1107,15 @@ EMA_component.options.__file = "src/overlays/EMA/EMA.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Hull Moving Average'
+        desc: 'Hull Moving Average',
+        preset: {
+          name: 'HMA $length',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#3af475'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -812,11 +1163,11 @@ if (false) { var HMA_api; }
 HMA_component.options.__file = "src/overlays/HMA/HMA.vue"
 /* harmony default export */ const HMA = (HMA_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function Histogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Histogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function Histogramvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Histogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Histogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+function Histogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 
 /* harmony default export */ const Histogramvue_type_script_lang_js_ = ({
@@ -840,7 +1191,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       var changed = false;
 
-      var _iterator = _createForOfIteratorHelper(this.$props.data),
+      var _iterator = Histogramvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
           _step;
 
       try {
@@ -1252,7 +1603,17 @@ Ichimoku_component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Keltner Channels'
+        desc: 'Keltner Channels',
+        preset: {
+          name: 'KC $length $mult',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#4c8dffab',
+            showMid: true,
+            backColor: '#4c8dff0a'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -1317,7 +1678,15 @@ KC_component.options.__file = "src/overlays/KC/KC.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Keltner Channels Width'
+        desc: 'Keltner Channels Width',
+        preset: {
+          name: 'KCW $length $mult',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#4c8dffab'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -1679,7 +2048,20 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
       return {
         author: 'StdSquad',
         version: '1.0.1',
-        desc: 'Moving Average Convergence/Divergence'
+        desc: 'Moving Average Convergence/Divergence',
+        preset: {
+          name: 'MACD $fast $slow $smooth',
+          side: 'offchart',
+          settings: {
+            histWidth: 4,
+            macdWidth: 1,
+            signalWidth: 1,
+            defColor: "#42b28a",
+            macdColor: "#3782f2",
+            signalColor: "#f48709",
+            histColors: ["#35a776", "#79e0b3", "#e54150", "#ea969e"]
+          }
+        }
       };
     },
     draw: function draw(ctx) {
@@ -1689,9 +2071,7 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
       var off = this.hist_width % 2 ? 0 : 0.5;
       ctx.lineWidth = this.hist_width;
       ctx.strokeStyle = this.color;
-      ctx.beginPath(); // Color changed
-
-      var changed = false;
+      ctx.beginPath();
 
       var _iterator = MACDvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
           _step;
@@ -1701,35 +2081,18 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
           var p = _step.value;
           var x = layout.t2screen(p[0]) - off;
           var y = layout.$2screen(p[1]) - 0.5;
-          var _changed = false;
-
-          if (p[4]) {
-            if (ctx.strokeStyle !== p[4]) {
-              ctx.stroke();
-              _changed = true;
-            }
-
-            ctx.strokeStyle = p[4];
-          } else {
-            if (ctx.strokeStyle !== this.color) {
-              ctx.stroke();
-              _changed = true;
-            }
-
-            ctx.strokeStyle = this.color;
-          }
-
-          if (_changed) ctx.beginPath();
+          ctx.strokeStyle = this.sett.histColors[p[4]];
+          ctx.beginPath();
           ctx.moveTo(x, base);
           ctx.lineTo(x, y);
-        }
+          ctx.stroke();
+        } // MACD LINE
+
       } catch (err) {
         _iterator.e(err);
       } finally {
         _iterator.f();
       }
-
-      ctx.stroke(); // MACD LINE
 
       ctx.beginPath();
       ctx.lineWidth = this.macd_width;
@@ -1813,13 +2176,9 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
           smooth: {
             def: 9,
             text: 'Signal EMA'
-          },
-          histColors: {
-            def: [],
-            text: 'Colors'
           }
         },
-        update: "\n                    let [macd, signal, hist] =\n                        macd(close, fast, slow, smooth)\n\n                    if (hist[0] >= 0) {\n                         var color = histColors[0]\n                         if (hist[0] < hist[1]) color = histColors[1]\n                    } else {\n                        color = histColors[2]\n                        if (hist[0] > hist[1]) color = histColors[3]\n                    }\n\n                    return [hist[0], macd[0], signal[0], color]\n                "
+        update: "\n                    let [macd, signal, hist] =\n                        macd(close, fast, slow, smooth)\n\n                    if (hist[0] >= 0) {\n                         var color = 0\n                         if (hist[0] < hist[1]) color = 1\n                    } else {\n                        color = 2\n                        if (hist[0] > hist[1]) color = 3\n                    }\n\n                    return [hist[0], macd[0], signal[0], color]\n                "
       };
     }
   },
@@ -1886,7 +2245,19 @@ MACD_component.options.__file = "src/overlays/MACD/MACD.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Money Flow Index'
+        desc: 'Money Flow Index',
+        preset: {
+          name: 'MFI $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#85c427ee',
+            bandColor: '#aaaaaa',
+            backColor: '#85c42711',
+            upper: 80,
+            lower: 20
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -1943,7 +2314,15 @@ MFI_component.options.__file = "src/overlays/MFI/MFI.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Momentum'
+        desc: 'Momentum',
+        preset: {
+          name: 'MOM $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#bcc427ee'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2130,7 +2509,15 @@ PlotCross_component.options.__file = "src/overlays/PlotCross/PlotCross.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Rate of Change'
+        desc: 'Rate of Change',
+        preset: {
+          name: 'ROC $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#279fc4'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2187,7 +2574,17 @@ ROC_component.options.__file = "src/overlays/ROC/ROC.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Relative Strength Index'
+        desc: 'Relative Strength Index',
+        preset: {
+          name: 'RSI $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#ec206e',
+            bandColor: '#aaa',
+            backColor: '#9b9ba316'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2244,7 +2641,15 @@ RSI_component.options.__file = "src/overlays/RSI/RSI.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Moving Average Ribbon'
+        desc: 'Moving Average Ribbon',
+        preset: {
+          name: 'EMA x $number',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            colors: ["#3aaaf4ee"]
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2309,7 +2714,15 @@ Ribbon_component.options.__file = "src/overlays/Ribbon/Ribbon.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Parabolic SAR'
+        desc: 'Parabolic SAR',
+        preset: {
+          name: 'SAR $start $inc $max',
+          side: 'onchart',
+          settings: {
+            lineWidth: 2,
+            color: '#35a9c6'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2374,7 +2787,15 @@ SAR_component.options.__file = "src/overlays/SAR/SAR.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Simple Moving Average'
+        desc: 'Simple Moving Average',
+        preset: {
+          name: 'SMA $length',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#d1385c'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2431,7 +2852,15 @@ SMA_component.options.__file = "src/overlays/SMA/SMA.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Symmetrically Weighted Moving Average'
+        desc: 'Symmetrically Weighted Moving Average',
+        preset: {
+          name: 'SWMA',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#e57440'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2489,7 +2918,18 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Stochastic'
+        desc: 'Stochastic',
+        preset: {
+          name: 'Stoch $param_k $param_d $smooth',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            kColor: '#3782f2',
+            dColor: '#f48709',
+            bandColor: '#ddd',
+            backColor: '#381e9c16'
+          }
+        }
       };
     },
     draw: function draw(ctx) {
@@ -2643,7 +3083,15 @@ Stoch_component.options.__file = "src/overlays/Stoch/Stoch.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'True Strength Index'
+        desc: 'True Strength Index',
+        preset: {
+          name: 'TSI $long $short $signal',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            colors: ["#3bb3e4", "#f7046d"]
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2708,7 +3156,15 @@ TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Volume Weighted Moving Average'
+        desc: 'Volume Weighted Moving Average',
+        preset: {
+          name: 'VWMA $length',
+          side: 'onchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#db0670'
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2723,7 +3179,7 @@ TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
           }
         },
         conf: {
-          renderer: 'Range'
+          renderer: 'Spline'
         },
         update: "\n                    return vwma(close, length)[0]\n                "
       };
@@ -2765,7 +3221,19 @@ VWMA_component.options.__file = "src/overlays/VWMA/VWMA.vue"
       return {
         author: 'StdSquad',
         version: '1.0.0',
-        desc: 'Williams %R'
+        desc: 'Williams %R',
+        preset: {
+          name: '%R $length',
+          side: 'offchart',
+          settings: {
+            lineWidth: 0.75,
+            color: '#0980e8',
+            bandColor: '#aaa',
+            backColor: '#9b9ba316',
+            upper: -20,
+            lower: -80
+          }
+        }
       };
     },
     use_for: function use_for() {
@@ -2812,6 +3280,274 @@ var WilliamsR_component = normalizeComponent(
 if (false) { var WilliamsR_api; }
 WilliamsR_component.options.__file = "src/overlays/WilliamsR/WilliamsR.vue"
 /* harmony default export */ const WilliamsR = (WilliamsR_component.exports);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/toConsumableArray.js
+var toConsumableArray = __webpack_require__(319);
+var toConsumableArray_default = /*#__PURE__*/__webpack_require__.n(toConsumableArray);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
+var classCallCheck = __webpack_require__(575);
+var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/createClass.js
+var createClass = __webpack_require__(913);
+var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
+
+// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xohlcbar.js
+
+
+
+// Ohlc object for Ohlcs overlay
+var XOhlcBar = /*#__PURE__*/function () {
+  function XOhlcBar(overlay, ctx, data) {
+    classCallCheck_default()(this, XOhlcBar);
+
+    this.ctx = ctx;
+    this.self = overlay;
+    this.style = data.raw[6] || this.self;
+
+    this._draw(data);
+  }
+
+  createClass_default()(XOhlcBar, [{
+    key: "_draw",
+    value: function _draw(data) {
+      var line_width = this.style.lineWidth;
+      var hlc_only = this.style.chartType == "HLC";
+      var line_width_half = line_width / 2; // Bar color
+
+      var bar_color = data.c <= data.o ? this.style.upBarColor : this.style.downBarColor;
+      var width = Math.max(data.w, 1);
+      var halfwidth = Math.max(Math.floor(width * 0.5), 1);
+      var height = Math.abs(data.o - data.c);
+      var max_h = data.c === data.o ? 1 : 2;
+      var s = line_width % 2 === 0 ? 0 : 0.5; // Draw the line from low to high and open and close also
+
+      this.ctx.strokeStyle = bar_color;
+      this.ctx.lineWidth = line_width;
+      this.ctx.beginPath(); // Draw high to low
+
+      this.ctx.moveTo(Math.floor(data.x - line_width_half) + s, Math.floor(data.h));
+      this.ctx.lineTo(Math.floor(data.x - line_width_half) + s, Math.floor(data.l));
+
+      if (width > 1) {
+        // Draw open notch
+        if (hlc_only) {
+          // No open price in consideration
+          // Draw open notch with close price
+          this.ctx.moveTo(Math.floor(data.x - halfwidth - line_width_half - 1), Math.floor(data.c) - s);
+          this.ctx.lineTo(Math.floor(data.x - line_width_half), Math.floor(data.c) - s);
+        } else {
+          // Draw open notch with open price
+          this.ctx.moveTo(Math.floor(data.x - halfwidth - line_width_half - 1), Math.floor(data.o) - s);
+          this.ctx.lineTo(Math.floor(data.x - line_width_half), Math.floor(data.o) - s);
+        } // Draw close notch
+
+
+        this.ctx.moveTo(Math.floor(data.x - line_width_half), Math.floor(data.c) - s);
+        this.ctx.lineTo(Math.floor(data.x + halfwidth - line_width_half + 1), Math.floor(data.c) - s);
+      }
+
+      this.ctx.stroke();
+    }
+  }]);
+
+  return XOhlcBar;
+}();
+
+
+// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xvolbar.js
+
+
+
+var XVolbar = /*#__PURE__*/function () {
+  function XVolbar(overlay, ctx, data, barData, thinVolumeBar) {
+    classCallCheck_default()(this, XVolbar);
+
+    this.ctx = ctx;
+    this.$p = overlay.$props;
+    this.self = overlay;
+    this.style = data.raw[6] || this.self;
+
+    this._draw(data, barData, thinVolumeBar);
+  }
+
+  createClass_default()(XVolbar, [{
+    key: "_draw",
+    value: function _draw(data, barData, thinVolumeBar) {
+      if (thinVolumeBar) {
+        // Thin Volume Bar
+        var bar_color = data.green ? this.style.upVolBarColor : this.style.downVolBarColor;
+        var line_width = this.style.volBarWidth;
+        var line_width_half = line_width / 2;
+        var y0 = this.$p.layout.height;
+        var w = data.x2 - data.x1;
+        var h = Math.floor(data.h);
+        this.ctx.strokeStyle = bar_color;
+        this.ctx.lineWidth = line_width;
+        this.ctx.beginPath(); // Draw high to low
+
+        this.ctx.moveTo(Math.floor(barData.x - line_width_half), Math.floor(y0 - h - 0.5));
+        this.ctx.lineTo(Math.floor(barData.x - line_width_half), Math.floor(y0 + 0.5));
+        this.ctx.stroke();
+      } else {
+        // Thick Volume Bar
+        var _y = this.$p.layout.height;
+
+        var _w = data.x2 - data.x1;
+
+        var _h = Math.floor(data.h);
+
+        this.ctx.fillStyle = data.green ? this.style.upVolBarColor : this.style.downVolBarColor;
+        this.ctx.fillRect(Math.floor(data.x1), Math.floor(_y - _h - 0.5), Math.floor(_w), Math.floor(_h + 1));
+      }
+    }
+  }]);
+
+  return XVolbar;
+}();
+
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
+
+
+function XOhlcBarsvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+// Renedrer for ohlcbar + volume (optional)
+// It can be used as the main chart or an indicator
+
+
+
+/* harmony default export */ const XOhlcBarsvue_type_script_lang_js_ = ({
+  name: 'XOhlcBars',
+  mixins: [external_trading_vue_js_.Overlay],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: 'X',
+        version: '1.3.0',
+        desc: 'Bar Chart'
+      };
+    },
+    init: function init() {//this.price = new Price(this) // TODO:
+    },
+    draw: function draw(ctx) {
+      //console.log("XOhlcBar.draw() called. this.$props.data.length = " + this.$props.data.length)
+      // render as main chart:
+      if (this.$props.sub === this.$props.data) {
+        var cnv = {
+          ohlcbars: this.$props.layout.candles,
+          volume: this.$props.layout.volume
+        }; // Else, as offchart / onchart indicator:
+      } else {
+        cnv = (0,external_trading_vue_js_.layout_cnv)(this);
+      }
+
+      if (this.show_volume) {
+        for (var i = 0; i < cnv.volume.length; i++) {
+          var volumeData = cnv.volume[i];
+          var _barData = cnv.ohlcbars[i];
+          new XVolbar(this, ctx, volumeData, _barData);
+        }
+      }
+
+      var _iterator = XOhlcBarsvue_type_script_lang_js_createForOfIteratorHelper(cnv.ohlcbars),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var barData = _step.value;
+          new XOhlcBar(this, ctx, barData);
+        } //if (this.price_line) this.price.draw(ctx)  // TODO:
+
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    },
+    use_for: function use_for() {
+      return ['XOhlcBars'];
+    },
+    // When added as offchart overlay
+    y_range: function y_range() {
+      return [Math.max.apply(Math, toConsumableArray_default()(this.$props.sub.map(function (x) {
+        return x[2];
+      }))), Math.min.apply(Math, toConsumableArray_default()(this.$props.sub.map(function (x) {
+        return x[3];
+      })))];
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    show_volume: function show_volume() {
+      return 'showVolume' in this.sett ? this.sett.showVolume : true;
+    },
+    price_line: function price_line() {
+      return 'priceLine' in this.sett ? this.sett.priceLine : true;
+    },
+    upVolBarColor: function upVolBarColor() {
+      return this.sett.upBarColor || "#23a77655";
+    },
+    downVolBarColor: function downVolBarColor() {
+      return this.sett.downBarColor || "#e5415055";
+    },
+    volBarWidth: function volBarWidth() {
+      return this.sett.barWidth || 2;
+    },
+    upBarColor: function upBarColor() {
+      return this.sett.upBarColor || "#23a776";
+    },
+    downBarColor: function downBarColor() {
+      return this.sett.downBarColor || "#e54150";
+    },
+    barWidth: function barWidth() {
+      return this.sett.barWidth || 1;
+    },
+    hlcOnly: function hlcOnly() {
+      return this.sett.hlcOnly || false;
+    },
+    lineWidth: function lineWidth() {
+      return this.sett.lineWidth || 1;
+    }
+  },
+  data: function data() {
+    return {
+      price: {}
+    };
+  }
+});
+// CONCATENATED MODULE: ./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
+ /* harmony default export */ const XOhlcBars_XOhlcBarsvue_type_script_lang_js_ = (XOhlcBarsvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/overlays/XOhlcBars/XOhlcBars.vue
+var XOhlcBars_render, XOhlcBars_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var XOhlcBars_component = normalizeComponent(
+  XOhlcBars_XOhlcBarsvue_type_script_lang_js_,
+  XOhlcBars_render,
+  XOhlcBars_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var XOhlcBars_api; }
+XOhlcBars_component.options.__file = "src/overlays/XOhlcBars/XOhlcBars.vue"
+/* harmony default export */ const XOhlcBars = (XOhlcBars_component.exports);
 // CONCATENATED MODULE: ./src/index_prod.js
 // -------- Production overlay index ---------
 //      ! THIS FILE WAS AUTO-GENERATED !
@@ -2849,10 +3585,13 @@ WilliamsR_component.options.__file = "src/overlays/WilliamsR/WilliamsR.vue"
 
 
 
+
+
 var Pack = {
   ALMA: ALMA,
   ATR: ATR,
   ATRp: ATRp,
+  Area51: Area51,
   BB: BB,
   BBW: BBW,
   CCI: CCI,
@@ -2879,7 +3618,8 @@ var Pack = {
   Stoch: Stoch,
   TSI: TSI,
   VWMA: VWMA,
-  WilliamsR: WilliamsR
+  WilliamsR: WilliamsR,
+  XOhlcBars: XOhlcBars
 };
 
 if (typeof window !== 'undefined' && window.Vue) {
@@ -2894,6 +3634,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 /***/ 954:
 /***/ ((module) => {
 
+"use strict";
 module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
 
 /***/ })
@@ -2924,6 +3665,18 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => module['default'] :
+/******/ 				() => module;
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -2956,7 +3709,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
 /******/ 	// module exports must be returned from runtime so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(196);
+/******/ 	return __webpack_require__(464);
 /******/ })()
 ;
 });

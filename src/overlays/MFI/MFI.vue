@@ -9,7 +9,19 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Money Flow Index'
+                desc: 'Money Flow Index',
+                preset: {
+                    name: 'MFI $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#85c427ee',
+                        bandColor: '#aaaaaa',
+                        backColor: '#85c42711',
+                        upper: 80,
+                        lower: 20
+                    }
+                }
             }
         },
         use_for() { return ['MFI'] },

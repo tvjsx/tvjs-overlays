@@ -15,6 +15,11 @@
             "author": "StdSquad",
             "is_tool": false
         },
+        "Area51": {
+            "version": "1.0.0",
+            "author": "👽",
+            "is_tool": false
+        },
         "BB": {
             "version": "1.0.0",
             "author": "StdSquad",
@@ -148,6 +153,11 @@
         "WilliamsR": {
             "version": "1.0.0",
             "author": "StdSquad",
+            "is_tool": false
+        },
+        "XOhlcBars": {
+            "version": "1.3.0",
+            "author": "X",
             "is_tool": false
         }
     }

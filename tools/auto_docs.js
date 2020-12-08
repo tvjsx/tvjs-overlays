@@ -97,12 +97,12 @@ async function parse() {
 
     for (var ov of list) {
 
-        if (argv['ov'] && ov.name !== argv['ov']) continue 
+        if (argv['ov'] && ov.name !== argv['ov']) continue
 
         console.log(`Making docs for `.gray + ov.name)
 
         // Screen
-        let p = '8080' || argv.port
+        let p = '8082' || argv.port
         let url = `http://localhost:${p}/?ov=${ov.name}&nm=false&header=false`
         await page.goto(url)
 
@@ -113,8 +113,10 @@ async function parse() {
             var data = null
             let df = fs.readFileSync(ov.path + '/data.json', 'utf-8')
             let ds = JSON.parse(df)
+            let ch = (ds.chart || {}).type === ov.name ? ds.chart : null
             let f1 = (ds.onchart || []).find(x => x.type === ov.name)
             let f2 = (ds.offchart || []).find(x => x.type === ov.name)
+            if (ch) data = ch.data.slice(0, 10)
             if (f1) data = f1.data.slice(0, 10)
             if (f2) data = f2.data.slice(0, 10)
         } catch(e) {

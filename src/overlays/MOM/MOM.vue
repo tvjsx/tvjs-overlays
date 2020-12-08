@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Momentum'
+                desc: 'Momentum',
+                preset: {
+                    name: 'MOM $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#bcc427ee'
+                    }
+                }
             }
         },
         use_for() { return ['MOM'] },

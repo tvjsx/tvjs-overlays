@@ -15,6 +15,7 @@
 | [ALMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ALMA) | StdSquad | OV+Script | Arnaud Legoux Moving Average | 1.0.0 |
 | [ATR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ATR) | StdSquad | OV+Script | Average True Range | 1.0.0 |
 | [ATRp](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ATRp) | StdSquad | OV+Script | Average True Range, % | 1.0.0 |
+| [Area51](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Area51) | 👽 | OV | Gradient area chart | 1.0.0 |
 | [BB](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/BB) | StdSquad | OV+Script | Bollinger Bands | 1.0.0 |
 | [BBW](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/BBW) | StdSquad | OV+Script | Bollinger Bands Width | 1.0.0 |
 | [CCI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/CCI) | StdSquad | OV+Script | Commodity Channel Index | 1.0.0 |
@@ -42,6 +43,7 @@
 | [TSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/TSI) | StdSquad | OV+Script | True Strength Index | 1.0.0 |
 | [VWMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/VWMA) | StdSquad | OV+Script | Volume Weighted Moving Average | 1.0.0 |
 | [WilliamsR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/WilliamsR) | StdSquad | OV+Script | Williams %R | 1.0.0 |
+| [XOhlcBars](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/XOhlcBars) | X | OV | Bar Chart | 1.3.0 |
 
 ## Install
 

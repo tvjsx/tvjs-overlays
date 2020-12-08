@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Keltner Channels Width'
+                desc: 'Keltner Channels Width',
+                preset: {
+                    name: 'KCW $length $mult',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#4c8dffab'
+                    }
+                }
             }
         },
         use_for() { return ['KCW'] },

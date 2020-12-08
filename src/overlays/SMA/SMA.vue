@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Simple Moving Average'
+                desc: 'Simple Moving Average',
+                preset: {
+                    name: 'SMA $length',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#d1385c'
+                    }
+                }
             }
         },
         use_for() { return ['SMA'] },

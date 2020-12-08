@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Volume Weighted Moving Average'
+                desc: 'Volume Weighted Moving Average',
+                preset: {
+                    name: 'VWMA $length',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#db0670'
+                    }
+                }
             }
         },
         use_for() { return ['VWMA'] },
@@ -18,7 +26,7 @@ export default {
                 props: {
                     length: { def: 20, text: 'Length' }
                 },
-                conf: { renderer: 'Range' },
+                conf: { renderer: 'Spline' },
                 update: `
                     return vwma(close, length)[0]
                 `

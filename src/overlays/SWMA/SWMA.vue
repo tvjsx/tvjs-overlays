@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Symmetrically Weighted Moving Average'
+                desc: 'Symmetrically Weighted Moving Average',
+                preset: {
+                    name: 'SWMA',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#e57440'
+                    }
+                }
             }
         },
         use_for() { return ['SWMA'] },

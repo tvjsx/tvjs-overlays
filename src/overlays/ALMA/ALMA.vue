@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Arnaud Legoux Moving Average'
+                desc: 'Arnaud Legoux Moving Average',
+                preset: {
+                    name: 'ALMA $length $offset $sigma',
+                    side: 'onchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#559de0'
+                    }
+                }
             }
         },
         use_for() { return ['ALMA'] },

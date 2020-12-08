@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'True Strength Index'
+                desc: 'True Strength Index',
+                preset: {
+                    name: 'TSI $long $short $signal',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        colors: ["#3bb3e4", "#f7046d"]
+                    }
+                }
             }
         },
         use_for() { return ['TSI'] },

@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Bollinger Bands Width'
+                desc: 'Bollinger Bands Width',
+                preset: {
+                    name: 'BBW $length $stddev',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#2cc6c9ab'
+                    }
+                }
             }
         },
         use_for() { return ['BBW'] },

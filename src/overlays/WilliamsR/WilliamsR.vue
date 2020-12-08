@@ -9,7 +9,19 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Williams %R'
+                desc: 'Williams %R',
+                preset: {
+                    name: '%R $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#0980e8',
+                        bandColor: '#aaa',
+                        backColor: '#9b9ba316',
+                        upper: -20,
+                        lower: -80
+                    }
+                }
             }
         },
         use_for() { return ['WilliamsR'] },

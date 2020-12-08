@@ -9,7 +9,15 @@ export default {
         meta_info() {
             return {
                 author: 'StdSquad', version: '1.0.0',
-                desc: 'Average True Range' 
+                desc: 'Average True Range',
+                preset: {
+                    name: 'ATR $length',
+                    side: 'offchart',
+                    settings: {
+                        lineWidth: 0.75,
+                        color: '#e52468'
+                    }
+                }
             }
         },
         use_for() { return ['ATR'] },
