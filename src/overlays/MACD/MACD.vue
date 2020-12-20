@@ -11,7 +11,7 @@ export default {
     methods: {
         meta_info() {
             return {
-                author: 'StdSquad', version: '1.0.1',
+                author: 'StdSquad', version: '1.0.2',
                 desc: 'Moving Average Convergence/Divergence',
                 preset: {
                     name: 'MACD $fast $slow $smooth',
@@ -90,7 +90,7 @@ export default {
                 return x.toFixed(Math.abs(x) > 0.001 ? 4 : 8)
             })
             return [
-                {value: xs[0], color:values[4]},
+                {value: xs[0], color: this.hist_colors[values[4]]},
                 {value: xs[1], color: this.macd_color},
                 {value: xs[2], color: this.signal_color}
             ]
