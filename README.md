@@ -21,6 +21,7 @@
 | [CCI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/CCI) | StdSquad | OV+Script | Commodity Channel Index | 1.0.0 |
 | [CMO](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/CMO) | StdSquad | OV+Script | Chande Momentum Oscillator | 1.0.0 |
 | [COG](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/COG) | StdSquad | OV+Script | Center of Gravity | 1.0.0 |
+| [DHistogram](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/DHistogram) | Acid3croco | OV | Double Histogram Plot | 1.0.0 |
 | [DMI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/DMI) | StdSquad | OV+Script | Directional Movement Index | 1.0.0 |
 | [EMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/EMA) | StdSquad | OV+Script | Exponential Moving Average | 1.0.0 |
 | [HMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/HMA) | StdSquad | OV+Script | Hull Moving Average | 1.0.0 |
@@ -29,7 +30,7 @@
 | [KC](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/KC) | StdSquad | OV+Script | Keltner Channels | 1.0.0 |
 | [KCW](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/KCW) | StdSquad | OV+Script | Keltner Channels Width | 1.0.0 |
 | [LongShortTrades](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/LongShortTrades) | Sudeep Batra | OV |  | 1.0.1 |
-| [MACD](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MACD) | StdSquad | OV+Script | Moving Average Convergence/Divergence | 1.0.1 |
+| [MACD](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MACD) | StdSquad | OV+Script | Moving Average Convergence/Divergence | 1.0.2 |
 | [MFI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MFI) | StdSquad | OV+Script | Money Flow Index | 1.0.0 |
 | [MOM](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MOM) | StdSquad | OV+Script | Momentum | 1.0.0 |
 | [PlotCross](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/PlotCross) | StdSquad | OV | Plot line with crosses | 1.0.0 |
