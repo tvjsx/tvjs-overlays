@@ -16,6 +16,7 @@ import BBW from './overlays/BBW/BBW.vue'
 import CCI from './overlays/CCI/CCI.vue'
 import CMO from './overlays/CMO/CMO.vue'
 import COG from './overlays/COG/COG.vue'
+import DHistogram from './overlays/DHistogram/DHistogram.vue'
 import DMI from './overlays/DMI/DMI.vue'
 import EMA from './overlays/EMA/EMA.vue'
 import HMA from './overlays/HMA/HMA.vue'
@@ -50,6 +51,7 @@ const Pack = {
     CCI,
     CMO,
     COG,
+    DHistogram,
     DMI,
     EMA,
     HMA,
@@ -91,6 +93,7 @@ export {
     CCI,
     CMO,
     COG,
+    DHistogram,
     DMI,
     EMA,
     HMA,

@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.3.0 - Tue Dec 08 2020
+ * TVJS Overlays - v0.4.0 - Fri Mar 12 2021
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -145,7 +145,7 @@ module.exports = _unsupportedIterableToArray;
 
 /***/ }),
 
-/***/ 464:
+/***/ 864:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -163,6 +163,7 @@ __webpack_require__.d(__webpack_exports__, {
   "CCI": () => /* reexport */ CCI,
   "CMO": () => /* reexport */ CMO,
   "COG": () => /* reexport */ COG,
+  "DHistogram": () => /* reexport */ DHistogram,
   "DMI": () => /* reexport */ DMI,
   "EMA": () => /* reexport */ EMA,
   "HMA": () => /* reexport */ HMA,
@@ -963,6 +964,141 @@ var COG_component = normalizeComponent(
 if (false) { var COG_api; }
 COG_component.options.__file = "src/overlays/COG/COG.vue"
 /* harmony default export */ const COG = (COG_component.exports);
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
+function DHistogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return DHistogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return DHistogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+/* harmony default export */ const DHistogramvue_type_script_lang_js_ = ({
+  name: "DHistogram",
+  mixins: [external_trading_vue_js_.Overlay],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: "Acid3croco",
+        version: "1.0.0",
+        desc: "Histogram plot",
+        preset: {
+          name: "DHistogram",
+          side: "offchart",
+          settings: {
+            histWidth: 4,
+            thresholdSize: 0,
+            posColor: "#35a776",
+            negColor: "#e54150"
+          }
+        }
+      };
+    },
+    draw: function draw(ctx) {
+      ctx.lineWidth = this.hist_width;
+      ctx.strokeStyle = this.color;
+      var layout = this.$props.layout;
+      var base = layout.$2screen(0) + 0.5;
+      var off = this.hist_width % 2 ? 0 : 0.5; // Color changed
+
+      var changed = false;
+
+      var _iterator = DHistogramvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var p = _step.value;
+          var pos_value = p[1];
+          var neg_value = p[2];
+          var x = layout.t2screen(p[0]) - off;
+          var y1 = layout.$2screen(pos_value) - 0.5;
+          var y2 = layout.$2screen(neg_value) - 0.5;
+
+          if (pos_value > this.threshold_size) {
+            ctx.strokeStyle = this.pos_color;
+            ctx.beginPath();
+            ctx.moveTo(x, base);
+            ctx.lineTo(x, y1);
+            ctx.stroke();
+          }
+
+          if (neg_value < -this.threshold_size) {
+            ctx.strokeStyle = this.neg_color;
+            ctx.beginPath();
+            ctx.moveTo(x, base);
+            ctx.lineTo(x, y2);
+            ctx.stroke();
+          }
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    },
+    use_for: function use_for() {
+      return ["DHistogram"];
+    },
+    legend: function legend(values) {
+      var xs = values.slice(1, 3).map(function (x) {
+        return x.toFixed(Math.abs(x) > 0.001 ? 4 : 8);
+      });
+      return [{
+        value: xs[0],
+        color: this.pos_color
+      }, {
+        value: xs[1],
+        color: this.neg_color
+      }];
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    hist_width: function hist_width() {
+      return this.sett.histWidth || 4;
+    },
+    threshold_size: function threshold_size() {
+      return this.sett.thresholdSize || 0;
+    },
+    pos_color: function pos_color() {
+      return this.sett.posColor || "#35a776";
+    },
+    neg_color: function neg_color() {
+      return this.sett.negColor || "#e54150";
+    }
+  },
+  data: function data() {
+    return {};
+  }
+});
+// CONCATENATED MODULE: ./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
+ /* harmony default export */ const DHistogram_DHistogramvue_type_script_lang_js_ = (DHistogramvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/overlays/DHistogram/DHistogram.vue
+var DHistogram_render, DHistogram_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var DHistogram_component = normalizeComponent(
+  DHistogram_DHistogramvue_type_script_lang_js_,
+  DHistogram_render,
+  DHistogram_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var DHistogram_api; }
+DHistogram_component.options.__file = "src/overlays/DHistogram/DHistogram.vue"
+/* harmony default export */ const DHistogram = (DHistogram_component.exports);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const DMIvue_type_script_lang_js_ = ({
@@ -2047,7 +2183,7 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
     meta_info: function meta_info() {
       return {
         author: 'StdSquad',
-        version: '1.0.1',
+        version: '1.0.2',
         desc: 'Moving Average Convergence/Divergence',
         preset: {
           name: 'MACD $fast $slow $smooth',
@@ -2153,7 +2289,7 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
       });
       return [{
         value: xs[0],
-        color: values[4]
+        color: this.hist_colors[values[4]]
       }, {
         value: xs[1],
         color: this.macd_color
@@ -3587,6 +3723,7 @@ XOhlcBars_component.options.__file = "src/overlays/XOhlcBars/XOhlcBars.vue"
 
 
 
+
 var Pack = {
   ALMA: ALMA,
   ATR: ATR,
@@ -3597,6 +3734,7 @@ var Pack = {
   CCI: CCI,
   CMO: CMO,
   COG: COG,
+  DHistogram: DHistogram,
   DMI: DMI,
   EMA: EMA,
   HMA: HMA,
@@ -3709,7 +3847,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
 /******/ 	// module exports must be returned from runtime so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(464);
+/******/ 	return __webpack_require__(864);
 /******/ })()
 ;
 });
