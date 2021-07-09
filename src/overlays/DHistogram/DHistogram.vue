@@ -9,7 +9,7 @@ export default {
       return {
         author: "Acid3croco",
         version: "1.0.0",
-        desc: "Histogram plot",
+        desc: "Double Histogram Plot",
         preset: {
           name: "DHistogram",
           side: "offchart",

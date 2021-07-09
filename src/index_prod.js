@@ -21,6 +21,7 @@ import DMI from './overlays/DMI/DMI.vue'
 import EMA from './overlays/EMA/EMA.vue'
 import HMA from './overlays/HMA/HMA.vue'
 import Histogram from './overlays/Histogram/Histogram.vue'
+import Ichi from './overlays/Ichi/Ichi.vue'
 import Ichimoku from './overlays/Ichimoku/Ichimoku.vue'
 import KC from './overlays/KC/KC.vue'
 import KCW from './overlays/KCW/KCW.vue'
@@ -28,6 +29,7 @@ import LongShortTrades from './overlays/LongShortTrades/LongShortTrades.vue'
 import MACD from './overlays/MACD/MACD.vue'
 import MFI from './overlays/MFI/MFI.vue'
 import MOM from './overlays/MOM/MOM.vue'
+import Markers from './overlays/Markers/Markers.vue'
 import PlotCross from './overlays/PlotCross/PlotCross.vue'
 import ROC from './overlays/ROC/ROC.vue'
 import RSI from './overlays/RSI/RSI.vue'
@@ -37,6 +39,7 @@ import SMA from './overlays/SMA/SMA.vue'
 import SWMA from './overlays/SWMA/SWMA.vue'
 import Stoch from './overlays/Stoch/Stoch.vue'
 import TSI from './overlays/TSI/TSI.vue'
+import TradesPlus from './overlays/TradesPlus/TradesPlus.vue'
 import VWMA from './overlays/VWMA/VWMA.vue'
 import WilliamsR from './overlays/WilliamsR/WilliamsR.vue'
 import XOhlcBars from './overlays/XOhlcBars/XOhlcBars.vue'
@@ -56,6 +59,7 @@ const Pack = {
     EMA,
     HMA,
     Histogram,
+    Ichi,
     Ichimoku,
     KC,
     KCW,
@@ -63,6 +67,7 @@ const Pack = {
     MACD,
     MFI,
     MOM,
+    Markers,
     PlotCross,
     ROC,
     RSI,
@@ -72,6 +77,7 @@ const Pack = {
     SWMA,
     Stoch,
     TSI,
+    TradesPlus,
     VWMA,
     WilliamsR,
     XOhlcBars
@@ -98,6 +104,7 @@ export {
     EMA,
     HMA,
     Histogram,
+    Ichi,
     Ichimoku,
     KC,
     KCW,
@@ -105,6 +112,7 @@ export {
     MACD,
     MFI,
     MOM,
+    Markers,
     PlotCross,
     ROC,
     RSI,
@@ -114,6 +122,7 @@ export {
     SWMA,
     Stoch,
     TSI,
+    TradesPlus,
     VWMA,
     WilliamsR,
     XOhlcBars

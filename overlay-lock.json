@@ -70,6 +70,11 @@
             "author": "StdSquad",
             "is_tool": false
         },
+        "Ichi": {
+            "version": "1.0.0",
+            "author": "C451",
+            "is_tool": false
+        },
         "Ichimoku": {
             "version": "1.0.0",
             "author": "Sudeep Batra",
@@ -103,6 +108,11 @@
         "MOM": {
             "version": "1.0.0",
             "author": "StdSquad",
+            "is_tool": false
+        },
+        "Markers": {
+            "version": "1.0.1",
+            "author": "C451",
             "is_tool": false
         },
         "PlotCross": {
@@ -148,6 +158,11 @@
         "TSI": {
             "version": "1.0.0",
             "author": "StdSquad",
+            "is_tool": false
+        },
+        "TradesPlus": {
+            "version": "1.0.1",
+            "author": "C451",
             "is_tool": false
         },
         "VWMA": {

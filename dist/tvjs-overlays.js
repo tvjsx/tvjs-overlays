@@ -1,5 +1,5 @@
 /*!
- * TVJS Overlays - v0.4.0 - Fri Mar 12 2021
+ * TVJS Overlays - v0.5.0 - Fri Jul 09 2021
  *     https://github.com/tvjsx/trading-vue-js
  *     Copyright (c) 2020 c451 Code's All Right;
  *     Licensed under the MIT license
@@ -18,181 +18,122 @@
 		root["TvjsOverlays"] = factory(root["trading-vue-js"]);
 })(self, function(__WEBPACK_EXTERNAL_MODULE__954__) {
 return /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 228:
+/***/ 954:
 /***/ ((module) => {
 
-function _arrayLikeToArray(arr, len) {
-  if (len == null || len > arr.length) len = arr.length;
+module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
 
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
+/***/ })
 
-  return arr2;
-}
-
-module.exports = _arrayLikeToArray;
-
-/***/ }),
-
-/***/ 646:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayLikeToArray = __webpack_require__(228);
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) return arrayLikeToArray(arr);
-}
-
-module.exports = _arrayWithoutHoles;
-
-/***/ }),
-
-/***/ 575:
-/***/ ((module) => {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-
-/***/ 913:
-/***/ ((module) => {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
-/***/ 860:
-/***/ ((module) => {
-
-function _iterableToArray(iter) {
-  if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-
-/***/ }),
-
-/***/ 206:
-/***/ ((module) => {
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-}
-
-module.exports = _nonIterableSpread;
-
-/***/ }),
-
-/***/ 319:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayWithoutHoles = __webpack_require__(646);
-
-var iterableToArray = __webpack_require__(860);
-
-var unsupportedIterableToArray = __webpack_require__(379);
-
-var nonIterableSpread = __webpack_require__(206);
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || unsupportedIterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
-
-/***/ }),
-
-/***/ 379:
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-var arrayLikeToArray = __webpack_require__(228);
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
-}
-
-module.exports = _unsupportedIterableToArray;
-
-/***/ }),
-
-/***/ 864:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "ALMA": () => /* reexport */ ALMA,
-  "ATR": () => /* reexport */ ATR,
-  "ATRp": () => /* reexport */ ATRp,
-  "Area51": () => /* reexport */ Area51,
-  "BB": () => /* reexport */ BB,
-  "BBW": () => /* reexport */ BBW,
-  "CCI": () => /* reexport */ CCI,
-  "CMO": () => /* reexport */ CMO,
-  "COG": () => /* reexport */ COG,
-  "DHistogram": () => /* reexport */ DHistogram,
-  "DMI": () => /* reexport */ DMI,
-  "EMA": () => /* reexport */ EMA,
-  "HMA": () => /* reexport */ HMA,
-  "Histogram": () => /* reexport */ Histogram,
-  "Ichimoku": () => /* reexport */ Ichimoku,
-  "KC": () => /* reexport */ KC,
-  "KCW": () => /* reexport */ KCW,
-  "LongShortTrades": () => /* reexport */ LongShortTrades,
-  "MACD": () => /* reexport */ MACD,
-  "MFI": () => /* reexport */ MFI,
-  "MOM": () => /* reexport */ MOM,
-  "PlotCross": () => /* reexport */ PlotCross,
-  "ROC": () => /* reexport */ ROC,
-  "RSI": () => /* reexport */ RSI,
-  "Ribbon": () => /* reexport */ Ribbon,
-  "SAR": () => /* reexport */ SAR,
-  "SMA": () => /* reexport */ SMA,
-  "SWMA": () => /* reexport */ SWMA,
-  "Stoch": () => /* reexport */ Stoch,
-  "TSI": () => /* reexport */ TSI,
-  "VWMA": () => /* reexport */ VWMA,
-  "WilliamsR": () => /* reexport */ WilliamsR,
-  "XOhlcBars": () => /* reexport */ XOhlcBars,
-  "default": () => /* binding */ index_prod
+  "ALMA": () => (/* reexport */ ALMA),
+  "ATR": () => (/* reexport */ ATR),
+  "ATRp": () => (/* reexport */ ATRp),
+  "Area51": () => (/* reexport */ Area51),
+  "BB": () => (/* reexport */ BB),
+  "BBW": () => (/* reexport */ BBW),
+  "CCI": () => (/* reexport */ CCI),
+  "CMO": () => (/* reexport */ CMO),
+  "COG": () => (/* reexport */ COG),
+  "DHistogram": () => (/* reexport */ DHistogram),
+  "DMI": () => (/* reexport */ DMI),
+  "EMA": () => (/* reexport */ EMA),
+  "HMA": () => (/* reexport */ HMA),
+  "Histogram": () => (/* reexport */ Histogram),
+  "Ichi": () => (/* reexport */ Ichi),
+  "Ichimoku": () => (/* reexport */ Ichimoku),
+  "KC": () => (/* reexport */ KC),
+  "KCW": () => (/* reexport */ KCW),
+  "LongShortTrades": () => (/* reexport */ LongShortTrades),
+  "MACD": () => (/* reexport */ MACD),
+  "MFI": () => (/* reexport */ MFI),
+  "MOM": () => (/* reexport */ MOM),
+  "Markers": () => (/* reexport */ Markers),
+  "PlotCross": () => (/* reexport */ PlotCross),
+  "ROC": () => (/* reexport */ ROC),
+  "RSI": () => (/* reexport */ RSI),
+  "Ribbon": () => (/* reexport */ Ribbon),
+  "SAR": () => (/* reexport */ SAR),
+  "SMA": () => (/* reexport */ SMA),
+  "SWMA": () => (/* reexport */ SWMA),
+  "Stoch": () => (/* reexport */ Stoch),
+  "TSI": () => (/* reexport */ TSI),
+  "TradesPlus": () => (/* reexport */ TradesPlus),
+  "VWMA": () => (/* reexport */ VWMA),
+  "WilliamsR": () => (/* reexport */ WilliamsR),
+  "XOhlcBars": () => (/* reexport */ XOhlcBars),
+  "default": () => (/* binding */ index_prod)
 });
 
 // EXTERNAL MODULE: external "trading-vue-js"
 var external_trading_vue_js_ = __webpack_require__(954);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const ALMAvue_type_script_lang_js_ = ({
   name: 'ALMA',
@@ -240,9 +181,9 @@ var external_trading_vue_js_ = __webpack_require__(954);
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/ALMA/ALMA.vue?vue&type=script&lang=js&
  /* harmony default export */ const ALMA_ALMAvue_type_script_lang_js_ = (ALMAvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+;// CONCATENATED MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
 /* globals __VUE_SSR_CONTEXT__ */
 
 // IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
@@ -342,14 +283,14 @@ function normalizeComponent (
   }
 }
 
-// CONCATENATED MODULE: ./src/overlays/ALMA/ALMA.vue
+;// CONCATENATED MODULE: ./src/overlays/ALMA/ALMA.vue
 var render, staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var component = normalizeComponent(
   ALMA_ALMAvue_type_script_lang_js_,
   render,
@@ -365,7 +306,7 @@ var component = normalizeComponent(
 if (false) { var api; }
 component.options.__file = "src/overlays/ALMA/ALMA.vue"
 /* harmony default export */ const ALMA = (component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const ATRvue_type_script_lang_js_ = ({
   name: 'ATR',
@@ -405,16 +346,16 @@ component.options.__file = "src/overlays/ALMA/ALMA.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/ATR/ATR.vue?vue&type=script&lang=js&
  /* harmony default export */ const ATR_ATRvue_type_script_lang_js_ = (ATRvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/ATR/ATR.vue
+;// CONCATENATED MODULE: ./src/overlays/ATR/ATR.vue
 var ATR_render, ATR_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var ATR_component = normalizeComponent(
   ATR_ATRvue_type_script_lang_js_,
   ATR_render,
@@ -430,7 +371,7 @@ var ATR_component = normalizeComponent(
 if (false) { var ATR_api; }
 ATR_component.options.__file = "src/overlays/ATR/ATR.vue"
 /* harmony default export */ const ATR = (ATR_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const ATRpvue_type_script_lang_js_ = ({
   name: 'ATRp',
@@ -470,16 +411,16 @@ ATR_component.options.__file = "src/overlays/ATR/ATR.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/ATRp/ATRp.vue?vue&type=script&lang=js&
  /* harmony default export */ const ATRp_ATRpvue_type_script_lang_js_ = (ATRpvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/ATRp/ATRp.vue
+;// CONCATENATED MODULE: ./src/overlays/ATRp/ATRp.vue
 var ATRp_render, ATRp_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var ATRp_component = normalizeComponent(
   ATRp_ATRpvue_type_script_lang_js_,
   ATRp_render,
@@ -495,8 +436,8 @@ var ATRp_component = normalizeComponent(
 if (false) { var ATRp_api; }
 ATRp_component.options.__file = "src/overlays/ATRp/ATRp.vue"
 /* harmony default export */ const ATRp = (ATRp_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
-function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
@@ -600,16 +541,16 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     return {};
   }
 });
-// CONCATENATED MODULE: ./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/Area51/Area51.vue?vue&type=script&lang=js&
  /* harmony default export */ const Area51_Area51vue_type_script_lang_js_ = (Area51vue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/Area51/Area51.vue
+;// CONCATENATED MODULE: ./src/overlays/Area51/Area51.vue
 var Area51_render, Area51_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var Area51_component = normalizeComponent(
   Area51_Area51vue_type_script_lang_js_,
   Area51_render,
@@ -625,7 +566,7 @@ var Area51_component = normalizeComponent(
 if (false) { var Area51_api; }
 Area51_component.options.__file = "src/overlays/Area51/Area51.vue"
 /* harmony default export */ const Area51 = (Area51_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BB/BB.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BB/BB.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const BBvue_type_script_lang_js_ = ({
   name: 'BB',
@@ -671,16 +612,16 @@ Area51_component.options.__file = "src/overlays/Area51/Area51.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/BB/BB.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/BB/BB.vue?vue&type=script&lang=js&
  /* harmony default export */ const BB_BBvue_type_script_lang_js_ = (BBvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/BB/BB.vue
+;// CONCATENATED MODULE: ./src/overlays/BB/BB.vue
 var BB_render, BB_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var BB_component = normalizeComponent(
   BB_BBvue_type_script_lang_js_,
   BB_render,
@@ -696,7 +637,7 @@ var BB_component = normalizeComponent(
 if (false) { var BB_api; }
 BB_component.options.__file = "src/overlays/BB/BB.vue"
 /* harmony default export */ const BB = (BB_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const BBWvue_type_script_lang_js_ = ({
   name: 'BBW',
@@ -740,16 +681,16 @@ BB_component.options.__file = "src/overlays/BB/BB.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/BBW/BBW.vue?vue&type=script&lang=js&
  /* harmony default export */ const BBW_BBWvue_type_script_lang_js_ = (BBWvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/BBW/BBW.vue
+;// CONCATENATED MODULE: ./src/overlays/BBW/BBW.vue
 var BBW_render, BBW_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var BBW_component = normalizeComponent(
   BBW_BBWvue_type_script_lang_js_,
   BBW_render,
@@ -765,7 +706,7 @@ var BBW_component = normalizeComponent(
 if (false) { var BBW_api; }
 BBW_component.options.__file = "src/overlays/BBW/BBW.vue"
 /* harmony default export */ const BBW = (BBW_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const CCIvue_type_script_lang_js_ = ({
   name: 'CCI',
@@ -809,16 +750,16 @@ BBW_component.options.__file = "src/overlays/BBW/BBW.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/CCI/CCI.vue?vue&type=script&lang=js&
  /* harmony default export */ const CCI_CCIvue_type_script_lang_js_ = (CCIvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/CCI/CCI.vue
+;// CONCATENATED MODULE: ./src/overlays/CCI/CCI.vue
 var CCI_render, CCI_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var CCI_component = normalizeComponent(
   CCI_CCIvue_type_script_lang_js_,
   CCI_render,
@@ -834,7 +775,7 @@ var CCI_component = normalizeComponent(
 if (false) { var CCI_api; }
 CCI_component.options.__file = "src/overlays/CCI/CCI.vue"
 /* harmony default export */ const CCI = (CCI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const CMOvue_type_script_lang_js_ = ({
   name: 'CMO',
@@ -874,16 +815,16 @@ CCI_component.options.__file = "src/overlays/CCI/CCI.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/CMO/CMO.vue?vue&type=script&lang=js&
  /* harmony default export */ const CMO_CMOvue_type_script_lang_js_ = (CMOvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/CMO/CMO.vue
+;// CONCATENATED MODULE: ./src/overlays/CMO/CMO.vue
 var CMO_render, CMO_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var CMO_component = normalizeComponent(
   CMO_CMOvue_type_script_lang_js_,
   CMO_render,
@@ -899,7 +840,7 @@ var CMO_component = normalizeComponent(
 if (false) { var CMO_api; }
 CMO_component.options.__file = "src/overlays/CMO/CMO.vue"
 /* harmony default export */ const CMO = (CMO_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/COG/COG.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/COG/COG.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const COGvue_type_script_lang_js_ = ({
   name: 'COG',
@@ -939,16 +880,16 @@ CMO_component.options.__file = "src/overlays/CMO/CMO.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/COG/COG.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/COG/COG.vue?vue&type=script&lang=js&
  /* harmony default export */ const COG_COGvue_type_script_lang_js_ = (COGvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/COG/COG.vue
+;// CONCATENATED MODULE: ./src/overlays/COG/COG.vue
 var COG_render, COG_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var COG_component = normalizeComponent(
   COG_COGvue_type_script_lang_js_,
   COG_render,
@@ -964,8 +905,8 @@ var COG_component = normalizeComponent(
 if (false) { var COG_api; }
 COG_component.options.__file = "src/overlays/COG/COG.vue"
 /* harmony default export */ const COG = (COG_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
-function DHistogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
+function DHistogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function DHistogramvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return DHistogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return DHistogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -980,7 +921,7 @@ function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
       return {
         author: "Acid3croco",
         version: "1.0.0",
-        desc: "Histogram plot",
+        desc: "Double Histogram Plot",
         preset: {
           name: "DHistogram",
           side: "offchart",
@@ -1074,16 +1015,16 @@ function DHistogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len 
     return {};
   }
 });
-// CONCATENATED MODULE: ./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/DHistogram/DHistogram.vue?vue&type=script&lang=js&
  /* harmony default export */ const DHistogram_DHistogramvue_type_script_lang_js_ = (DHistogramvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/DHistogram/DHistogram.vue
+;// CONCATENATED MODULE: ./src/overlays/DHistogram/DHistogram.vue
 var DHistogram_render, DHistogram_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var DHistogram_component = normalizeComponent(
   DHistogram_DHistogramvue_type_script_lang_js_,
   DHistogram_render,
@@ -1099,7 +1040,7 @@ var DHistogram_component = normalizeComponent(
 if (false) { var DHistogram_api; }
 DHistogram_component.options.__file = "src/overlays/DHistogram/DHistogram.vue"
 /* harmony default export */ const DHistogram = (DHistogram_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const DMIvue_type_script_lang_js_ = ({
   name: 'DMI',
@@ -1143,16 +1084,16 @@ DHistogram_component.options.__file = "src/overlays/DHistogram/DHistogram.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/DMI/DMI.vue?vue&type=script&lang=js&
  /* harmony default export */ const DMI_DMIvue_type_script_lang_js_ = (DMIvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/DMI/DMI.vue
+;// CONCATENATED MODULE: ./src/overlays/DMI/DMI.vue
 var DMI_render, DMI_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var DMI_component = normalizeComponent(
   DMI_DMIvue_type_script_lang_js_,
   DMI_render,
@@ -1168,7 +1109,7 @@ var DMI_component = normalizeComponent(
 if (false) { var DMI_api; }
 DMI_component.options.__file = "src/overlays/DMI/DMI.vue"
 /* harmony default export */ const DMI = (DMI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const EMAvue_type_script_lang_js_ = ({
   name: 'EMA',
@@ -1208,16 +1149,16 @@ DMI_component.options.__file = "src/overlays/DMI/DMI.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/EMA/EMA.vue?vue&type=script&lang=js&
  /* harmony default export */ const EMA_EMAvue_type_script_lang_js_ = (EMAvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/EMA/EMA.vue
+;// CONCATENATED MODULE: ./src/overlays/EMA/EMA.vue
 var EMA_render, EMA_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var EMA_component = normalizeComponent(
   EMA_EMAvue_type_script_lang_js_,
   EMA_render,
@@ -1233,7 +1174,7 @@ var EMA_component = normalizeComponent(
 if (false) { var EMA_api; }
 EMA_component.options.__file = "src/overlays/EMA/EMA.vue"
 /* harmony default export */ const EMA = (EMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const HMAvue_type_script_lang_js_ = ({
   name: 'HMA',
@@ -1273,16 +1214,16 @@ EMA_component.options.__file = "src/overlays/EMA/EMA.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/HMA/HMA.vue?vue&type=script&lang=js&
  /* harmony default export */ const HMA_HMAvue_type_script_lang_js_ = (HMAvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/HMA/HMA.vue
+;// CONCATENATED MODULE: ./src/overlays/HMA/HMA.vue
 var HMA_render, HMA_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var HMA_component = normalizeComponent(
   HMA_HMAvue_type_script_lang_js_,
   HMA_render,
@@ -1298,8 +1239,8 @@ var HMA_component = normalizeComponent(
 if (false) { var HMA_api; }
 HMA_component.options.__file = "src/overlays/HMA/HMA.vue"
 /* harmony default export */ const HMA = (HMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
-function Histogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Histogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
+function Histogramvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Histogramvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function Histogramvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Histogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Histogramvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -1400,16 +1341,16 @@ function Histogramvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     };
   }
 });
-// CONCATENATED MODULE: ./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/Histogram/Histogram.vue?vue&type=script&lang=js&
  /* harmony default export */ const Histogram_Histogramvue_type_script_lang_js_ = (Histogramvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/Histogram/Histogram.vue
+;// CONCATENATED MODULE: ./src/overlays/Histogram/Histogram.vue
 var Histogram_render, Histogram_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var Histogram_component = normalizeComponent(
   Histogram_Histogramvue_type_script_lang_js_,
   Histogram_render,
@@ -1425,8 +1366,158 @@ var Histogram_component = normalizeComponent(
 if (false) { var Histogram_api; }
 Histogram_component.options.__file = "src/overlays/Histogram/Histogram.vue"
 /* harmony default export */ const Histogram = (Histogram_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
-function Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ichi/Ichi.vue?vue&type=script&lang=js&
+// Cloud renderer. (Ichimoku)
+
+/* harmony default export */ const Ichivue_type_script_lang_js_ = ({
+  name: 'Ichi',
+  mixins: [external_trading_vue_js_.Overlay],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: 'C451',
+        version: '1.0.0',
+        desc: 'Ichimoku Cloud based on scripts'
+      };
+    },
+    draw: function draw(ctx) {
+      ctx.lineWidth = this.line_width;
+
+      for (var i = 0; i < this.$props.data.length - 1; i++) {
+        var p1 = this.mapp(this.$props.data[i]);
+        var p2 = this.mapp(this.$props.data[i + 1]);
+        if (!p2) continue;
+        if (p1.y1 !== p1.y1) continue; // Fix NaN
+        // Background
+
+        ctx.beginPath();
+        ctx.fillStyle = p1.y1 < p1.y2 ? this.back1 : this.back2;
+        ctx.moveTo(p1.x, p1.y1);
+        ctx.lineTo(p2.x + 0.1, p2.y1);
+        ctx.lineTo(p2.x + 0.1, p2.y2);
+        ctx.lineTo(p1.x, p1.y2);
+        ctx.fill(); // Lines
+
+        if (!this.draw_lines) continue;
+        ctx.beginPath();
+        ctx.strokeStyle = this.color1;
+        ctx.moveTo(p1.x, p1.y1);
+        ctx.lineTo(p2.x, p2.y1);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.strokeStyle = this.color2;
+        ctx.moveTo(p1.x, p1.y2);
+        ctx.lineTo(p2.x, p2.y2);
+        ctx.stroke();
+      }
+    },
+    mapp: function mapp(p) {
+      var layout = this.$props.layout;
+      return p && {
+        x: layout.t2screen(p[0]),
+        y1: layout.$2screen(p[1]),
+        y2: layout.$2screen(p[2])
+      };
+    },
+    use_for: function use_for() {
+      return ['Ichi'];
+    },
+    data_colors: function data_colors() {
+      return [this.color1, this.color2];
+    },
+    calc: function calc() {
+      return {
+        props: {
+          CP: {
+            def: 9,
+            text: 'Conversion Line Length'
+          },
+          BP: {
+            def: 26,
+            text: 'Base Line Length'
+          },
+          LSP: {
+            def: 52,
+            text: 'Lagging Span 2 Length'
+          },
+          DIZ: {
+            def: 26,
+            text: 'Displacement'
+          },
+          baseColor: {
+            def: 'brown',
+            text: 'Base Line Color'
+          },
+          conversionColor: {
+            def: 'lightblue',
+            text: 'Conversion Line Color'
+          },
+          laggingColor: {
+            def: '#66CC66',
+            text: 'Lagging Span Color'
+          }
+        },
+        update: "\n                    let donchian = (len, id) => ts(\n                        avg(lowest(low, len)[0], highest(high, len)[0]), id\n                    )\n                    let conversionLine = donchian(CP, 1)\n                    let baseLine = donchian(BP, 2)\n                    let leadLine1 = ts(avg(conversionLine[0], baseLine[0]))\n                    let leadLine2 = donchian(LSP, 3)\n                    let lagging = ts(close[0])\n\n\n                    offset(this, DIZ - 1)\n                    offset(lagging, -DIZ + 1)\n                    onchart([conversionLine, baseLine], 'Base Lines', {\n                        colors: [conversionColor, baseColor]\n                    })\n                    onchart(lagging, 'Lagging Span', {\n                        color: laggingColor\n                    })\n                    return [leadLine1[0], leadLine2[0]]\n                "
+      };
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    line_width: function line_width() {
+      return this.sett.lineWidth || 0.75;
+    },
+    color1: function color1() {
+      return this.sett.color1 || 'lightgreen';
+    },
+    color2: function color2() {
+      return this.sett.color2 || 'orange';
+    },
+    back1: function back1() {
+      return this.sett.back1 || '#79ff9e22';
+    },
+    back2: function back2() {
+      return this.sett.back2 || '#ef535022';
+    },
+    draw_lines: function draw_lines() {
+      return this.sett.drawLines;
+    }
+  },
+  data: function data() {
+    return {
+      COLORS: ['#42b28a', '#5691ce', '#612ff9', '#d50b90', '#ff2316']
+    };
+  }
+});
+;// CONCATENATED MODULE: ./src/overlays/Ichi/Ichi.vue?vue&type=script&lang=js&
+ /* harmony default export */ const Ichi_Ichivue_type_script_lang_js_ = (Ichivue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/overlays/Ichi/Ichi.vue
+var Ichi_render, Ichi_staticRenderFns
+;
+
+
+
+/* normalize component */
+;
+var Ichi_component = normalizeComponent(
+  Ichi_Ichivue_type_script_lang_js_,
+  Ichi_render,
+  Ichi_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var Ichi_api; }
+Ichi_component.options.__file = "src/overlays/Ichi/Ichi.vue"
+/* harmony default export */ const Ichi = (Ichi_component.exports);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
+function Ichimokuvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function Ichimokuvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Ichimokuvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Ichimokuvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -1704,16 +1795,16 @@ function Ichimokuvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len ==
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue?vue&type=script&lang=js&
  /* harmony default export */ const Ichimoku_Ichimokuvue_type_script_lang_js_ = (Ichimokuvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue
+;// CONCATENATED MODULE: ./src/overlays/Ichimoku/Ichimoku.vue
 var Ichimoku_render, Ichimoku_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var Ichimoku_component = normalizeComponent(
   Ichimoku_Ichimokuvue_type_script_lang_js_,
   Ichimoku_render,
@@ -1729,7 +1820,7 @@ var Ichimoku_component = normalizeComponent(
 if (false) { var Ichimoku_api; }
 Ichimoku_component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
 /* harmony default export */ const Ichimoku = (Ichimoku_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KC/KC.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KC/KC.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const KCvue_type_script_lang_js_ = ({
   name: 'KC',
@@ -1779,16 +1870,16 @@ Ichimoku_component.options.__file = "src/overlays/Ichimoku/Ichimoku.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/KC/KC.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/KC/KC.vue?vue&type=script&lang=js&
  /* harmony default export */ const KC_KCvue_type_script_lang_js_ = (KCvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/KC/KC.vue
+;// CONCATENATED MODULE: ./src/overlays/KC/KC.vue
 var KC_render, KC_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var KC_component = normalizeComponent(
   KC_KCvue_type_script_lang_js_,
   KC_render,
@@ -1804,7 +1895,7 @@ var KC_component = normalizeComponent(
 if (false) { var KC_api; }
 KC_component.options.__file = "src/overlays/KC/KC.vue"
 /* harmony default export */ const KC = (KC_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const KCWvue_type_script_lang_js_ = ({
   name: 'KCW',
@@ -1852,16 +1943,16 @@ KC_component.options.__file = "src/overlays/KC/KC.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/KCW/KCW.vue?vue&type=script&lang=js&
  /* harmony default export */ const KCW_KCWvue_type_script_lang_js_ = (KCWvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/KCW/KCW.vue
+;// CONCATENATED MODULE: ./src/overlays/KCW/KCW.vue
 var KCW_render, KCW_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var KCW_component = normalizeComponent(
   KCW_KCWvue_type_script_lang_js_,
   KCW_render,
@@ -1877,8 +1968,8 @@ var KCW_component = normalizeComponent(
 if (false) { var KCW_api; }
 KCW_component.options.__file = "src/overlays/KCW/KCW.vue"
 /* harmony default export */ const KCW = (KCW_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
-function LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
+function LongShortTradesvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function LongShortTradesvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return LongShortTradesvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -2141,16 +2232,16 @@ function LongShortTradesvue_type_script_lang_js_arrayLikeToArray(arr, len) { if 
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue?vue&type=script&lang=js&
  /* harmony default export */ const LongShortTrades_LongShortTradesvue_type_script_lang_js_ = (LongShortTradesvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue
+;// CONCATENATED MODULE: ./src/overlays/LongShortTrades/LongShortTrades.vue
 var LongShortTrades_render, LongShortTrades_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var LongShortTrades_component = normalizeComponent(
   LongShortTrades_LongShortTradesvue_type_script_lang_js_,
   LongShortTrades_render,
@@ -2166,8 +2257,8 @@ var LongShortTrades_component = normalizeComponent(
 if (false) { var LongShortTrades_api; }
 LongShortTrades_component.options.__file = "src/overlays/LongShortTrades/LongShortTrades.vue"
 /* harmony default export */ const LongShortTrades = (LongShortTrades_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
-function MACDvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = MACDvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
+function MACDvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = MACDvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function MACDvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return MACDvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return MACDvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -2346,16 +2437,16 @@ function MACDvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nul
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/MACD/MACD.vue?vue&type=script&lang=js&
  /* harmony default export */ const MACD_MACDvue_type_script_lang_js_ = (MACDvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/MACD/MACD.vue
+;// CONCATENATED MODULE: ./src/overlays/MACD/MACD.vue
 var MACD_render, MACD_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var MACD_component = normalizeComponent(
   MACD_MACDvue_type_script_lang_js_,
   MACD_render,
@@ -2371,7 +2462,7 @@ var MACD_component = normalizeComponent(
 if (false) { var MACD_api; }
 MACD_component.options.__file = "src/overlays/MACD/MACD.vue"
 /* harmony default export */ const MACD = (MACD_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const MFIvue_type_script_lang_js_ = ({
   name: 'MFI',
@@ -2415,16 +2506,16 @@ MACD_component.options.__file = "src/overlays/MACD/MACD.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/MFI/MFI.vue?vue&type=script&lang=js&
  /* harmony default export */ const MFI_MFIvue_type_script_lang_js_ = (MFIvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/MFI/MFI.vue
+;// CONCATENATED MODULE: ./src/overlays/MFI/MFI.vue
 var MFI_render, MFI_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var MFI_component = normalizeComponent(
   MFI_MFIvue_type_script_lang_js_,
   MFI_render,
@@ -2440,7 +2531,7 @@ var MFI_component = normalizeComponent(
 if (false) { var MFI_api; }
 MFI_component.options.__file = "src/overlays/MFI/MFI.vue"
 /* harmony default export */ const MFI = (MFI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const MOMvue_type_script_lang_js_ = ({
   name: 'MOM',
@@ -2480,16 +2571,16 @@ MFI_component.options.__file = "src/overlays/MFI/MFI.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/MOM/MOM.vue?vue&type=script&lang=js&
  /* harmony default export */ const MOM_MOMvue_type_script_lang_js_ = (MOMvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/MOM/MOM.vue
+;// CONCATENATED MODULE: ./src/overlays/MOM/MOM.vue
 var MOM_render, MOM_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var MOM_component = normalizeComponent(
   MOM_MOMvue_type_script_lang_js_,
   MOM_render,
@@ -2505,8 +2596,149 @@ var MOM_component = normalizeComponent(
 if (false) { var MOM_api; }
 MOM_component.options.__file = "src/overlays/MOM/MOM.vue"
 /* harmony default export */ const MOM = (MOM_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
-function PlotCrossvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Markers/Markers.vue?vue&type=script&lang=js&
+function Markersvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Markersvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function Markersvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Markersvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Markersvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function Markersvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+/* harmony default export */ const Markersvue_type_script_lang_js_ = ({
+  name: 'Markers',
+  mixins: [external_trading_vue_js_.Overlay],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: 'C451',
+        version: '1.0.1',
+        desc: 'Interactive markers'
+      };
+    },
+    init: function init() {
+      this.mouse.on('mousemove', function () {});
+    },
+    draw: function draw(ctx) {
+      ctx.lineWidth = 1.5;
+      ctx.strokeStyle = 'black';
+      document.body.style.cursor = 'auto';
+      this.selected = null;
+
+      var _iterator = Markersvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var p = _step.value;
+          this.draw_point(ctx, p);
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+
+      var f = this.data.find(function (x) {
+        return x[1].sel;
+      });
+
+      if (f) {
+        this.draw_point(ctx, f);
+      }
+    },
+    draw_point: function draw_point(ctx, p) {
+      var layout = this.$props.layout;
+      var stroke = this.colors.back;
+      var fill = p[1].color || 'orange';
+      var radius = 2;
+      var height = p[1].sel ? 20 : 14;
+      var width = p[1].sel ? 17 : 13;
+      var x = layout.t2screen(p[0]) - width * 0.5;
+      var y = layout.$2screen(p[1].$) - (p[1].sel ? 27 : 20); // Collisions
+
+      if (this.mouse.x > x && this.mouse.x < x + width && this.mouse.y > y && this.mouse.y < y + height) {
+        document.body.style.cursor = 'pointer';
+        this.selected = p;
+        stroke = this.colors.text;
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.lineTo(x + width * 1 / 2, y + height + height / 5);
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.lineWidth = 1;
+      ctx.closePath();
+      ctx.fillStyle = fill;
+      ctx.strokeStyle = stroke;
+      ctx.fill();
+      ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillStyle = p[1].textColor || this.colors.back;
+      ctx.font = "".concat(p[1].sel ? 15 : 11, "px Arial");
+      ctx.fillText(p[1].text || '$', x + width / 2, y + height * 0.8);
+    },
+    use_for: function use_for() {
+      return ['Markers'];
+    },
+    legend: function legend() {
+      return [];
+    },
+    mousedown: function mousedown() {
+      this.$emit('marker-selected', this.selected);
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    default_font: function default_font() {
+      return '12px ' + this.$props.font.split('px').pop();
+    },
+    new_font: function new_font() {
+      return this.sett.font || this.default_font;
+    }
+  },
+  data: function data() {
+    return {
+      selected: null
+    };
+  }
+});
+;// CONCATENATED MODULE: ./src/overlays/Markers/Markers.vue?vue&type=script&lang=js&
+ /* harmony default export */ const Markers_Markersvue_type_script_lang_js_ = (Markersvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/overlays/Markers/Markers.vue
+var Markers_render, Markers_staticRenderFns
+;
+
+
+
+/* normalize component */
+;
+var Markers_component = normalizeComponent(
+  Markers_Markersvue_type_script_lang_js_,
+  Markers_render,
+  Markers_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var Markers_api; }
+Markers_component.options.__file = "src/overlays/Markers/Markers.vue"
+/* harmony default export */ const Markers = (Markers_component.exports);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
+function PlotCrossvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function PlotCrossvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return PlotCrossvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return PlotCrossvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -2610,16 +2842,16 @@ function PlotCrossvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     };
   }
 });
-// CONCATENATED MODULE: ./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/PlotCross/PlotCross.vue?vue&type=script&lang=js&
  /* harmony default export */ const PlotCross_PlotCrossvue_type_script_lang_js_ = (PlotCrossvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/PlotCross/PlotCross.vue
+;// CONCATENATED MODULE: ./src/overlays/PlotCross/PlotCross.vue
 var PlotCross_render, PlotCross_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var PlotCross_component = normalizeComponent(
   PlotCross_PlotCrossvue_type_script_lang_js_,
   PlotCross_render,
@@ -2635,7 +2867,7 @@ var PlotCross_component = normalizeComponent(
 if (false) { var PlotCross_api; }
 PlotCross_component.options.__file = "src/overlays/PlotCross/PlotCross.vue"
 /* harmony default export */ const PlotCross = (PlotCross_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const ROCvue_type_script_lang_js_ = ({
   name: 'ROC',
@@ -2675,16 +2907,16 @@ PlotCross_component.options.__file = "src/overlays/PlotCross/PlotCross.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/ROC/ROC.vue?vue&type=script&lang=js&
  /* harmony default export */ const ROC_ROCvue_type_script_lang_js_ = (ROCvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/ROC/ROC.vue
+;// CONCATENATED MODULE: ./src/overlays/ROC/ROC.vue
 var ROC_render, ROC_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var ROC_component = normalizeComponent(
   ROC_ROCvue_type_script_lang_js_,
   ROC_render,
@@ -2700,7 +2932,7 @@ var ROC_component = normalizeComponent(
 if (false) { var ROC_api; }
 ROC_component.options.__file = "src/overlays/ROC/ROC.vue"
 /* harmony default export */ const ROC = (ROC_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const RSIvue_type_script_lang_js_ = ({
   name: 'RSI',
@@ -2742,16 +2974,16 @@ ROC_component.options.__file = "src/overlays/ROC/ROC.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/RSI/RSI.vue?vue&type=script&lang=js&
  /* harmony default export */ const RSI_RSIvue_type_script_lang_js_ = (RSIvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/RSI/RSI.vue
+;// CONCATENATED MODULE: ./src/overlays/RSI/RSI.vue
 var RSI_render, RSI_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var RSI_component = normalizeComponent(
   RSI_RSIvue_type_script_lang_js_,
   RSI_render,
@@ -2767,7 +2999,7 @@ var RSI_component = normalizeComponent(
 if (false) { var RSI_api; }
 RSI_component.options.__file = "src/overlays/RSI/RSI.vue"
 /* harmony default export */ const RSI = (RSI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const Ribbonvue_type_script_lang_js_ = ({
   name: 'Ribbon',
@@ -2815,16 +3047,16 @@ RSI_component.options.__file = "src/overlays/RSI/RSI.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/Ribbon/Ribbon.vue?vue&type=script&lang=js&
  /* harmony default export */ const Ribbon_Ribbonvue_type_script_lang_js_ = (Ribbonvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/Ribbon/Ribbon.vue
+;// CONCATENATED MODULE: ./src/overlays/Ribbon/Ribbon.vue
 var Ribbon_render, Ribbon_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var Ribbon_component = normalizeComponent(
   Ribbon_Ribbonvue_type_script_lang_js_,
   Ribbon_render,
@@ -2840,7 +3072,7 @@ var Ribbon_component = normalizeComponent(
 if (false) { var Ribbon_api; }
 Ribbon_component.options.__file = "src/overlays/Ribbon/Ribbon.vue"
 /* harmony default export */ const Ribbon = (Ribbon_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const SARvue_type_script_lang_js_ = ({
   name: 'SAR',
@@ -2888,16 +3120,16 @@ Ribbon_component.options.__file = "src/overlays/Ribbon/Ribbon.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/SAR/SAR.vue?vue&type=script&lang=js&
  /* harmony default export */ const SAR_SARvue_type_script_lang_js_ = (SARvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/SAR/SAR.vue
+;// CONCATENATED MODULE: ./src/overlays/SAR/SAR.vue
 var SAR_render, SAR_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var SAR_component = normalizeComponent(
   SAR_SARvue_type_script_lang_js_,
   SAR_render,
@@ -2913,7 +3145,7 @@ var SAR_component = normalizeComponent(
 if (false) { var SAR_api; }
 SAR_component.options.__file = "src/overlays/SAR/SAR.vue"
 /* harmony default export */ const SAR = (SAR_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const SMAvue_type_script_lang_js_ = ({
   name: 'SMA',
@@ -2953,16 +3185,16 @@ SAR_component.options.__file = "src/overlays/SAR/SAR.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/SMA/SMA.vue?vue&type=script&lang=js&
  /* harmony default export */ const SMA_SMAvue_type_script_lang_js_ = (SMAvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/SMA/SMA.vue
+;// CONCATENATED MODULE: ./src/overlays/SMA/SMA.vue
 var SMA_render, SMA_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var SMA_component = normalizeComponent(
   SMA_SMAvue_type_script_lang_js_,
   SMA_render,
@@ -2978,7 +3210,7 @@ var SMA_component = normalizeComponent(
 if (false) { var SMA_api; }
 SMA_component.options.__file = "src/overlays/SMA/SMA.vue"
 /* harmony default export */ const SMA = (SMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const SWMAvue_type_script_lang_js_ = ({
   name: 'SWMA',
@@ -3013,16 +3245,16 @@ SMA_component.options.__file = "src/overlays/SMA/SMA.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/SWMA/SWMA.vue?vue&type=script&lang=js&
  /* harmony default export */ const SWMA_SWMAvue_type_script_lang_js_ = (SWMAvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/SWMA/SWMA.vue
+;// CONCATENATED MODULE: ./src/overlays/SWMA/SWMA.vue
 var SWMA_render, SWMA_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var SWMA_component = normalizeComponent(
   SWMA_SWMAvue_type_script_lang_js_,
   SWMA_render,
@@ -3038,8 +3270,8 @@ var SWMA_component = normalizeComponent(
 if (false) { var SWMA_api; }
 SWMA_component.options.__file = "src/overlays/SWMA/SWMA.vue"
 /* harmony default export */ const SWMA = (SWMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
-function Stochvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = Stochvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
+function Stochvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = Stochvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function Stochvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Stochvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Stochvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -3184,16 +3416,16 @@ function Stochvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == nu
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/Stoch/Stoch.vue?vue&type=script&lang=js&
  /* harmony default export */ const Stoch_Stochvue_type_script_lang_js_ = (Stochvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/Stoch/Stoch.vue
+;// CONCATENATED MODULE: ./src/overlays/Stoch/Stoch.vue
 var Stoch_render, Stoch_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var Stoch_component = normalizeComponent(
   Stoch_Stochvue_type_script_lang_js_,
   Stoch_render,
@@ -3209,7 +3441,7 @@ var Stoch_component = normalizeComponent(
 if (false) { var Stoch_api; }
 Stoch_component.options.__file = "src/overlays/Stoch/Stoch.vue"
 /* harmony default export */ const Stoch = (Stoch_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const TSIvue_type_script_lang_js_ = ({
   name: 'TSI',
@@ -3257,16 +3489,16 @@ Stoch_component.options.__file = "src/overlays/Stoch/Stoch.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/TSI/TSI.vue?vue&type=script&lang=js&
  /* harmony default export */ const TSI_TSIvue_type_script_lang_js_ = (TSIvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/TSI/TSI.vue
+;// CONCATENATED MODULE: ./src/overlays/TSI/TSI.vue
 var TSI_render, TSI_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var TSI_component = normalizeComponent(
   TSI_TSIvue_type_script_lang_js_,
   TSI_render,
@@ -3282,7 +3514,163 @@ var TSI_component = normalizeComponent(
 if (false) { var TSI_api; }
 TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
 /* harmony default export */ const TSI = (TSI_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/TradesPlus/TradesPlus.vue?vue&type=script&lang=js&
+function TradesPlusvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = TradesPlusvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function TradesPlusvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return TradesPlusvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return TradesPlusvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
+
+function TradesPlusvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+var CROSS = "m512.001 84.853-84.853-84.853-171.147 171.147-171.148-171.147-84.853\n84.853 171.148 171.147-171.148 171.148 84.853 84.853 171.148-171.147\n171.147 171.147 84.853-84.853-171.148-171.148z";
+/* harmony default export */ const TradesPlusvue_type_script_lang_js_ = ({
+  name: 'TradesPlus',
+  mixins: [external_trading_vue_js_.Overlay],
+  methods: {
+    meta_info: function meta_info() {
+      return {
+        author: 'C451',
+        version: '1.0.1',
+        desc: 'Trades overlay with stops'
+      };
+    },
+    draw: function draw(ctx) {
+      var layout = this.$props.layout;
+      ctx.strokeStyle = 'black';
+
+      var _iterator = TradesPlusvue_type_script_lang_js_createForOfIteratorHelper(this.$props.data),
+          _step;
+
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var p = _step.value;
+          ctx.fillStyle = p[1] ? this.buy_color : this.sell_color;
+          var x = layout.t2screen(p[0]); // x - Mapping
+
+          var y = layout.$2screen(p[2]); // y - Mapping
+
+          if (p[3] === 'Stop') {
+            this.draw_cross(ctx, x, y);
+          } else {
+            this.draw_circle(ctx, x, y);
+          }
+
+          if (this.show_label && p[3] && p[3] !== 'Stop') {
+            this.draw_label(ctx, x, y, p);
+          }
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+    },
+    draw_label: function draw_label(ctx, x, y, p) {
+      ctx.fillStyle = this.label_color;
+      ctx.font = this.new_font;
+      ctx.textAlign = 'center';
+      ctx.fillText(p[3], x, y - 25);
+    },
+    draw_circle: function draw_circle(ctx, x, y) {
+      ctx.lineWidth = 1.5;
+      ctx.beginPath();
+      ctx.arc(x, y, this.marker_size + 0.5, 0, Math.PI * 2, true);
+      ctx.fill();
+      ctx.stroke();
+    },
+    draw_cross: function draw_cross(ctx, x, y) {
+      ctx.save();
+      var p = new Path2D(CROSS);
+      ctx.lineWidth = 150;
+      ctx.translate(x - 5, y - 5);
+      ctx.scale(0.0175, 0.0175);
+      ctx.stroke(p);
+      ctx.fill(p);
+      ctx.scale(1, 1);
+      ctx.restore();
+    },
+    use_for: function use_for() {
+      return ['TradesPlus'];
+    },
+    // Defines legend format (values & colors)
+    legend: function legend(values) {
+      switch (values[1]) {
+        case 0:
+          var pos = 'Sell';
+          break;
+
+        case 1:
+          pos = 'Buy';
+          break;
+
+        default:
+          pos = 'Unknown';
+      }
+
+      return [{
+        value: pos
+      }, {
+        value: values[2].toFixed(4),
+        color: this.$props.colors.colorText
+      }].concat(values[3] ? [{
+        value: values[3]
+      }] : []);
+    }
+  },
+  // Define internal setting & constants here
+  computed: {
+    sett: function sett() {
+      return this.$props.settings;
+    },
+    default_font: function default_font() {
+      return '12px ' + this.$props.font.split('px').pop();
+    },
+    buy_color: function buy_color() {
+      return this.sett.buyColor || '#63df89';
+    },
+    sell_color: function sell_color() {
+      return this.sett.sellColor || '#ec4662';
+    },
+    label_color: function label_color() {
+      return this.sett.labelColor || this.colors.text;
+    },
+    marker_size: function marker_size() {
+      return this.sett.markerSize || 5;
+    },
+    show_label: function show_label() {
+      return this.sett.showLabel !== false;
+    },
+    new_font: function new_font() {
+      return this.sett.font || this.default_font;
+    }
+  }
+});
+;// CONCATENATED MODULE: ./src/overlays/TradesPlus/TradesPlus.vue?vue&type=script&lang=js&
+ /* harmony default export */ const TradesPlus_TradesPlusvue_type_script_lang_js_ = (TradesPlusvue_type_script_lang_js_); 
+;// CONCATENATED MODULE: ./src/overlays/TradesPlus/TradesPlus.vue
+var TradesPlus_render, TradesPlus_staticRenderFns
+;
+
+
+
+/* normalize component */
+;
+var TradesPlus_component = normalizeComponent(
+  TradesPlus_TradesPlusvue_type_script_lang_js_,
+  TradesPlus_render,
+  TradesPlus_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var TradesPlus_api; }
+TradesPlus_component.options.__file = "src/overlays/TradesPlus/TradesPlus.vue"
+/* harmony default export */ const TradesPlus = (TradesPlus_component.exports);
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const VWMAvue_type_script_lang_js_ = ({
   name: 'VWMA',
@@ -3322,16 +3710,16 @@ TSI_component.options.__file = "src/overlays/TSI/TSI.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/VWMA/VWMA.vue?vue&type=script&lang=js&
  /* harmony default export */ const VWMA_VWMAvue_type_script_lang_js_ = (VWMAvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/VWMA/VWMA.vue
+;// CONCATENATED MODULE: ./src/overlays/VWMA/VWMA.vue
 var VWMA_render, VWMA_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var VWMA_component = normalizeComponent(
   VWMA_VWMAvue_type_script_lang_js_,
   VWMA_render,
@@ -3347,7 +3735,7 @@ var VWMA_component = normalizeComponent(
 if (false) { var VWMA_api; }
 VWMA_component.options.__file = "src/overlays/VWMA/VWMA.vue"
 /* harmony default export */ const VWMA = (VWMA_component.exports);
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
 
 /* harmony default export */ const WilliamsRvue_type_script_lang_js_ = ({
   name: 'WilliamsR',
@@ -3391,16 +3779,16 @@ VWMA_component.options.__file = "src/overlays/VWMA/VWMA.vue"
     }
   }
 });
-// CONCATENATED MODULE: ./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/WilliamsR/WilliamsR.vue?vue&type=script&lang=js&
  /* harmony default export */ const WilliamsR_WilliamsRvue_type_script_lang_js_ = (WilliamsRvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/WilliamsR/WilliamsR.vue
+;// CONCATENATED MODULE: ./src/overlays/WilliamsR/WilliamsR.vue
 var WilliamsR_render, WilliamsR_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var WilliamsR_component = normalizeComponent(
   WilliamsR_WilliamsRvue_type_script_lang_js_,
   WilliamsR_render,
@@ -3416,26 +3804,77 @@ var WilliamsR_component = normalizeComponent(
 if (false) { var WilliamsR_api; }
 WilliamsR_component.options.__file = "src/overlays/WilliamsR/WilliamsR.vue"
 /* harmony default export */ const WilliamsR = (WilliamsR_component.exports);
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/toConsumableArray.js
-var toConsumableArray = __webpack_require__(319);
-var toConsumableArray_default = /*#__PURE__*/__webpack_require__.n(toConsumableArray);
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js
+function arrayLikeToArray_arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(575);
-var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
 
-// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/createClass.js
-var createClass = __webpack_require__(913);
-var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
+  return arr2;
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/arrayWithoutHoles.js
 
-// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xohlcbar.js
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) return arrayLikeToArray_arrayLikeToArray(arr);
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/iterableToArray.js
+function _iterableToArray(iter) {
+  if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter);
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js
+
+function unsupportedIterableToArray_unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray_arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray_arrayLikeToArray(o, minLen);
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/nonIterableSpread.js
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js
+
+
+
+
+function _toConsumableArray(arr) {
+  return _arrayWithoutHoles(arr) || _iterableToArray(arr) || unsupportedIterableToArray_unsupportedIterableToArray(arr) || _nonIterableSpread();
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/createClass.js
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+;// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xohlcbar.js
 
 
 
 // Ohlc object for Ohlcs overlay
 var XOhlcBar = /*#__PURE__*/function () {
   function XOhlcBar(overlay, ctx, data) {
-    classCallCheck_default()(this, XOhlcBar);
+    _classCallCheck(this, XOhlcBar);
 
     this.ctx = ctx;
     this.self = overlay;
@@ -3444,7 +3883,7 @@ var XOhlcBar = /*#__PURE__*/function () {
     this._draw(data);
   }
 
-  createClass_default()(XOhlcBar, [{
+  _createClass(XOhlcBar, [{
     key: "_draw",
     value: function _draw(data) {
       var line_width = this.style.lineWidth;
@@ -3491,13 +3930,13 @@ var XOhlcBar = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xvolbar.js
+;// CONCATENATED MODULE: ./src/overlays/XOhlcBars/primitives/xvolbar.js
 
 
 
 var XVolbar = /*#__PURE__*/function () {
   function XVolbar(overlay, ctx, data, barData, thinVolumeBar) {
-    classCallCheck_default()(this, XVolbar);
+    _classCallCheck(this, XVolbar);
 
     this.ctx = ctx;
     this.$p = overlay.$props;
@@ -3507,7 +3946,7 @@ var XVolbar = /*#__PURE__*/function () {
     this._draw(data, barData, thinVolumeBar);
   }
 
-  createClass_default()(XVolbar, [{
+  _createClass(XVolbar, [{
     key: "_draw",
     value: function _draw(data, barData, thinVolumeBar) {
       if (thinVolumeBar) {
@@ -3543,10 +3982,10 @@ var XVolbar = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js??vue-loader-options!./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
 
 
-function XOhlcBarsvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function XOhlcBarsvue_type_script_lang_js_createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
 function XOhlcBarsvue_type_script_lang_js_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(o, minLen); }
 
@@ -3610,9 +4049,9 @@ function XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     },
     // When added as offchart overlay
     y_range: function y_range() {
-      return [Math.max.apply(Math, toConsumableArray_default()(this.$props.sub.map(function (x) {
+      return [Math.max.apply(Math, _toConsumableArray(this.$props.sub.map(function (x) {
         return x[2];
-      }))), Math.min.apply(Math, toConsumableArray_default()(this.$props.sub.map(function (x) {
+      }))), Math.min.apply(Math, _toConsumableArray(this.$props.sub.map(function (x) {
         return x[3];
       })))];
     }
@@ -3659,16 +4098,16 @@ function XOhlcBarsvue_type_script_lang_js_arrayLikeToArray(arr, len) { if (len =
     };
   }
 });
-// CONCATENATED MODULE: ./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
+;// CONCATENATED MODULE: ./src/overlays/XOhlcBars/XOhlcBars.vue?vue&type=script&lang=js&
  /* harmony default export */ const XOhlcBars_XOhlcBarsvue_type_script_lang_js_ = (XOhlcBarsvue_type_script_lang_js_); 
-// CONCATENATED MODULE: ./src/overlays/XOhlcBars/XOhlcBars.vue
+;// CONCATENATED MODULE: ./src/overlays/XOhlcBars/XOhlcBars.vue
 var XOhlcBars_render, XOhlcBars_staticRenderFns
-
+;
 
 
 
 /* normalize component */
-
+;
 var XOhlcBars_component = normalizeComponent(
   XOhlcBars_XOhlcBarsvue_type_script_lang_js_,
   XOhlcBars_render,
@@ -3684,13 +4123,16 @@ var XOhlcBars_component = normalizeComponent(
 if (false) { var XOhlcBars_api; }
 XOhlcBars_component.options.__file = "src/overlays/XOhlcBars/XOhlcBars.vue"
 /* harmony default export */ const XOhlcBars = (XOhlcBars_component.exports);
-// CONCATENATED MODULE: ./src/index_prod.js
+;// CONCATENATED MODULE: ./src/index_prod.js
 // -------- Production overlay index ---------
 //      ! THIS FILE WAS AUTO-GENERATED !
 //
 // Do not commit this file, the final index is
 // compiled by the repo owner, use index_dev.js to
 // experiment: 'npm run compile'
+
+
+
 
 
 
@@ -3739,6 +4181,7 @@ var Pack = {
   EMA: EMA,
   HMA: HMA,
   Histogram: Histogram,
+  Ichi: Ichi,
   Ichimoku: Ichimoku,
   KC: KC,
   KCW: KCW,
@@ -3746,6 +4189,7 @@ var Pack = {
   MACD: MACD,
   MFI: MFI,
   MOM: MOM,
+  Markers: Markers,
   PlotCross: PlotCross,
   ROC: ROC,
   RSI: RSI,
@@ -3755,6 +4199,7 @@ var Pack = {
   SWMA: SWMA,
   Stoch: Stoch,
   TSI: TSI,
+  TradesPlus: TradesPlus,
   VWMA: VWMA,
   WilliamsR: WilliamsR,
   XOhlcBars: XOhlcBars
@@ -3766,89 +4211,9 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 /* harmony default export */ const index_prod = (Pack);
 
+})();
 
-/***/ }),
-
-/***/ 954:
-/***/ ((module) => {
-
-"use strict";
-module.exports = __WEBPACK_EXTERNAL_MODULE__954__;
-
-/***/ })
-
-/******/ 	});
-/************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		if(__webpack_module_cache__[moduleId]) {
-/******/ 			return __webpack_module_cache__[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => module['default'] :
-/******/ 				() => module;
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
-/******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 			}
-/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 		};
-/******/ 	})();
-/******/ 	
-/************************************************************************/
-/******/ 	// module exports must be returned from runtime so entry inlining is disabled
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(864);
+/******/ 	return __webpack_exports__;
 /******/ })()
 ;
 });
-//# sourceMappingURL=tvjs-overlays.js.map

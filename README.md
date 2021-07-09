@@ -26,6 +26,7 @@
 | [EMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/EMA) | StdSquad | OV+Script | Exponential Moving Average | 1.0.0 |
 | [HMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/HMA) | StdSquad | OV+Script | Hull Moving Average | 1.0.0 |
 | [Histogram](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Histogram) | StdSquad | OV | Histogram plot | 1.0.0 |
+| [Ichi](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Ichi) | C451 | OV+Script | Ichimoku Cloud based on scripts | 1.0.0 |
 | [Ichimoku](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Ichimoku) | Sudeep Batra | OV |  | 1.0.0 |
 | [KC](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/KC) | StdSquad | OV+Script | Keltner Channels | 1.0.0 |
 | [KCW](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/KCW) | StdSquad | OV+Script | Keltner Channels Width | 1.0.0 |
@@ -33,6 +34,7 @@
 | [MACD](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MACD) | StdSquad | OV+Script | Moving Average Convergence/Divergence | 1.0.2 |
 | [MFI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MFI) | StdSquad | OV+Script | Money Flow Index | 1.0.0 |
 | [MOM](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/MOM) | StdSquad | OV+Script | Momentum | 1.0.0 |
+| [Markers](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Markers) | C451 | OV | Interactive markers | 1.0.1 |
 | [PlotCross](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/PlotCross) | StdSquad | OV | Plot line with crosses | 1.0.0 |
 | [ROC](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/ROC) | StdSquad | OV+Script | Rate of Change | 1.0.0 |
 | [RSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/RSI) | StdSquad | OV+Script | Relative Strength Index | 1.0.0 |
@@ -42,6 +44,7 @@
 | [SWMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/SWMA) | StdSquad | OV+Script | Symmetrically Weighted Moving Average | 1.0.0 |
 | [Stoch](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/Stoch) | StdSquad | OV+Script | Stochastic | 1.0.0 |
 | [TSI](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/TSI) | StdSquad | OV+Script | True Strength Index | 1.0.0 |
+| [TradesPlus](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/TradesPlus) | C451 | OV | Trades overlay with stops | 1.0.1 |
 | [VWMA](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/VWMA) | StdSquad | OV+Script | Volume Weighted Moving Average | 1.0.0 |
 | [WilliamsR](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/WilliamsR) | StdSquad | OV+Script | Williams %R | 1.0.0 |
 | [XOhlcBars](https://github.com/tvjsx/tvjs-overlays/tree/master/src/overlays/XOhlcBars) | X | OV | Bar Chart | 1.3.0 |
